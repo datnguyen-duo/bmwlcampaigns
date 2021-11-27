@@ -1,0 +1,59 @@
+header{
+    height: 100px;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .logo_holder{
+        position: absolute;
+        left: 2vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav{
+        position: absolute;
+        right: 2vw;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+
+        ul{
+            li{
+                margin-right: 2vw;
+                display: inline-block;
+
+                a{
+                    .text();
+                    color: @color1;
+                }
+            }
+        }
+
+        .btn.white{
+            .text();
+            align-items: center;
+            padding: 5px 35px;
+            box-sizing: border-box;
+            display: flex;
+            min-height: auto;
+            max-height: 50px;
+
+            svg{
+                margin-left: 1vw;
+                width: 18px;
+            }
+
+            &:hover{
+                svg{
+                    path, line{
+                        stroke: @color2
+                    }
+                }
+            }
+        }
+    }
+}
