@@ -10,8 +10,6 @@
  */
 
 ?>
-
-
 </div><!-- #page -->
 <div class="noise"></div>
 <?php wp_footer(); ?>

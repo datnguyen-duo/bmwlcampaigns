@@ -202,7 +202,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="sixth_section noise">
+    <div class="sixth_section">
         <div class="sixth_section_content">
             <div class="accordion_headline">
                 <h2>

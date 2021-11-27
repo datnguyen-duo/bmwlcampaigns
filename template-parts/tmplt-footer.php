@@ -1,5 +1,5 @@
 <footer>
-    <div class="footer_content noise">
+    <div class="footer_content">
         <div class="top_section">
             <div class="left">
                 <span>Sign Up For Email Updates</span>
