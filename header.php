@@ -47,7 +47,9 @@
 			</li>
 		</ul>
 		<div class="btn white">
-			Contact
+			<span>
+				Contact
+			</span>
 			<svg xmlns="http://www.w3.org/2000/svg" width="44.099" height="35.871" viewBox="0 0 44.099 35.871">
 				<g id="Group_4451" data-name="Group 4451" transform="translate(0 0.707)">
 					<path id="Path_47094" data-name="Path 47094" d="M6952.579,10920.357l17.228,17.23-17.228,17.227" transform="translate(-6927.122 -10920.357)" fill="none" stroke="#ededed" stroke-width="3"/>

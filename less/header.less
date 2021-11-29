@@ -11,6 +11,11 @@ header{
         left: 2vw;
         top: 50%;
         transform: translateY(-50%);
+        width: 9vw;
+
+        img{
+            width: 100%;
+        }
     }
 
     nav{
@@ -29,6 +34,11 @@ header{
                 a{
                     .text();
                     color: @color1;
+                    font-size: 14px;
+
+                    @media @desktop-s{
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -40,9 +50,17 @@ header{
             box-sizing: border-box;
             display: flex;
             min-height: auto;
-            max-height: 50px;
+            max-height: 45px;
+            font-size: 14px;
+
+            @media @desktop-s{
+                font-size: 18px;
+                max-height: 50px;
+            }
 
             svg{
+                position: relative;
+                z-index: 1;
                 margin-left: 1vw;
                 width: 18px;
             }

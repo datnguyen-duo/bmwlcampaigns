@@ -19,14 +19,20 @@
 
                 <div class="social_wrap">
                     <a href="">
-                        Facebook
+                        <span>
+                            Facebook
+                        </span>
                     </a>
                     <a href="">
-                        Instagram
-                        
+                        <span>
+                            Instagram
+                        </span>
+
                     </a>
                     <a href="">
-                        Linkedin
+                        <span>
+                            Linkedin
+                        </span>
                     </a>
                 </div>
             </div>

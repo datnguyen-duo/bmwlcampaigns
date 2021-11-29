@@ -9,6 +9,15 @@ footer{
         padding: 4vw 6vw;
         padding-bottom: 1.5vw;
         box-sizing: border-box;
+        position: relative;
+        top: 200px;
+        opacity: 0;
+        .transition(all, 600ms);
+
+        &.active{
+            opacity: 1;
+            top: 0;
+        }
 
         span{
             font-size: 16px;
@@ -112,15 +121,43 @@ footer{
                         color: @color2;
                         font-size: 16px;
                         font-family: @font1;
+                        position: relative;
+                        box-sizing: border-box;
                         .transition();
 
                         @media @desktop-s{
                             height: 2vw;
                         }
 
-                        &:hover{
+                        span{
+                            z-index: 1;
+                            position: relative;
+                            color: @color2;
+                            margin: 0px
+                        }
+
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            z-index: 0;
+                            right: 0;
+                            top: 0;
+                            width: 0%;
+                            height: 100%;
                             background-color: @color2;
-                            color: @color4;
+                            clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
+                            .transition(all, 600ms);
+                        }
+                    
+                    
+                        &:hover{
+                            span{
+                                color: @color4;
+                            }
+                            &:after{
+                                width: 100%;
+                                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                            }
                         }
                     }
                 }
@@ -175,7 +212,7 @@ footer{
                         &:after{
                             content: '';
                             width: 0%;
-                            height: 5px;
+                            height: 2px;
                             background-color: @color2;
                             position: absolute;
                             left: 0;

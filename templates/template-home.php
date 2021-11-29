@@ -64,7 +64,9 @@ get_header(); ?>
                             Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing e elefend.
                         </p>
                         <a href="" class="btn">
-                            Our Services
+                            <span>
+                                Our Services
+                            </span>
                         </a>
                     </div>
                     
@@ -103,7 +105,9 @@ get_header(); ?>
                         Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing e elefend.
                     </p>
                     <a href="" class="btn">
-                        About BMWL
+                        <span>
+                            About BMWL
+                        </span>
                     </a>
                 </div>
             </div>
@@ -192,7 +196,9 @@ get_header(); ?>
                     <h2>Project Name</h2>
                 </p>
                 <a href="" class="btn">
-                    View Project
+                    <span>
+                        View Project
+                    </span>
                 </a>
             </div>
 
@@ -307,7 +313,9 @@ get_header(); ?>
             <h2>Let’s work</h2>
             <h2>together</h2>
             <a href="" class="btn white">
-                Contact Us
+                <span>
+                    Contact Us
+                </span>
             </a>
         </div>
         

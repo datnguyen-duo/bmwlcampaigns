@@ -112,6 +112,10 @@
   }
 }
 
+html{
+  background-color: @color1;
+}
+
 body,
 html {
 //   background-color: @color1;
@@ -161,12 +165,12 @@ body {
 }
 
 .text {
-  font-size: 18px;
+  font-size: 16px;
   font-family: @font1;
 
-  @media @laptop-l {
-    font-size: 20px;
-  }
+//   @media @laptop-l {
+//     font-size: 20px;
+//   }
 
   @media @desktop-m {
     font-size: 22px;
@@ -228,19 +232,47 @@ body {
   .transition();
   display: inline-block;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
+  padding-top: 21px;
+  position: relative;
 
-  @media @laptop-l {
-    font-size: 20px;
-  }
+//   @media @laptop-l {
+//     font-size: 20px;
+//   }
+
+    span{
+        z-index: 1;
+        position: relative;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        background-color: @color4;
+        clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
+        .transition(all, 600ms);
+    }
+
+
+    &:hover{
+        &:after{
+            width: 100%;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
 
   @media @desktop-m {
     font-size: 22px;
   }
 
-  &:hover {
-    background-color: @color4;
-  }
+//   &:hover {
+//     background-color: @color4;
+//   }
 
   &.white {
     background-color: transparent;
@@ -248,8 +280,12 @@ body {
     padding: 18px 117px;
     color: @color1;
 
+    &:after{
+        background-color: @color1;;
+    }
+
     &:hover {
-      background-color: @color1;
+    //   background-color: @color1;
       color: @color2;
     }
   }
