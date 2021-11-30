@@ -8,9 +8,9 @@
                         <input type="email" placeholder="Enter your email">
 
                         <div class="button_holder">
-                            <!-- <input type="submit"> -->
-                            <button>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+                            
+                            <button class="arrow">
+                                
                             </button>
                             
                         </div>

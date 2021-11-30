@@ -1,6 +1,33 @@
 (function ($) { //document ready
     $( document ).ready(function() {
+        $(window).scroll(function(){
+            gsap.to('.vscroll', {
+                scrollTrigger: {
+                    trigger: "body",
+                    start: "top center",
+                    //   end: "bottom top",
+                    scrub: true
+                },
+                yPercent: '-' + $(window).scrollTop() / 50,
+            })
+        });
 
+        let animationTrigger = $(".fadein_wrap");
+    
+        animationTrigger.each(function () {
+            let trigger = $(this);
+    
+            gsap.to(animationTrigger, {
+                scrollTrigger: {
+                    trigger: trigger,
+                    start: "top 70%",
+                    onEnter: function () {
+                        $(trigger).addClass("in_view");
+                    },
+                },
+            });
+        });
+        
         /*-----------------------------------------------------------------------------
         Footer Slide Up
         --------------------------------------------------------------------------------- */
@@ -39,6 +66,42 @@
         End of Accordions logic
         --------------------------------------------------------------------------------- */
 
+        /*-----------------------------------------------------------------------------
+        Services Animation
+        --------------------------------------------------------------------------------- */
+        let servicesAnimationTrigger = $('.fourth_section_content');
+        let singleService = $('.single_item');
+        singleService.each(function () {
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: servicesAnimationTrigger,
+                    start: "top 70%",
+                }
+            }).set(singleService, {className: 'single_item animate', stagger: 0.2, ease: "power2.inOut"}, "+=1")
+        });
+
+        /*-----------------------------------------------------------------------------
+        End of Services Animation
+        --------------------------------------------------------------------------------- */
+
+        /*-----------------------------------------------------------------------------
+        Services Animation
+        --------------------------------------------------------------------------------- */
+        let accordionsAnimationTrigger = $('.accordions');
+        
+        
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: accordionsAnimationTrigger,
+                    start: "top 70%",
+                }
+            }).set(accordionsAnimationTrigger, {className: 'accordions animate', ease: "power2.inOut"}, "+=1")
+        
+
+        /*-----------------------------------------------------------------------------
+        End of Services Animation
+        --------------------------------------------------------------------------------- */
+
 
         /*-----------------------------------------------------------------------------
         Color Change
@@ -63,7 +126,7 @@
         --------------------------------------------------------------------------------- */
         let image_reveal = $(".fifth_section_content .image_holder, .fifth_section_content .image_holder img");
         let textColor = $(".fifth_section_content p");
-        let headlineReveal = $(".fifth_section_content .content h2");
+        let headlineReveal = $(".fifth_section_content .content, .fifth_section_content p");
 
         gsap.timeline({
             scrollTrigger: {
@@ -73,7 +136,7 @@
             start: "top top",
             end: "+=100%"
             }
-        }).to(image_reveal, { width: '100vw', height: '100vh', skewX: '0deg', ease: "none"}).to(textColor, {color: "#EDEDED"}).to(headlineReveal, {opacity: 1, scaleX:1, scaleY:1}, '<');
+        }).to(image_reveal, { width: '100vw', height: '100vh', skewX: '0deg', ease: "none"}).to(textColor, {color: "#EDEDED"}).to(headlineReveal, {opacity: 1}, '<');
 
         /*-----------------------------------------------------------------------------
         End of Image Reveal

@@ -14,12 +14,14 @@ get_header(); ?>
             <span>
                 Play Video
             </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="44.099" height="35.871" viewBox="0 0 44.099 35.871">
+            <div class="arrow arrow-bar is-right"></div>
+
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="44.099" height="35.871" viewBox="0 0 44.099 35.871">
                 <g id="Group_4451" data-name="Group 4451" transform="translate(0 0.707)">
                     <path id="Path_47094" data-name="Path 47094" d="M6952.579,10920.357l17.228,17.23-17.228,17.227" transform="translate(-6927.122 -10920.357)" fill="none" stroke="#ededed" stroke-width="2"/>
                     <line id="Line_186" data-name="Line 186" x1="42.693" transform="translate(0 17.228)" fill="none" stroke="#ededed" stroke-width="2"/>
                 </g>
-            </svg>
+            </svg> -->
         </div>
     </div>
 
@@ -53,7 +55,7 @@ get_header(); ?>
 
             <div class="image_text_section">
                 <div class="left">
-                    <div class="image_holder">
+                    <div class="image_holder fadein_wrap fadeIn">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/home/third_section.png" alt="">
                     </div>
                 </div>
@@ -77,21 +79,21 @@ get_header(); ?>
 
     <div class="third_section">
 
-        <div class="image_holder_top">
-            <div class="image_holder">
+        <div class="image_holder_top vscroll">
+            <div class="image_holder fadein_wrap fadeIn">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth3.png" alt="">
             </div>
         </div>
 
         <div class="image_holder_bottom">
-            <div class="image_holder">
+            <div class="image_holder fadein_wrap fadeIn">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth2.png" alt="">
             </div>
         </div>
 
         <div class="third_section_content">
             <div class="left">
-                <div class="image_holder">
+                <div class="image_holder fadein_wrap fadeIn">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth1.png" alt="">
                 </div>
             </div>
@@ -228,7 +230,7 @@ get_header(); ?>
                         <div class="content">
                             <div class="next_acordion">
                                 Next testimonial
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+                                <div class="arrow"></div>
                             </div>
                             <span>Occupation Year</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/images/quotes.svg" alt="">
@@ -249,7 +251,7 @@ get_header(); ?>
                         <div class="content">
                             <div class="next_acordion">
                                 Next testimonial
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+                                <div class="arrow"></div>
                             </div>
                             <span>Occupation Year</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/images/quotes.svg" alt="">
@@ -270,7 +272,7 @@ get_header(); ?>
                         <div class="content">
                             <div class="next_acordion">
                                 Next testimonial
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+                                <div class="arrow"></div>
                             </div>
                             <span>Occupation Year</span>
                             
@@ -291,7 +293,8 @@ get_header(); ?>
                     <div class="accordion_content">
                         <div class="content">
                             <div class="prev_acordion">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+                                
+                                <div class="arrow"></div>
                                 Previous testimonial
                             </div>
                             <span>Occupation Year</span>
