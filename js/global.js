@@ -27,5 +27,6 @@
   //   }
   $.getScript(site_data.theme_url + "/js/about.js", function () {});
   $.getScript(site_data.theme_url + "/js/home.js", function () {});
+  $.getScript(site_data.theme_url + "/js/portfolio.js", function () {});
   
 })(jQuery);

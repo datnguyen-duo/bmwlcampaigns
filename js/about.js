@@ -3,7 +3,7 @@
     console.log('about')
 
     /*	-----------------------------------------------------------------------------
-        Home First Banner
+        About First Banner
         --------------------------------------------------------------------------------- */
         var first_banner = $(".about_first_banner .banner_section");
         gsap.to(first_banner, { opacity: 1 });
@@ -30,7 +30,7 @@
 
         });
         /*	-----------------------------------------------------------------------------
-        End of Home First Banner
+        End of About First Banner
         --------------------------------------------------------------------------------- */
         let imageSlider = $('.image_slider')
         gsap.to(imageSlider, {

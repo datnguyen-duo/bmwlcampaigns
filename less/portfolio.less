@@ -1,0 +1,93 @@
+.portfolio_wrap{
+    .portfolio_header{
+        padding-top: 10vw;
+        h1{
+            .big_headline();
+            text-align: center;
+            color: @color2;
+            line-height: .65em;
+        }
+
+        .work_description{
+            
+            box-sizing: border-box;
+            text-align: center;
+            // border-top: 2px solid @color2;
+            border-bottom: 2px solid @color2;
+            padding-top: 5vw;
+            padding-bottom: 5vw;
+            padding-left: 10vw;
+            padding-right: 7vw;
+            position: relative;
+
+            &:after{
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                -webkit-transform: skewX(-20deg);
+                transform: skewX(-15deg);
+                width: 6vw;
+                height: 12vw;
+                display: block;
+                z-index: 1;
+                top: 0;
+                left: 9vw;
+            }
+
+            &:before{
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                -webkit-transform: skewX(-20deg);
+                transform: skewX(-15deg);
+                width: 6vw;
+                height: 8vw;
+                display: block;
+                z-index: 0;
+                bottom: 0vw;
+                right: 5.5vw;
+            }
+
+            h2{
+                .font2R();
+                .small_headline();
+                position: relative;
+                z-index: 2;
+            }
+
+            p{
+                .text();
+                color: @color2;
+                max-width: 620px;
+                margin: auto;
+                margin-top: 40px;
+            }
+        }
+    }
+    .section_parallax{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+
+        h2{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .big_headline();
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+            color: @color1;
+        }
+
+        .image_holder {
+            background-size: cover;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 120%;
+        }
+    }
+}
