@@ -29,9 +29,13 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-<header>
+<header class="<?php if (is_page_template('templates/template-about.php')): ?>dark<?php endif; ?>">
 	<div class="logo_holder">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="">
+		<?php if (is_page_template('templates/template-about.php')): ?>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="">
+		<?php else: ?>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="">
+		<?php endif; ?>
 	</div>
 
 	<nav>

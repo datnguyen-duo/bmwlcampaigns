@@ -6,6 +6,7 @@
   });
 
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
 
   //   var static = $(".noise");
   //   TweenMax.to(".noise", 0.03, {
@@ -24,7 +25,7 @@
   //         "%",
   //     });
   //   }
-
-  $.getScript(site_data.theme_url + "/js/home.js", function () {});
   $.getScript(site_data.theme_url + "/js/about.js", function () {});
+  $.getScript(site_data.theme_url + "/js/home.js", function () {});
+  
 })(jQuery);

@@ -74,4 +74,46 @@ header{
             }
         }
     }
+
+    &.dark{
+        nav{
+            ul{
+                li{
+                    a{
+                        color: @color2;
+                    }
+                }
+            }
+
+            .btn{
+                border-color: @color2;
+
+                span{
+                    color: @color2;
+                }
+
+                &:after{
+                    background-color: @color2;
+                }
+
+                svg{
+                    path, line{
+                        stroke: @color2;
+                    }
+                }
+
+                &:hover{
+                    span{
+                        color: @color1;
+                    }
+
+                    svg{
+                        path, line{
+                            stroke: @color1;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

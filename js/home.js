@@ -33,7 +33,7 @@
         --------------------------------------------------------------------------------- */
         ScrollTrigger.create({
             trigger: "footer",
-            start: 'top -50%',
+            start: 'top 50%',
             scrub: true,
             onEnter: () => $(".footer_content").addClass('active')
         });
@@ -106,7 +106,7 @@
         /*-----------------------------------------------------------------------------
         Color Change
         --------------------------------------------------------------------------------- */
-        let trigger = $('.third_section');
+        let trigger = $('.home_wrap .third_section');
 
         gsap.timeline({
             scrollTrigger: {

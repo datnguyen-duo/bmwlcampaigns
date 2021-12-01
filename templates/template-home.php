@@ -77,7 +77,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="third_section">
+    <div class="third_section color_change">
 
         <div class="image_holder_top vscroll">
             <div class="image_holder fadein_wrap fadeIn">
