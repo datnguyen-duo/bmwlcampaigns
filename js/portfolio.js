@@ -14,16 +14,16 @@
 
     gsap.utils.toArray(".section_parallax h2").forEach((section, i) => {
 
-        const heightDiff = section.parentElement.parentElement.clientHeight / 2;
+        const heightDiff = section.parentElement.parentElement.clientHeight;
         
         gsap.to(section, {
-            yPercent: heightDiff,
+            y: heightDiff,
             scrollTrigger: {
                 trigger: '.portfolio_paralax_holder',
                 start: 'top top',
                 scrub: true
             },
-            yPercent: () => heightDiff,
+            y: () => heightDiff,
             ease: "none"
         })
     });
