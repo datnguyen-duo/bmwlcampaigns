@@ -49,10 +49,17 @@
             });
         });
 
+
+        var letterAnaimation = -10;
         gsap.utils.toArray(".letter_wrap").forEach(section => {
+            
+            if(section.parentElement.className == "seventh_section_content"){
+                letterAnaimation = -30;
+            }
+
             gsap.to(section.querySelectorAll("span"), {
                 scrollTrigger: section,
-                y: -10,
+                y: letterAnaimation,
                 duration: 1,
                 stagger: 0.08,
                 ease: Power1.easeOuteaseOut
