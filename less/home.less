@@ -23,9 +23,13 @@
             .main_headline();
             position: absolute;
             left: 2vw;
-            bottom: 0;
+            bottom: -30px;
             letter-spacing: -5.5px;
-            
+            // opacity: 0;
+
+            .line{
+                line-height: 0.75em;
+            }
         }
 
         .cta_button{
@@ -38,6 +42,7 @@
             color: @color1;
             display: flex;
             flex-direction: column;
+            opacity: 0;
 
             span{
                 display: inline-block;
@@ -162,6 +167,10 @@
                 .font2R();
                 position: relative;
                 top: -15vw;
+
+                .line{
+                    line-height: 1.2em;
+                }
             }
 
             .image_text_section{
@@ -549,6 +558,10 @@
 
                 &:nth-of-type(2){
                     padding-left: 22vw;
+                }
+
+                .line{
+                    line-height: 0.85em;
                 }
             }
 

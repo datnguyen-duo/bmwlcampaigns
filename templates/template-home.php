@@ -6,9 +6,7 @@ get_header(); ?>
     <div class="home_hero">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/background_image.png" alt="">
 
-        <h1>
-            We Win For You
-        </h1>
+        <h1 class="letter_wrap"><div class="line">We Win</div><div class="line">For You</div></h1>
 
         <div class="cta_button">
             <span>
@@ -35,12 +33,10 @@ get_header(); ?>
     <div class="first_section">
         <div class="first_section_content">
             <div class="left">
-                <h2>
-                    Only one outcome is acceptable:
-                </h2>
+                <h2 class="letter_wrap"><div class="line">Only one</div><div class="line">outcome is</div><div class="line">acceptable:</div></h2>
             </div>
             <div class="right">
-                <div class="image_holder_wrap">
+                <div class="image_holder_wrap vscroll">
                     <div class="image_holder">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/home/second_section.png" alt="">
                     </div>
@@ -51,7 +47,7 @@ get_header(); ?>
 
     <div class="second_section">
         <div class="second_section_content">
-            <h2>Winning</h2>
+            <h2 class="letter_wrap"><div class="line">Winning</div></h2>
 
             <div class="image_text_section">
                 <div class="left">
@@ -100,9 +96,7 @@ get_header(); ?>
 
             <div class="right">
                 <div class="right_content">
-                    <h2>
-                        Your full-service campaign consultant
-                    </h2>
+                    <h2 class="letter_wrap"><div class="line">Your full-service</div><div class="line">campaign consultant</div></h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing e elefend.
                     </p>
@@ -126,9 +120,7 @@ get_header(); ?>
     <div class="fourth_section">
         <div class="fourth_section_content">
             <div class="left">
-                <h2>
-                    Our team <br> can help <br> you with:
-                </h2>
+                <h2 class="letter_wrap"><div class="line">Our team</div> <div class="line">can help</div>  <div class="line">you with:</div></h2>
             </div>
             <div class="right">
                 <div class="single_item">
@@ -195,7 +187,7 @@ get_header(); ?>
 
             <div class="content">
                 <p>
-                    <h2>Project Name</h2>
+                    <h2 class="letter_wrap"> <div class="line">Project</div> <div class="line">Name</div></h2>
                 </p>
                 <a href="" class="btn">
                     <span>
@@ -213,9 +205,7 @@ get_header(); ?>
     <div class="sixth_section">
         <div class="sixth_section_content">
             <div class="accordion_headline">
-                <h2>
-                    What people <br> say about BMWL
-                </h2>
+                <h2 class="letter_wrap"><div class="line">What people</div> <div class="line">say about BMWL</div></h2>
             </div>
             
             <div class="accordions">
@@ -313,8 +303,8 @@ get_header(); ?>
     <div class="seventh_section">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/last_section.png" alt="">
         <div class="seventh_section_content">
-            <h2>Let’s work</h2>
-            <h2>together</h2>
+            <h2 class="letter_wrap"> <div class="line">Let’s work</div></h2>
+            <h2 class="letter_wrap"> <div class="line">together</div></h2>
             <a href="" class="btn white">
                 <span>
                     Contact Us

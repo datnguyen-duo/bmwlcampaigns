@@ -1,17 +1,38 @@
 (function ($) { //document ready
     $( document ).ready(function() {
-        $(window).scroll(function(){
-            gsap.to('.vscroll', {
-                scrollTrigger: {
-                    trigger: "body",
-                    start: "top center",
-                    //   end: "bottom top",
-                    scrub: true
-                },
-                yPercent: '-' + $(window).scrollTop() / 50,
-            })
-        });
 
+        /*-----------------------------------------------------------------------------
+        Paralax Animation
+        --------------------------------------------------------------------------------- */
+        gsap.to('.vscroll', {
+            yPercent: -50,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".third_section",
+                // start: "top 100%",
+                // end: "bottom 50%",
+                scrub: true
+            },
+        })
+
+        gsap.to('.vscroll', {
+            yPercent: 50,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".first_section",
+                // start: "top 100%",
+                // end: "bottom 50%",
+                scrub: true
+            },
+        })
+
+        /*-----------------------------------------------------------------------------
+        Fade Paralax Animation
+        --------------------------------------------------------------------------------- */
+
+        /*-----------------------------------------------------------------------------
+        Fade Image/Text Animation
+        --------------------------------------------------------------------------------- */
         let animationTrigger = $(".fadein_wrap");
     
         animationTrigger.each(function () {
@@ -27,6 +48,50 @@
                 },
             });
         });
+
+        gsap.utils.toArray(".letter_wrap").forEach(section => {
+            gsap.to(section.querySelectorAll("span"), {
+                scrollTrigger: section,
+                y: -10,
+                duration: 1,
+                stagger: 0.08,
+                ease: Power1.easeOuteaseOut
+            });
+        });
+
+        /*-----------------------------------------------------------------------------
+        End Of Fade Image/Text Animation
+        --------------------------------------------------------------------------------- */
+
+
+        /*-----------------------------------------------------------------------------
+        Home Hero Animation
+        --------------------------------------------------------------------------------- */
+        var heroAnimation = gsap.timeline({
+            onComplete: function () {
+              // console.log("complete");
+            },
+        });
+
+        let heroHeadline = $(".home_hero h1");
+        let heroCtaButton = $(".home_hero .cta_button");
+        let headerAnimation = $("header");
+        // heroAnimation.to(heroHeadline, { opacity: 1, duration: 0.5, delay: 0.5 });
+        heroAnimation.to(heroCtaButton, { opacity: 1, duration: 0.5, delay: 0.5 });
+        heroAnimation.to(headerAnimation, { opacity: 1, duration: 0.5 }, '<');
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: $(".home_hero"),
+                start: "top top",
+                start: "bottom bottom",
+                scrub: true
+            }
+        }).to($(".home_hero .cta_button, .home_hero h1"), {opacity: 0})
+
+        /*-----------------------------------------------------------------------------
+        End of Home Hero Animation
+        --------------------------------------------------------------------------------- */
         
         /*-----------------------------------------------------------------------------
         Footer Slide Up
@@ -110,9 +175,8 @@
 
         gsap.timeline({
             scrollTrigger: {
-            trigger: trigger,
-            start: "top 70%",
-            
+                trigger: trigger,
+                start: "top 70%"
             }
         }).to(trigger, {backgroundColor: '#1C2021'})
 

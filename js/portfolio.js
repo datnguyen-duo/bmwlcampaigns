@@ -2,8 +2,6 @@
      /*	-----------------------------------------------------------------------------
     Headline Movement
     --------------------------------------------------------------------------------- */
-    $("#yourElement").css({ top: '100px' });
-    
     var positionTop = 50;
     $(".section_parallax h2").each(function(index) { 
         console.log(index);

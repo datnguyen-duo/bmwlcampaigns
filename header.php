@@ -30,21 +30,21 @@
 <div id="page" class="site">
 
 <header class="<?php if (is_page_template('templates/template-about.php') || is_page_template('templates/template-portfolio.php')): ?>dark<?php endif; ?>">
-	<div class="logo_holder">
+	<a href="/" class="logo_holder">
 		<?php if (is_page_template('templates/template-about.php') || is_page_template('templates/template-portfolio.php')): ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="">
 		<?php else: ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="">
 		<?php endif; ?>
-	</div>
+		</a>
 
 	<nav>
 		<ul>
 			<li>
-				<a href="">About</a>
+				<a href="/about">About</a>
 			</li>
 			<li>
-				<a href="">Work</a>
+				<a href="/portfolio">Work</a>
 			</li>
 			<li>
 				<a href="">Services</a>
