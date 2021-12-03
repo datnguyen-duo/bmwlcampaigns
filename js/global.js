@@ -3,6 +3,9 @@ var locoScroll;
 (function ($) {
   //document ready
 
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
+
   function smoothScroll() {
     locoScroll = new LocomotiveScroll({
       el: document.querySelector("#viewport"),
@@ -30,11 +33,8 @@ var locoScroll;
     });
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
+    console.log("scroller");
   }
-
-  $(window).resize(function () {
-    ScrollTrigger.refresh();
-  });
 
   var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
     type: "lines, words, chars",
@@ -43,14 +43,14 @@ var locoScroll;
     charsClass: "char char++",
   });
 
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(ScrollToPlugin);
+  window.addEventListener("load", function () {
+    smoothScroll();
+    $.getScript(site_data.theme_url + "/js/home.js", function () {});
+    $.getScript(site_data.theme_url + "/js/about.js", function () {});
+    $.getScript(site_data.theme_url + "/js/portfolio.js", function () {});
+  });
+
   $(window).resize(function () {
     ScrollTrigger.refresh();
   });
-
-  $.getScript(site_data.theme_url + "/js/about.js", function () {});
-  $.getScript(site_data.theme_url + "/js/home.js", function () {});
-  $.getScript(site_data.theme_url + "/js/portfolio.js", function () {});
-  smoothScroll();
 })(jQuery);

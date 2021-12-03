@@ -352,6 +352,6 @@
         End of Home Second Banner
         --------------------------------------------------------------------------------- */
 
-    // locoScroll.update();
+    ScrollTrigger.refresh();
   });
 })(jQuery);
