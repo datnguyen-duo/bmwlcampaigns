@@ -206,7 +206,7 @@
         --------------------------------------------------------------------------------- */
         let image_reveal = $(".fifth_section_content .image_holder, .fifth_section_content .image_holder img");
         let textColor = $(".fifth_section_content p");
-        let headlineReveal = $(".fifth_section_content .content, .fifth_section_content p");
+        let headlineReveal = $(".fifth_section_content .content .btn, .fifth_section_content p");
 
         gsap.timeline({
             scrollTrigger: {
@@ -216,7 +216,7 @@
             start: "top top",
             end: "+=100%"
             }
-        }).to(image_reveal, { width: '100vw', height: '100vh', skewX: '0deg', ease: "none"}).to(textColor, {color: "#EDEDED"}).to(headlineReveal, {opacity: 1}, '<');
+        }).to(image_reveal, { width: '100vw', height: '100vh', skewX: '0deg', ease: "none"}).to(textColor, {color: "#EDEDED"}).to($('.fifth_section_content .content h2 .char'), {y: -10, duration: 1, stagger: 0.08, ease: Power1.easeOuteaseOut}, '<').to(headlineReveal, {opacity: 1}, '<');
 
         /*-----------------------------------------------------------------------------
         End of Image Reveal

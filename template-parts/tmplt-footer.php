@@ -46,15 +46,15 @@
                     </div>
                     <div class="single_item">
                         <span>Call Us</span>
-                        <a>
+                        <a href="tel:415.615.0311">
                             415.615.0311
                         </a>
                     </div>
                     <div class="single_item">
                         <span>Email Us</span>
-                        <p>
+                        <a href="mailto:info@whitehurstmosher.com">
                             info@whitehurstmosher.com
-                        </p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -62,16 +62,16 @@
         <div class="bottom_section">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="/about">About</a>
                 </li>
                 <li>
                     <a href="">Services</a>
                 </li>
                 <li>
-                    <a href="">Portfolio</a>
+                    <a href="/portfolio">Portfolio</a>
                 </li>
                 <li>
                     <a href="">Contact</a>

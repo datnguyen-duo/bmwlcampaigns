@@ -96,7 +96,7 @@ get_header(); ?>
 
             <div class="right">
                 <div class="right_content">
-                    <h2 class="letter_wrap">Your full-service campaign consultant</h2>
+                    <h2 class="letter_wrap">Your full-service <br> campaign consultant</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing e elefend.
                     </p>
@@ -198,7 +198,7 @@ get_header(); ?>
 
             <div class="content">
                 <p>
-                    <h2 class="letter_wrap"> Project Name</h2>
+                    <h2 class="letter_wrap_scroll"> Project Name</h2>
                 </p>
                 <a href="" class="btn">
                     <span>

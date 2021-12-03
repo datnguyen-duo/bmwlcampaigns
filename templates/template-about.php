@@ -11,7 +11,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="right">
-                <h2>
+                <h2 class="letter_wrap">
                     More than two decades of winning campaigns
                 </h2>
 
@@ -34,7 +34,7 @@ get_header(); ?>
     <div class="second_section">
         <div class="second_section_content">
             <div class="headline_holder">
-                <h2>
+                <h2 class="letter_wrap">
                     Our commitment <br> to every campaign
                 </h2>
             </div>
@@ -60,8 +60,8 @@ get_header(); ?>
     <div class="third_section">
         <div class="third_section_content">
             <div class="headline_holder">
-                <h2>Our core</h2>
-                <h2>values</h2>
+                <h2 class="letter_wrap">Our core</h2>
+                <h2 class="letter_wrap">values</h2>
             </div>
             <div class="banner about_first_banner">
                 <div class="banner_section">
@@ -162,7 +162,7 @@ get_header(); ?>
 
     <div class="fourth_section">
         <div class="fourth_section_content">
-            <h2>
+            <h2 class="letter_wrap">
                 Our team
             </h2>
 
@@ -190,7 +190,7 @@ get_header(); ?>
                     <?php if ($i == $len - 1) { ?>
                         <div class="single_team join_us_holder">
                             <div class="join_us">
-                                <h3>Join our team</h3>
+                                <h3 class="letter_wrap">Join our team</h3>
 
                                 <p>
                                 Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.

@@ -4,14 +4,14 @@ get_header(); ?>
 
 <div class="portfolio_wrap">
     <div class="portfolio_header">
-        <h1>Our <br> Work</h1>
+        <h1 class="letter_wrap">Our <br> Work</h1>
         <div class="banner portfolio_first_banner">
             <div class="banner_section">
                 <p>The Right Mix Of Experience And Passion</p>                
             </div>
         </div>
         <div class="work_description">
-            <h2>A Winning Record</h2>
+            <h2 class="letter_wrap">A Winning Record</h2>
             <p>
                 BMWL represents a broad spectrum of clients, from politicians to political action committees, from corporations to nonprofits and from unions to trade associations.
             </p>
