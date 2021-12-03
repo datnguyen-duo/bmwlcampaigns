@@ -89,7 +89,6 @@
         scrollTrigger: {
           trigger: section,
           scroller: "#viewport",
-          markers: true,
         },
 
         y: 500,
