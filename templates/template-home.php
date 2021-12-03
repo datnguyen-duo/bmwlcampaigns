@@ -6,7 +6,7 @@ get_header(); ?>
     <div class="home_hero">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/background_image.png" alt="">
 
-        <h1 class="letter_wrap"><div class="line">We Win</div><div class="line">For You</div></h1>
+        <h1 class="letter_wrap">We Win For You</h1>
 
         <div class="cta_button">
             <span>
@@ -33,7 +33,7 @@ get_header(); ?>
     <div class="first_section">
         <div class="first_section_content">
             <div class="left">
-                <h2 class="letter_wrap"><div class="line">Only one</div><div class="line">outcome is</div><div class="line">acceptable:</div></h2>
+                <h2 class="letter_wrap">Only one outcome is acceptable:</h2>
             </div>
             <div class="right">
                 <div class="image_holder_wrap vscroll">
@@ -47,7 +47,7 @@ get_header(); ?>
 
     <div class="second_section">
         <div class="second_section_content">
-            <h2 class="letter_wrap"><div class="line">Winning</div></h2>
+            <h2 class="letter_wrap">Winning</h2>
 
             <div class="image_text_section">
                 <div class="left">
@@ -96,7 +96,7 @@ get_header(); ?>
 
             <div class="right">
                 <div class="right_content">
-                    <h2 class="letter_wrap"><div class="line">Your full-service</div><div class="line">campaign consultant</div></h2>
+                    <h2 class="letter_wrap">Your full-service campaign consultant</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing e elefend.
                     </p>
@@ -120,12 +120,14 @@ get_header(); ?>
     <div class="fourth_section">
         <div class="fourth_section_content">
             <div class="left">
-                <h2 class="letter_wrap"><div class="line">Our team</div> <div class="line">can help</div>  <div class="line">you with:</div></h2>
+                <h2 class="letter_wrap">Our team can help you with:</h2>
             </div>
             <div class="right">
                 <div class="single_item">
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon1.png" alt="">
+                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <h3>
                         Strategy
@@ -133,7 +135,10 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon2.png" alt="">
+                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4" type="video/mp4">
+                        </video>
+                        
                     </div>
                     <h3>
                         Digital Media
@@ -141,7 +146,9 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon3.png" alt="">
+                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/organizing.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <h3>
                         Field Organizing
@@ -149,7 +156,9 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon4.png" alt="">
+                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/email.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <h3>
                         Direct Email
@@ -157,7 +166,9 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon5.png" alt="">
+                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/vote.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <h3>
                         Vote-By-Email
@@ -187,7 +198,7 @@ get_header(); ?>
 
             <div class="content">
                 <p>
-                    <h2 class="letter_wrap"> <div class="line">Project</div> <div class="line">Name</div></h2>
+                    <h2 class="letter_wrap"> Project Name</h2>
                 </p>
                 <a href="" class="btn">
                     <span>
@@ -205,7 +216,7 @@ get_header(); ?>
     <div class="sixth_section">
         <div class="sixth_section_content">
             <div class="accordion_headline">
-                <h2 class="letter_wrap"><div class="line">What people</div> <div class="line">say about BMWL</div></h2>
+                <h2 class="letter_wrap">What people say about BMWL</h2>
             </div>
             
             <div class="accordions">
@@ -303,8 +314,8 @@ get_header(); ?>
     <div class="seventh_section">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/last_section.png" alt="">
         <div class="seventh_section_content">
-            <h2 class="letter_wrap"> <div class="line">Let’s work</div></h2>
-            <h2 class="letter_wrap"> <div class="line">together</div></h2>
+            <h2 class="letter_wrap">Let’s work</h2>
+            <h2 class="letter_wrap">together</h2>
             <a href="" class="btn white">
                 <span>
                     Contact Us

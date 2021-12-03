@@ -5,27 +5,34 @@
     ScrollTrigger.refresh();
   });
 
-  $(".line").each(function () {
-    var words = jQuery(this).text().split(" ");
-    jQuery(this)
-      .empty()
-      .html(function () {
-        for (i = 0; i < words.length; i++) {
-          if (i == 0) {
-            jQuery(this).append(
-              '<div class="single_word">' + words[i] + "</div>"
-            );
-          } else {
-            jQuery(this).append(
-              ' <div class="single_word">' + words[i] + "</div>"
-            );
-          }
-        }
-      });
-  });
+  // $(".line").each(function () {
+  //   var words = jQuery(this).text().split(" ");
+  //   jQuery(this)
+  //     .empty()
+  //     .html(function () {
+  //       for (i = 0; i < words.length; i++) {
+  //         if (i == 0) {
+  //           jQuery(this).append(
+  //             '<div class="single_word">' + words[i] + "</div>"
+  //           );
+  //         } else {
+  //           jQuery(this).append(
+  //             ' <div class="single_word">' + words[i] + "</div>"
+  //           );
+  //         }
+  //       }
+  //     });
+  // });
 
-  $(".single_word").html(function (index, html) {
-      return html.replace(/\S/g, '<span>$&</span>');
+  // $(".single_word").html(function (index, html) {
+  //     return html.replace(/\S/g, '<span>$&</span>');
+  // });
+
+  var mySplitText = new SplitText($('.letter_wrap'), {
+    type: "lines, words, chars",
+    wordsClass: 'test test++',
+    linesClass: 'line line++',
+    charsClass: 'char char++'
   });
 
   gsap.registerPlugin(ScrollTrigger);

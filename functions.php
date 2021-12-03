@@ -87,6 +87,7 @@ function bmwl_scripts() {
 	wp_style_add_data( 'bmwl-style', 'rtl', 'replace' );
 
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+	wp_enqueue_script('split-text', get_template_directory_uri() . '/js/SplitText.min.js', true);
 	wp_enqueue_script( 'global', get_template_directory_uri() . '/js/global.min.js', array(), '1.0', true );
 
 	wp_localize_script('global','site_data',array(

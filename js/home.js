@@ -1,5 +1,14 @@
 (function ($) { //document ready
     $( document ).ready(function() {
+        var figure = $(".icon").hover( hoverVideo, hideVideo );
+
+        function hoverVideo(e) {  
+            $('video', this).get(0).play(); 
+        }
+
+        function hideVideo(e) {
+            $('video', this).get(0).pause(); 
+        }
 
         /*-----------------------------------------------------------------------------
         Paralax Animation
@@ -52,12 +61,12 @@
 
         var letterAnaimation = -10;
         gsap.utils.toArray(".letter_wrap").forEach(section => {
-            
+
             if(section.parentElement.className == "seventh_section_content"){
                 letterAnaimation = -30;
             }
 
-            gsap.to(section.querySelectorAll("span"), {
+            gsap.to(section.querySelectorAll("div.char"), {
                 scrollTrigger: section,
                 y: letterAnaimation,
                 duration: 1,
