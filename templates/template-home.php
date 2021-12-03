@@ -36,7 +36,7 @@ get_header(); ?>
                 <h2 class="letter_wrap">Only one outcome is acceptable:</h2>
             </div>
             <div class="right">
-                <div class="image_holder_wrap vscroll">
+                <div class="image_holder_wrap vscroll__up">
                     <div class="image_holder">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/home/second_section.png" alt="">
                     </div>
@@ -125,7 +125,7 @@ get_header(); ?>
             <div class="right">
                 <div class="single_item">
                     <div class="icon">
-                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
+                        <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
                             <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -135,7 +135,7 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
+                        <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
                             <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4" type="video/mp4">
                         </video>
                         
@@ -146,8 +146,8 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/organizing.mp4" type="video/mp4">
+                        <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/fieldorganizing.mp4" type="video/mp4">
                         </video>
                     </div>
                     <h3>
@@ -156,8 +156,8 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/email.mp4" type="video/mp4">
+                        <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/directemail.mp4" type="video/mp4">
                         </video>
                     </div>
                     <h3>
@@ -166,8 +166,8 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <video class="thevideo" loop webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/vote.mp4" type="video/mp4">
+                        <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/vbe.mp4" type="video/mp4">
                         </video>
                     </div>
                     <h3>
@@ -176,7 +176,9 @@ get_header(); ?>
                 </div>
                 <div class="single_item">
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/icon6.png" alt="">
+                        <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/tv.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <h3>
                         Television

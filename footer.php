@@ -11,6 +11,7 @@
 
 ?>
 </div><!-- #page -->
+</div><!-- #viewport -->
 <div class="noise"></div>
 <?php wp_footer(); ?>
 
