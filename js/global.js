@@ -33,7 +33,6 @@ var locoScroll;
     });
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
-    console.log("scroller");
   }
 
   var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
