@@ -3,7 +3,6 @@
   $(document).ready(function () {
     document.body.classList.remove("loading");
 
-
     var rows = document.querySelectorAll(".fourth_section .single_item");
 
     rows.forEach((row) => {
@@ -108,11 +107,15 @@
     let heroCtaButton = $(".home_hero .cta_button");
     let headerAnimation = $("header");
     heroAnimation.to(heroImg, { opacity: 1, duration: 0.5 });
-    heroAnimation.from(heroHeadline,{ y: 500, duration: 1, stagger: 0.03, ease: Power1.easeOuteaseOut });
+    heroAnimation.from(heroHeadline, {
+      y: 500,
+      duration: 0.5,
+      stagger: 0.01,
+      ease: Power1.easeOuteaseOut,
+    });
     heroAnimation.to(heroHeadline, { opacity: 1 });
     heroAnimation.to(heroCtaButton, { opacity: 1, duration: 0.5 });
     heroAnimation.to(headerAnimation, { opacity: 1, duration: 0.5 }, "<");
-    
 
     gsap
       .timeline({
@@ -166,15 +169,20 @@
     });
 
     gsap.to("single_accordion", {
-        scrollTrigger: {
-          trigger: ".accordions",
-          start: "top top",
-          scroller: "#viewport",
-          onEnter: () => setTimeout(function(){$(".single_accordion").first().addClass("active")}, 2000),
-        },
-      });
+      scrollTrigger: {
+        trigger: ".accordions",
+        start: "top top",
+        scroller: "#viewport",
+        onEnter: () =>
+          setTimeout(function () {
+            $(".single_accordion").first().addClass("active");
+          }, 2000),
+      },
+    });
 
-    let singleAccordionsAnimationTrigger = $(".accordions, .page-template-template-about .third_section_content");
+    let singleAccordionsAnimationTrigger = $(
+      ".accordions, .page-template-template-about .third_section_content"
+    );
     let singleAccordion = $(".single_accordion");
     singleAccordion.each(function () {
       gsap
