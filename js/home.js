@@ -3,15 +3,6 @@
   $(document).ready(function () {
     document.body.classList.remove("loading");
 
-    // var figure = $(".icon").hover(hoverVideo, hideVideo);
-
-    // function hoverVideo(e) {
-    //   $("video", this).get(0).play();
-    // }
-
-    // function hideVideo(e) {
-    //   $("video", this).get(0).pause();
-    // }
 
     var rows = document.querySelectorAll(".fourth_section .single_item");
 
@@ -117,7 +108,7 @@
     let heroCtaButton = $(".home_hero .cta_button");
     let headerAnimation = $("header");
     heroAnimation.to(heroImg, { opacity: 1, duration: 0.5 });
-    heroAnimation.from(heroHeadline,{ y: 500, duration: 1, stagger: 0.08, ease: Power1.easeOuteaseOut });
+    heroAnimation.from(heroHeadline,{ y: 500, duration: 1, stagger: 0.03, ease: Power1.easeOuteaseOut });
     heroAnimation.to(heroHeadline, { opacity: 1 });
     heroAnimation.to(heroCtaButton, { opacity: 1, duration: 0.5 });
     heroAnimation.to(headerAnimation, { opacity: 1, duration: 0.5 }, "<");
