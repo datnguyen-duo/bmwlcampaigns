@@ -6,7 +6,7 @@ get_header(); ?>
     <div class="home_hero">
         <img src="<?php echo get_template_directory_uri(); ?>/images/home/background_image.png" alt="">
 
-        <h1 class="letter_wrap">We Win For You</h1>
+        <h1 class="letter_wrap_scroll">We Win For You</h1>
 
         <div class="cta_button">
             <span>
@@ -222,7 +222,7 @@ get_header(); ?>
             </div>
             
             <div class="accordions">
-                <div class="single_accordion active">
+                <div class="single_accordion">
                     <div class="accordion_header">
                         <span>/01</span>
                         <p>

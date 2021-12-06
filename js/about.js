@@ -36,6 +36,7 @@
             x: () => innerWidth,
             ease: "none",
             scrollTrigger: {
+                scroller: "#viewport",
                 trigger: ".massiveImage",
                 start: "top top",
                 end: () => innerWidth * 3,

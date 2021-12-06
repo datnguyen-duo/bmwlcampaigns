@@ -70,7 +70,7 @@ get_header(); ?>
             </div>
 
             <div class="accordions">
-                <div class="single_accordion active">
+                <div class="single_accordion">
                     <div class="accordion_header">
                         <span>/01</span>
                         <p>
