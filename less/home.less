@@ -59,6 +59,7 @@
         -ms-transform: rotate(315deg);
         -webkit-transform: rotate(315deg);
         transform: rotate(315deg);
+        .transition();
 
         &:after {
           border-bottom-style: solid;
@@ -92,9 +93,12 @@
       }
 
       &:hover {
+
         .arrow {
+          left: 34px;
+
           &:before {
-            height: 65px;
+            height: 55px;
           }
         }
       }

@@ -35,10 +35,30 @@ header{
                 a{
                     .text();
                     color: @color1;
+                    position: relative;
                     font-size: 14px;
 
                     @media @desktop-s{
                         font-size: 18px;
+                    }
+
+                    &:after{
+                        content: '';
+                        left: 50%;
+                        transform: translateX(-50%);
+                        position: absolute;
+                        bottom: -2px;
+                        display: block;
+                        height: 2px;
+                        background-color: @color1;
+                        width: 0%;
+                        .transition();
+                    }
+
+                    &:hover{
+                        &:after{
+                            width: 100%;
+                        }
                     }
                 }
             }

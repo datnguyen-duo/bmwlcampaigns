@@ -338,10 +338,7 @@ body {
         // }
 
         .arrow {
-          // margin: 25px;
           left: 20px;
-          // top: 1px;
-          // margin-bottom: 5px;
           display: inline-block;
           height: 16px;
           position: relative;
@@ -350,6 +347,7 @@ body {
           -ms-transform: rotate(315deg);
           -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
+          .transition();
 
           &:after {
             border-bottom-style: solid;
@@ -383,6 +381,10 @@ body {
         }
 
         &:hover {
+          .arrow{
+            left: 25px;
+          }
+
           .arrow::before {
             height: 30px;
           }
@@ -397,6 +399,16 @@ body {
           margin-left: auto;
           margin-right: 40px;
           transform: rotate(135deg);
+        }
+
+        &:hover {
+          .arrow{
+            left: 15px;
+          }
+
+          .arrow::before {
+            height: 30px;
+          }
         }
       }
 
