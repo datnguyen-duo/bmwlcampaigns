@@ -69,7 +69,7 @@
       gsap.to(animationTrigger, {
         scrollTrigger: {
           trigger: trigger,
-          start: "top 70%",
+          start: "top 60%",
           scroller: "#viewport",
 
           onEnter: function () {
@@ -93,8 +93,8 @@
 
         y: 500,
         opacity: 0,
-        duration: 0.4,
-        stagger: 0.01,
+        duration: 0.5,
+        stagger: 0.007,
         ease: "Power1.easeOut",
       });
     });
@@ -124,12 +124,14 @@
         scrollTrigger: {
           trigger: $(".home_hero"),
           start: "top top",
-          start: "bottom bottom",
           scrub: true,
           scroller: "#viewport",
         },
       })
-      .to($(".home_hero .cta_button, .home_hero h1"), { opacity: 0 });
+      .to($(".home_hero .cta_button, .home_hero h1"), {
+        yPercent: -20,
+        ease: "none",
+      });
 
     /*-----------------------------------------------------------------------------
         End of Home Hero Animation
@@ -138,13 +140,22 @@
     /*-----------------------------------------------------------------------------
         Footer Slide Up
         --------------------------------------------------------------------------------- */
-    ScrollTrigger.create({
-      trigger: "footer",
-      start: "top 50%",
-      scrub: true,
-      scroller: "#viewport",
+    // ScrollTrigger.create({
+    //   trigger: "footer",
+    //   start: "top 50%",
+    //   scrub: true,
+    //   scroller: "#viewport",
 
-      onEnter: () => $(".footer_content").addClass("active"),
+    //   onEnter: () => $(".footer_content").addClass("active"),
+    // });
+
+    gsap.to("footer", {
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 50%",
+        scroller: "#viewport",
+        onEnter: () => $(".footer_content").addClass("active"),
+      },
     });
 
     /*-----------------------------------------------------------------------------
@@ -264,7 +275,6 @@
           scrub: true,
           pin: true,
           pinSpacing: true,
-          start: "top top",
           end: "+=100%",
           scroller: "#viewport",
         },

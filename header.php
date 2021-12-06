@@ -27,6 +27,7 @@
 
 <body <?php body_class("loading"); ?>>
 <?php wp_body_open(); ?>
+<div id="viewport">
 <div id="page" class="site">
 
 <header class="<?php if (is_page_template('templates/template-about.php') || is_page_template('templates/template-portfolio.php')): ?>dark<?php endif; ?>">
@@ -63,4 +64,3 @@
 		</div>
 	</nav>
 </header>
-<div id="viewport">

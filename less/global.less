@@ -175,14 +175,14 @@ body {
 .big_text {
   font-family: @font1;
   color: @color2;
-  font-size: 28px;
+  font-size: 22px;
 
   @media @laptop-l {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   @media @desktop-m {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
@@ -237,7 +237,7 @@ body {
     display: flex;
     overflow: hidden;
     width: 9vw;
-    .transition();
+    transition: all 0.5s ease-in-out;
 
     &:nth-of-type(even) {
       .accordion_header {
@@ -538,7 +538,7 @@ body {
 .letter_wrap_scroll {
   .line {
     overflow: hidden;
-    line-height: 1em;
+    line-height: 0.9em;
 
     .word {
       display: inline-block;
