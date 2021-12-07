@@ -239,6 +239,7 @@ body {
     width: 9vw;
     transition: all 0.5s ease-in-out;
     position: relative;
+    border-right: 2px solid @color2;
 
     &:nth-of-type(even) {
       .accordion_header {
@@ -256,17 +257,17 @@ body {
       }
     }
 
-    &.animate{
-      .accordion_header{
-        span, p{
-          opacity: 1;
-        }
+    // &.animate{
+    //   .accordion_header{
+    //     span, p{
+    //       opacity: 1;
+    //     }
 
-        &:before{
-          height: 100%;
-        }
-      }
-    }
+    //     &:before{
+    //       height: 100%;
+    //     }
+    //   }
+    // }
 
     .accordion_header {
       display: flex;
@@ -280,6 +281,7 @@ body {
       width: 100px;
       position: relative;
       cursor: pointer;
+      
 
       &:before {
         content: "";
@@ -323,8 +325,7 @@ body {
         .text();
         position: relative;
         z-index: 1;
-        opacity: 0;
-        .transition();
+        
       }
 
       p {
@@ -333,8 +334,6 @@ body {
         white-space: nowrap;
         transform: rotate(-90deg);
         z-index: 1;
-        opacity: 0;
-        .transition();
       }
     }
 
@@ -461,20 +460,7 @@ body {
 
     &.active {
       width: 100%;
-      // border-right: 2px solid @color2;
-
-      &:after{
-        content: "";
-        position: absolute;
-        z-index: 0;
-        background-color: @color2;
-        z-index: 3;
-        right: 0;
-        top: 0;
-        width: 2px;
-        height: 100%;
-        .transition(all, 600ms);
-      }
+      border-right: 2px solid @color2;
 
       @media @desktop-s{
         &:after{

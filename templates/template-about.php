@@ -70,7 +70,7 @@ get_header(); ?>
             </div>
 
             <div class="accordions">
-                <div class="single_accordion">
+                <div class="single_accordion active">
                     <div class="accordion_header">
                         <span>/01</span>
                         <p>
@@ -79,6 +79,7 @@ get_header(); ?>
                     </div>
                     <div class="accordion_content">
                         <div class="content">
+
                             <div class="next_acordion">
                                 Next core value
                                 <div class="arrow"></div>
@@ -100,6 +101,10 @@ get_header(); ?>
                     </div>
                     <div class="accordion_content">
                         <div class="content">
+                            <div class="prev_acordion">
+                                <div class="arrow"></div>
+                                Previous core value
+                            </div>
                             <div class="next_acordion">
                                 Next core value
                                 <div class="arrow"></div>
@@ -121,6 +126,10 @@ get_header(); ?>
                     </div>
                     <div class="accordion_content">
                         <div class="content">
+                            <div class="prev_acordion">
+                                <div class="arrow"></div>
+                                Previous core value
+                            </div>
                             <div class="next_acordion">
                                 Next core value
                                 <div class="arrow"></div>
@@ -129,7 +138,7 @@ get_header(); ?>
                             
                             <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. Donec elementum, dui ut cursus egestas, orci orci ullamcorper est.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. Donec elementum, dui ut cursus egestas, orci orci ullamcorper est.
                             </p>
                         </div>
                     </div>
@@ -144,7 +153,6 @@ get_header(); ?>
                     <div class="accordion_content">
                         <div class="content">
                             <div class="prev_acordion">
-                                
                                 <div class="arrow"></div>
                                 Previous core value
                             </div>

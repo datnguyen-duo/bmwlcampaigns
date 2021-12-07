@@ -168,41 +168,41 @@
       $(this).addClass("active");
     });
 
-    gsap.to("single_accordion", {
-      scrollTrigger: {
-        trigger: ".accordions",
-        start: "top top",
-        scroller: "#viewport",
-        onEnter: () =>
-          setTimeout(function () {
-            $(".single_accordion").first().addClass("active");
-          }, 2000),
-      },
-    });
+    // gsap.to("single_accordion", {
+    //   scrollTrigger: {
+    //     trigger: ".accordions",
+    //     start: "top top",
+    //     scroller: "#viewport",
+    //     onEnter: () =>
+    //       setTimeout(function () {
+    //         $(".single_accordion").first().addClass("active");
+    //       }, 2000),
+    //   },
+    // });
 
-    let singleAccordionsAnimationTrigger = $(
-      ".accordions, .page-template-template-about .third_section_content"
-    );
-    let singleAccordion = $(".single_accordion");
-    singleAccordion.each(function () {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: singleAccordionsAnimationTrigger,
-            start: "top top",
-            scroller: "#viewport",
-          },
-        })
-        .set(
-          singleAccordion,
-          {
-            className: "single_accordion animate",
-            stagger: 0.2,
-            ease: "power2.inOut",
-          },
-          "+=1"
-        );
-    });
+    // let singleAccordionsAnimationTrigger = $(
+    //   ".accordions, .page-template-template-about .third_section_content"
+    // );
+    // let singleAccordion = $(".single_accordion");
+    // singleAccordion.each(function () {
+    //   gsap
+    //     .timeline({
+    //       scrollTrigger: {
+    //         trigger: singleAccordionsAnimationTrigger,
+    //         start: "top top",
+    //         scroller: "#viewport",
+    //       },
+    //     })
+    //     .set(
+    //       singleAccordion,
+    //       {
+    //         className: "single_accordion animate",
+    //         stagger: 0.2,
+    //         ease: "power2.inOut",
+    //       },
+    //       "+=1"
+    //     );
+    // });
 
     $(".next_acordion").on("click", function (e) {
       $(this).parent().parent().parent().removeClass("active");
