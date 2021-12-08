@@ -400,11 +400,12 @@
     .third_section_content {
       display: flex;
       flex-wrap: wrap;
-      padding-top: 7vw;
+      padding-top: 60px;
       padding-bottom: 50px;
       box-sizing: border-box;
 
       @media @tablet-s{
+        padding-top: 7vw;
         padding-top: 15vw;
         padding-bottom: 30vw;
       }
@@ -435,6 +436,19 @@
 
           img {
             .cropped_image();
+            &.desktop{
+              display: none;
+            }
+
+            @media @tablet-s{
+              &.mobile{
+                display: none;
+              }
+
+              &.desktop{
+                display: block;
+              }
+            }
           }
         }
       }

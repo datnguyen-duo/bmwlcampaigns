@@ -52,6 +52,7 @@ get_header(); ?>
             <div class="image_text_section">
                 <div class="left">
                     <div class="image_holder fadein_wrap fadeIn">
+                
                         <img src="<?php echo get_template_directory_uri(); ?>/images/home/third_section.png" alt="">
                     </div>
                 </div>
@@ -77,6 +78,7 @@ get_header(); ?>
 
         <div class="image_holder_top vscroll">
             <div class="image_holder fadein_wrap fadeIn">
+                
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth3.png" alt="">
             </div>
         </div>
@@ -85,7 +87,8 @@ get_header(); ?>
         <div class="third_section_content">
             <div class="left">
                 <div class="image_holder fadein_wrap fadeIn">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth1.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/mobile_image.png" alt="" class="mobile">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth1.png" alt="" class="desktop">
                 </div>
             </div>
 
