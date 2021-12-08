@@ -81,11 +81,6 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="image_holder_bottom">
-            <div class="image_holder fadein_wrap fadeIn">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth2.png" alt="">
-            </div>
-        </div>
 
         <div class="third_section_content">
             <div class="left">
@@ -106,6 +101,12 @@ get_header(); ?>
                         </span>
                     </a>
                 </div>
+            </div>
+        </div>
+
+        <div class="image_holder_bottom">
+            <div class="image_holder fadein_wrap fadeIn">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/home/fourth2.png" alt="">
             </div>
         </div>
         

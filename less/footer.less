@@ -1,18 +1,26 @@
 footer{
-    padding: 1.5vw;
     position: relative;
     z-index: 1;
     box-sizing: border-box;
 
+    @media @tablet-s{
+        padding: 1.5vw;
+    }
+
     .footer_content{
         background-color: @color4;
-        padding: 4vw 6vw;
-        padding-bottom: 1.5vw;
+        padding: 50px 30px;
+        padding-bottom: 10px;
         box-sizing: border-box;
         position: relative;
         top: 200px;
         opacity: 0;
         .transition(all, 600ms);
+
+        @media @tablet-s{
+            padding: 4vw 6vw;
+            padding-bottom: 1.5vw;
+        }
 
         &.active{
             opacity: 1;
@@ -20,20 +28,32 @@ footer{
         }
 
         span{
-            font-size: 16px;
+            font-size: 12px;
             font-family: @font1;
             color: @color2;
+
+            @media @tablet-s{
+                font-size: 16px;
+            }
         }
 
         .top_section{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: 7.5vw;
+            margin-bottom: 50px;
+
+            @media @tablet-s{
+                margin-bottom: 7.5vw;
+            }
 
             .left{
                 // width: 70%;
                 width: 100%;
-                max-width: 43vw;
+
+                @media @tablet-l{
+                    max-width: 43vw;
+                }
 
                 @media @desktop-s{
                     max-width: 36vw;
@@ -41,12 +61,20 @@ footer{
                 
 
                 span{
-                    margin-bottom: 5vw;
+                    margin-bottom: 20px;
                     display: inline-block;
+
+                    @media @tablet-s{
+                        margin-bottom: 5vw;
+                    }
                 }
 
                 .form_holder{
-                    margin-bottom: 7.2vw;
+                    margin-bottom: 35px;
+
+                    @media @tablet-s{
+                        margin-bottom: 7.2vw;
+                    }
 
                     form{
                         position: relative;
@@ -58,6 +86,11 @@ footer{
                             border-bottom: 2px solid @color2;
                             .big_text();
                             color: @color2;
+                            padding-bottom: 5px;
+
+                            @media @tablet-xl{
+                                padding: 0px;
+                            }
 
                             &:focus{
                                 outline: none;
@@ -74,10 +107,12 @@ footer{
                         .button_holder{
                             position: absolute;
                             right: 0px;
-                            top: 50%;
-                            transform: translateY(-50%);
+                            top: 0%;
 
-                            
+                            @media @tablet-s{
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
 
                             button{
                                 position: relative;
@@ -100,14 +135,19 @@ footer{
                                 left: 0px;
                                 margin-bottom: 5px;
                                 display: inline-block;
-                                height: 16px;
+                                height: 11px;
                                 position: relative;
-                                width: 16px;
+                                width: 11px;
                                 -moz-transform: rotate(315deg);
                                 -ms-transform: rotate(315deg);
                                 -webkit-transform: rotate(315deg);
                                 transform: rotate(315deg);
                                 .transition();
+
+                                @media @tablet-xl{
+                                    width: 16px;
+                                    height: 16px;
+                                }
                             
                                 &:after {
                                     border-bottom-style: solid;
@@ -116,18 +156,23 @@ footer{
                                     border-right-width: 2px;
                                     content: "";
                                     display: inline-block;
-                                    height: 16px;
+                                    height: 11px;
                                     left: 0;
                                     position: absolute;
                                     top: 0;
-                                    width: 16px;
+                                    width: 11px;
+
+                                    @media @tablet-xl{
+                                        width: 16px;
+                                        height: 16px;
+                                    }
                                 }
                             
                                 &:before {
                                     bottom: 1px;
                                     content: "";
                                     background-color: @color2;
-                                    height: 25px;
+                                    height: 16px;
                                     position: absolute;
                                     right: 0;
                                     transform-origin: bottom;
@@ -137,29 +182,35 @@ footer{
                                     -webkit-transform: rotate(-45deg);
                                     transform: rotate(-45deg);
                                     .transition();
-                                }
-                            }
 
-                            &:hover{
-                                .arrow{
-                                    left: 10px;
-                                    
-                                    &:before{
-                                        height: 35px;
+                                    @media @tablet-xl{
+                                        height: 25px;
                                     }
                                 }
                             }
+
+                            @media @tablet-xl{
+                                &:hover{
+                                    .arrow{
+                                        left: 10px;
+                                        
+                                        &:before{
+                                            height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                            
                         }
                     }
                 }
 
                 .social_wrap{
                     display: flex;
-                    
-
+                
                     a{
                         display: inline-block;
-                        margin-right: 1.2vw;
+                        margin-right: 10px;
                         padding: 0px 3.9vw;
                         height: 38px;
                         display: flex;
@@ -173,6 +224,16 @@ footer{
                         position: relative;
                         box-sizing: border-box;
                         .transition();
+                        width: 100%;
+
+                        &:last-child{
+                            margin: 0px;
+                        }
+
+                        @media @tablet-s{
+                            width: auto;
+                            margin-right: 1.2vw;
+                        }
 
                         @media @desktop-s{
                             height: 2vw;
@@ -213,12 +274,21 @@ footer{
             }
 
             .right{
-                max-width: 25.5vw;
                 width: 100%;
+                margin-top: 40px;
+
+                @media @tablet-l{
+                    margin-top: 0px;
+                    max-width: 25.5vw;
+                }
 
                 .right_content{
                   .single_item{
-                      margin-bottom: 3vw;
+                      margin-bottom: 20px;
+
+                      @media @tablet-s{
+                        margin-bottom: 3vw;
+                      }
 
                       &:last-child{
                           margin-bottom: 0px;
@@ -244,9 +314,14 @@ footer{
                 text-align: center;
 
                 li{
-                    margin-right: 3.5vw;
+                    margin-right: 20px;
+                    margin-bottom: 10px;
                     display: inline-block;
 
+                    @media @tablet-s{
+                        margin-right: 3.5vw;
+                        margin-bottom: 0px;
+                    }
 
                     &:last-child{
                         margin-right: 0px;
@@ -279,11 +354,16 @@ footer{
             }
             
             .copyright{
-                margin-top: 4.5vw;
-                font-size: 16px;
+                margin-top: 20px;
+                font-size: 12px;
                 font-family: @font1;
                 color: @color2;
                 text-align: center;
+
+                @media @tablet-s{
+                    margin-top: 4.5vw;
+                    font-size: 16px;
+                }
             }
         }
     }

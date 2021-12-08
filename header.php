@@ -37,9 +37,21 @@
 		<?php else: ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="">
 		<?php endif; ?>
-		</a>
+	</a>
 
-	<nav>
+	<div class="close_nav">
+		<span>
+			Close
+		</span>
+	</div>
+
+	<div class="nav_opener">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<nav class="desktop">
 		<ul>
 			<li>
 				<a href="/about">About</a>
@@ -63,4 +75,37 @@
 			</svg>
 		</div>
 	</nav>
+
+	<div class="mobile_nav">
+		<div class="nav_content">
+			<ul>
+				<li>
+					<a href="">About</a>
+				</li>
+				<li>
+					<a href="">Work</a>
+				</li>
+				<li>
+					<a href="">Services</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+			</ul>
+		</div>
+		<div class="form_holder">
+			<span>Sign Up For Email Updates</span>
+			<form action="">
+				<input type="email" placeholder="Enter your email">
+
+				<div class="button_holder">
+					
+					<button class="arrow">
+						
+					</button>
+					
+				</div>
+			</form>
+		</div>
+	</div>
 </header>

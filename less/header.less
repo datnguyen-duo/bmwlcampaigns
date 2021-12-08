@@ -1,5 +1,5 @@
 header{
-    height: 100px;
+    height: 70px;
     position: absolute;
     z-index: 999;
     top: 0;
@@ -7,25 +7,250 @@ header{
     width: 100%;
     opacity: 0;
 
+    @media @tablet-s{
+        height: 100px;
+    }
+
     .logo_holder{
         position: absolute;
-        left: 2vw;
+        left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        width: 9vw;
+        width: 80px;
+        z-index: 101;
+
+        @media @tablet-s{
+            left: 2vw;
+            width: 130px;
+        }
+
+        @media @tablet-l{
+            width: 9vw;
+        }
 
         img{
             width: 100%;
         }
     }
 
-    nav{
+    .close_nav{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        font-size: 12px;
+        color: @color1;
+        font-family: @font1;
+        z-index: 101;
+        width: 40px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .nav_opener{
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+
+        span{
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: @color1;
+            margin-bottom: 8px;
+        }
+    }
+
+    .mobile_nav{
+        position: fixed;
+        display: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #0491B5;
+        z-index: 100;
+
+        .form_holder{
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            padding: 0 30px;
+            box-sizing: border-box;
+
+            span{
+                display: block;
+                font-size: 12px;
+                font-family: @font1;
+                color: @color1;
+                margin-bottom: 20px;
+            }
+
+            form{
+                position: relative;
+
+                input[type=email]{
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid @color1;
+                    .big_text();
+                    color: @color1;
+                    padding-bottom: 5px;
+                    padding-left: 0px;
+
+                    &:focus{
+                        outline: none;
+                    }
+                    
+
+                    &::placeholder{
+                        .big_text();
+                        color: @color1;
+                        
+                    }
+                }
+
+                .button_holder{
+                    position: absolute;
+                    right: 0px;
+                    top: 0%;
+
+                    @media @tablet-s{
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    button{
+                        position: relative;
+                        width: auto;
+                        width: 25px;
+                        height: 22px;
+                        background-color: transparent;
+                        border: none;
+                        position: relative;
+                        left: 0;
+                        .transition();
+                        
+                        img{
+                            width: 100%;
+                        }
+                    }
+
+                    .arrow {
+                        // margin: 25px;
+                        left: 0px;
+                        margin-bottom: 5px;
+                        display: inline-block;
+                        height: 11px;
+                        position: relative;
+                        width: 11px;
+                        -moz-transform: rotate(315deg);
+                        -ms-transform: rotate(315deg);
+                        -webkit-transform: rotate(315deg);
+                        transform: rotate(315deg);
+                        .transition();
+
+                        @media @tablet-xl{
+                            width: 16px;
+                            height: 16px;
+                        }
+                    
+                        &:after {
+                            border-bottom-style: solid;
+                            border-bottom-width: 2px;
+                            border-right-style: solid;
+                            border-right-width: 2px;
+                            border-color: @color1;
+                            content: "";
+                            display: inline-block;
+                            height: 11px;
+                            left: 0;
+                            position: absolute;
+                            top: 0;
+                            width: 11px;
+
+                            @media @tablet-xl{
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    
+                        &:before {
+                            bottom: 1px;
+                            content: "";
+                            background-color: @color1;
+                            height: 16px;
+                            position: absolute;
+                            right: 0;
+                            transform-origin: bottom;
+                            width: 2px;
+                            -moz-transform: rotate(-45deg);
+                            -ms-transform: rotate(-45deg);
+                            -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                            .transition();
+
+                            @media @tablet-xl{
+                                height: 25px;
+                            }
+                        }
+                    }
+
+                    @media @tablet-xl{
+                        &:hover{
+                            .arrow{
+                                left: 10px;
+                                
+                                &:before{
+                                    height: 35px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .nav_content{
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+            ul{
+                li{
+                    text-align: center;
+                    margin-bottom: 5px;
+
+                    a{
+                        font-size: 80px;
+                        color: @color1;
+                        .font2R();
+                        line-height: 0.75em;    
+                    }
+                }
+            }
+        }
+    }
+
+    nav.desktop{
         position: absolute;
         right: 2vw;
         top: 50%;
         transform: translateY(-50%);
-        display: flex;
         align-items: center;
+        display: none;
+
+        @media @tablet-s{
+            display: flex;
+        }
 
         ul{
             li{

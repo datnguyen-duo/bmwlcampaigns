@@ -1,6 +1,21 @@
 (function ($) {
   //document ready
   $(document).ready(function () {
+    $('.nav_opener').on('click', function(){
+      $(this).fadeOut();
+      $('.mobile_nav').fadeIn();
+      $('.close_nav').fadeIn().css('display', 'flex');
+      $('header').css('position', 'fixed');
+    })
+
+    $('.close_nav').on('click', function(){
+      $(this).fadeOut();
+      $('header').css('position', 'absolute');
+      $('.nav_opener').fadeIn();
+      $('.close_nav').fadeOut();
+      $('.mobile_nav').fadeOut();
+      
+    })
     document.body.classList.remove("loading");
 
     var rows = document.querySelectorAll(".fourth_section .single_item");
@@ -69,10 +84,24 @@
       });
     });
 
-    var letterAnaimation = -10;
+    var letterAnaimation;
+
+    if($(window).width() > 765){
+      letterAnaimation = -10;
+      console.log('vece')
+    } else{
+      letterAnaimation = 0;
+      console.log('manje')
+    }
+
     gsap.utils.toArray(".letter_wrap").forEach((section) => {
       if (section.parentElement.className == "seventh_section_content") {
-        letterAnaimation = -30;
+        
+        if($(window).width() > 765){
+          letterAnaimation = -30;
+        } else{
+          letterAnaimation = 0;
+        }
       }
 
       gsap.from(section.querySelectorAll("div.char"), {
@@ -167,42 +196,6 @@
       $(".single_accordion").removeClass("active");
       $(this).addClass("active");
     });
-
-    // gsap.to("single_accordion", {
-    //   scrollTrigger: {
-    //     trigger: ".accordions",
-    //     start: "top top",
-    //     scroller: "#viewport",
-    //     onEnter: () =>
-    //       setTimeout(function () {
-    //         $(".single_accordion").first().addClass("active");
-    //       }, 2000),
-    //   },
-    // });
-
-    // let singleAccordionsAnimationTrigger = $(
-    //   ".accordions, .page-template-template-about .third_section_content"
-    // );
-    // let singleAccordion = $(".single_accordion");
-    // singleAccordion.each(function () {
-    //   gsap
-    //     .timeline({
-    //       scrollTrigger: {
-    //         trigger: singleAccordionsAnimationTrigger,
-    //         start: "top top",
-    //         scroller: "#viewport",
-    //       },
-    //     })
-    //     .set(
-    //       singleAccordion,
-    //       {
-    //         className: "single_accordion animate",
-    //         stagger: 0.2,
-    //         ease: "power2.inOut",
-    //       },
-    //       "+=1"
-    //     );
-    // });
 
     $(".next_acordion").on("click", function (e) {
       $(this).parent().parent().parent().removeClass("active");
