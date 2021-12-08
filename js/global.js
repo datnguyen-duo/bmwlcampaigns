@@ -43,11 +43,16 @@ var locoScroll;
   });
 
   window.addEventListener("load", function () {
-    smoothScroll();
+    if(window.screen.width > 1024){
+      smoothScroll();
+    }
+    
     $.getScript(site_data.theme_url + "/js/home.js", function () {});
     $.getScript(site_data.theme_url + "/js/about.js", function () {});
     $.getScript(site_data.theme_url + "/js/portfolio.js", function () {});
-    locoScroll.update();
+    if(window.screen.width > 1024){
+      locoScroll.update();
+    }
   });
 
   $(window).resize(function () {

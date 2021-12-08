@@ -1,6 +1,12 @@
 (function ($) {
   //document ready
   $(document).ready(function () {
+    if(window.screen.width > 1024){
+      var scroller = '#viewport';
+    } else{
+      var scroller = 'body';
+    }
+
     $('.nav_opener').on('click', function(){
       $(this).fadeOut();
       $('.mobile_nav').fadeIn();
@@ -43,7 +49,7 @@
         // start: "top 100%",
         // end: "bottom 50%",
         scrub: true,
-        scroller: "#viewport",
+        scroller: scroller,
       },
     });
 
@@ -55,7 +61,7 @@
         start: "top bottom",
         // end: "bottom 50%",
         scrub: true,
-        scroller: "#viewport",
+        scroller: scroller,
       },
     });
 
@@ -75,7 +81,7 @@
         scrollTrigger: {
           trigger: trigger,
           start: "top 60%",
-          scroller: "#viewport",
+          scroller: scroller,
 
           onEnter: function () {
             $(trigger).addClass("in_view");
@@ -107,7 +113,7 @@
       gsap.from(section.querySelectorAll("div.char"), {
         scrollTrigger: {
           trigger: section,
-          scroller: "#viewport",
+          scroller: scroller,
         },
 
         y: 500,
@@ -152,7 +158,7 @@
           trigger: $(".home_hero"),
           start: "top top",
           scrub: true,
-          scroller: "#viewport",
+          scroller: scroller,
         },
       })
       .to($(".home_hero .cta_button, .home_hero h1"), {
@@ -171,7 +177,7 @@
     //   trigger: "footer",
     //   start: "top 50%",
     //   scrub: true,
-    //   scroller: "#viewport",
+    //   scroller: scroller,
 
     //   onEnter: () => $(".footer_content").addClass("active"),
     // });
@@ -180,7 +186,7 @@
       scrollTrigger: {
         trigger: "footer",
         start: "top 50%",
-        scroller: "#viewport",
+        scroller: scroller,
         onEnter: () => $(".footer_content").addClass("active"),
       },
     });
@@ -224,7 +230,7 @@
           scrollTrigger: {
             trigger: servicesAnimationTrigger,
             start: "top bottom",
-            scroller: "#viewport",
+            scroller: scroller,
           },
         })
         .set(
@@ -252,7 +258,7 @@
         scrollTrigger: {
           trigger: accordionsAnimationTrigger,
           start: "top 70%",
-          scroller: "#viewport",
+          scroller: scroller,
         },
       })
       .set(
@@ -275,7 +281,7 @@
         scrollTrigger: {
           trigger: trigger,
           start: "top 70%",
-          scroller: "#viewport",
+          scroller: scroller,
         },
       })
       .to(trigger, { backgroundColor: "#1C2021" });
@@ -303,7 +309,7 @@
           pin: true,
           pinSpacing: true,
           end: "+=100%",
-          scroller: "#viewport",
+          scroller: scroller,
         },
       })
       .to(image_reveal, {

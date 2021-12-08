@@ -20,7 +20,7 @@
                 trigger: '.portfolio_paralax_holder',
                 start: 'top top',
                 scrub: true,
-                scroller: "#viewport"
+                scroller: scroller
             },
             y: () => heightDiff,
             ease: "none"
@@ -75,7 +75,7 @@
             scrollTrigger: {
                 trigger: section.parentElement,
                 scrub: true,
-                scroller: "#viewport",
+                scroller: "#scroller,
             },
             y: 0,
             ease: "none"
