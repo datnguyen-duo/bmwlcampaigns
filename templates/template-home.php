@@ -127,7 +127,7 @@ get_header(); ?>
                 <div class="single_item">
                     <div class="icon">
                         <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy.mp4#t=0.1" type="video/mp4">
                         </video>
                     </div>
                     <h3>
@@ -137,7 +137,7 @@ get_header(); ?>
                 <div class="single_item">
                     <div class="icon">
                         <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
                         </video>
                         
                     </div>
@@ -148,7 +148,7 @@ get_header(); ?>
                 <div class="single_item">
                     <div class="icon">
                         <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/fieldorganizing.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/fieldorganizing.mp4#t=0.1" type="video/mp4">
                         </video>
                     </div>
                     <h3>
@@ -158,7 +158,7 @@ get_header(); ?>
                 <div class="single_item">
                     <div class="icon">
                         <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/directemail.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/directemail.mp4#t=0.1" type="video/mp4">
                         </video>
                     </div>
                     <h3>
@@ -168,7 +168,7 @@ get_header(); ?>
                 <div class="single_item">
                     <div class="icon">
                         <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/vbe.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/vbe.mp4#t=0.1" type="video/mp4">
                         </video>
                     </div>
                     <h3>
@@ -178,7 +178,7 @@ get_header(); ?>
                 <div class="single_item">
                     <div class="icon">
                         <video class="thevideo" webkit-playsinline="true" playsinline="true" muted="muted">
-                            <source src="<?php echo get_template_directory_uri(); ?>/videos/tv.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/videos/tv.mp4#t=0.1" type="video/mp4">
                         </video>
                     </div>
                     <h3>
