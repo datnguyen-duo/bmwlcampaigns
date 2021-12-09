@@ -27,6 +27,135 @@
 
 <body <?php body_class("loading"); ?>>
 <?php wp_body_open(); ?>
+
+<div class="contact_popup_holder">
+	<div class="contact_popup">
+		<div class="close_contact_popup">
+			<span>Close</span>
+		</div>
+
+
+		<div class="content">
+			<div class="success_message_wrap">
+				<div class="success_message">
+					<h2>
+						Thank you, <span>Name</span>!
+					</h2>
+
+					<h3>
+						Your Message Has Been Sent.
+					</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. elementum, dui ut cursus egestas.
+					</p>
+
+					<a class="btn close_contact_popup_btn">
+						<span>
+						Go Back Home
+						</span>
+					</a>
+				</div>
+			</div>
+			<h2 class="letter_wrap_scroll form_headline">How can we help you?</h2>
+			<p>
+				BMWL is ready to talk with you about your campaign and the capabilities we offer to deliver a winning result.
+			</p>
+			<div class="form_holder">
+				<div class="form_header">
+					<div class="single_form active" data-formid="work">
+						<span>Work Inquries</span>
+					</div>
+					<div class="single_form" data-formid="meeting">
+						<span>Request a Meeting</span>
+					</div>
+				</div>
+				
+				<?php echo do_shortcode('[contact-form-7 id="17" title="Work" html_id="work" html_class="active"]'); ?>
+				<?php echo do_shortcode('[contact-form-7 id="16" title="Meeting" html_id="meeting"]'); ?>
+				
+			</div>
+		</div>
+		<div class="contact_footer">
+			<div class="contact_footer_content">
+				<div class="left">
+					<span>
+						Contact Us
+					</span>
+
+					<p>
+					312 Clay St, Suite 300 <br> Oakland, CA 94607
+					</p>
+					<a href="">
+						415.615.0311
+					</a>
+					<a href="">
+						info@whitehurstmosher.com
+					</a>
+				</div>
+				<div class="right">
+					<span>
+						Follow Us
+					</span>
+
+					<a href="">
+						<span>
+							Facebook
+						</span>
+					</a>
+					<a href="">
+						<span>
+							Instagram
+						</span>
+					</a>
+					<a href="">
+						<span>
+							Linkedin
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="single_team_popup">
+	<div class="single_team_popup_content">
+		<div class="close_team_popup">
+			<span>Close</span>
+		</div>
+		<div class="content">
+			<div class="team_header">
+				<h2 class="letter_wrap_scroll">John Whitehurst</h2>
+				<h3>Principal</h3>
+			</div>
+			<div class="team_description">
+				<div class="left">
+					<div class="image_holder">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/about/team.png" alt="">
+					</div>
+
+					<div class="team_info">
+						<div class="single_info">
+							<span>Contact</span>
+							<a>Email Address</a>
+						</div>
+						<div class="single_info">
+							<span>Follow</span>
+							<a>Social Media 1</a>
+							<a>Social Media 1</a>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<p>
+						John has directed more than 200 political campaigns over the last 25 years. He has one of the best win records in California, guiding candidates and ballot measures to victory throughout the state. <br><br> John has helped hospitals, schools, colleges and transportation systems secure billions of dollars in public finance measures at the ballot. He has managed successful independent expenditure campaigns for labor and business interests and led groundbreaking candidate campaigns. <br><br>John has helped candidates win at every level of government, including Santa Clara Supervisor Susan Ellenberg, Supervisor Catherine Stefanie, former San Francisco Mayor Willie L. Brown, Jr., former State Senate President Pro Tem Don Perata, San Francisco City Attorney Dennis Herrera, California Governor Jerry Brown and former State Senators Mark Leno and Noreen Evans. Prior to co-founding Whitehurst/Mosher, John started Whitehurst Campaigns and worked at Clinton Reilly Campaigns. His first professional political campaign was Gary Hart for President in 1984 where he learned to organize in Iowa, Pennsylvania and California. <br><br> John holds a Bachelors Degree in Political Science from American University. John loves all things Italian — from traveling to Italy to enjoying Italian food and wine. Currently, he is learning how to play the guitar.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div id="viewport">
 <div id="page" class="site">
 
@@ -63,7 +192,7 @@
 				<a href="">Services</a>
 			</li>
 		</ul>
-		<div class="btn white">
+		<div class="btn white contact_popup_opener">
 			<span>
 				Contact
 			</span>

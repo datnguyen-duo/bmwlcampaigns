@@ -1,6 +1,51 @@
 (function ($) { //document ready
+    $(document).ready(function () {
+        if(window.screen.width > 1024){
+            var scroller = '#viewport';
+        } else{
+            var scroller = 'body';
+        }
+
+        /*	-----------------------------------------------------------------------------
+        TEAM OPENER START
+        --------------------------------------------------------------------------------- */
+        var teamOpener = gsap.timeline({
+            paused: true,
+            reversed: true,
+            onComplete: function () {
+            console.log("complete");
+            },
+        });
     
-    /*	-----------------------------------------------------------------------------
+        let team_holder = $(".single_team_popup");
+        let team_content_holder = $(".single_team_popup_content");
+        let team_content = $(".single_team_popup_content .content, .close_team_popup");
+        
+        teamOpener.to(team_holder, {
+            visibility: "visible",
+            opacity: 1,
+            duration: 0.7,
+            ease: "power2.inOut",
+        });
+        teamOpener.to(team_content_holder, { width: '80%'});
+        teamOpener.to(team_content, { opacity: 1});
+        teamOpener.from(
+            $(".team_header h2 .char"),
+            { y: 500, duration: 1, stagger: 0.08, ease: Power1.easeOuteaseOut }, "<"
+          )
+    
+        $(".single_team").on("click", function () {
+            teamOpener.play()
+        });
+
+        $('.close_team_popup').on('click', function(){
+            teamOpener.reverse()
+        });
+        /*	-----------------------------------------------------------------------------
+          TEAM OPENER END
+          --------------------------------------------------------------------------------- */
+        
+        /*	-----------------------------------------------------------------------------
         About First Banner
         --------------------------------------------------------------------------------- */
         var first_banner = $(".about_first_banner .banner_section");
@@ -46,4 +91,5 @@
                 anticipatePin: 1
             }
         })
+    })
 }(jQuery));

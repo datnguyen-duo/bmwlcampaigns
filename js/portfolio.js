@@ -1,5 +1,11 @@
 (function ($) { //document ready
-     /*	-----------------------------------------------------------------------------
+    if(window.screen.width > 1024){
+        var scroller = '#viewport';
+    } else{
+        var scroller = 'body';
+    }
+
+    /*	-----------------------------------------------------------------------------
     Headline Movement
     --------------------------------------------------------------------------------- */
     var positionTop = 50;
@@ -75,7 +81,7 @@
             scrollTrigger: {
                 trigger: section.parentElement,
                 scrub: true,
-                scroller: "#scroller,
+                scroller: scroller,
             },
             y: 0,
             ease: "none"

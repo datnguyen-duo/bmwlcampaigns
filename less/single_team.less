@@ -1,0 +1,117 @@
+.single_team_popup{
+    position: fixed;
+    background-color: rgba(4, 145, 181, 0.9);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+
+    .single_team_popup_content{
+        width: 0%;
+        margin-left: auto;
+        background-color: @color1;
+        margin-top: 10%;
+        position: relative;
+        
+        .close_team_popup{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+            .transition();
+            z-index: 6;
+            opacity: 0;
+
+            &:hover{
+                opacity: 0.6;
+            }
+
+            span{
+                .text();
+            }
+        }
+
+        .content{
+            padding: 5vw 8vw;
+            box-sizing: border-box;
+            opacity: 0;
+
+            .team_header{
+                margin-bottom: 6vw;
+                position: relative;
+
+                h2{
+                    .medium_headline();
+                    margin-bottom: 20px;
+                }
+
+                h3{
+                    .big_text();
+                }
+            }
+
+            .team_description{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .left{
+                    width: 26%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .image_holder{
+                        position: relative;
+                        overflow: hidden;
+                        padding-top: 84%;
+
+                        img{
+                            .cropped_image();
+                        }
+                    }
+
+                    .team_info{
+                        .single_info{
+                            margin-bottom: 20px;
+
+                            span{
+                                font-size: 12px;
+                                font-family: @font1;
+                                color: @color4;
+                                margin-bottom: 5px;
+                                display: block;
+                    
+                                @media @tablet-s{
+                                    font-size: 16px;
+                                }
+                            }
+
+                            a{
+                                .text();
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .right{
+                    width: 74%;
+                    padding-left: 10vw;
+                    box-sizing: border-box;
+
+                    p{
+                        .text();
+                        max-width: 29vw;
+                        line-height: 1.4em;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,86 @@
     } else{
       var scroller = 'body';
     }
+    /*	-----------------------------------------------------------------------------
+    CONTACT OPENER START
+    --------------------------------------------------------------------------------- */
+      var contactOpener = gsap.timeline({
+          paused: true,
+          reversed: true,
+          onComplete: function () {
+          console.log("complete");
+          },
+      });
+  
+      let contact_holder = $(".contact_popup_holder");
+      let contact_content_holder = $(".contact_popup");
+      let contact_content = $(".contact_popup .content, .close_contact_popup");
+      
+      contactOpener.to(contact_holder, {
+          visibility: "visible",
+          opacity: 1,
+          duration: 0.7,
+          ease: "power2.inOut",
+      });
+      contactOpener.to(contact_content_holder, { width: '50%'});
+      contactOpener.to(contact_content, { opacity: 1});
+      contactOpener.from(
+          $(".contact_popup .form_headline .char"),
+          { y: 500, duration: 1, stagger: 0.08, ease: Power1.easeOuteaseOut }, "<"
+        )
+  
+      $(".single_team").on("click", function () {
+          contactOpener.play()
+      });
+
+      $('.close_team_popup').on('click', function(){
+          contactOpener.reverse()
+      });
+
+      $('#work').on('wpcf7mailsent.#work', function(e) {
+        $('.success_message_wrap').fadeIn();
+        $('.contact_popup_holder').addClass('green');
+        
+        var test = $(this).find('.first_name input').val();
+  
+        $('.success_message_wrap .success_message h2 span').text(test);
+      });
+  
+      $('#meeting').on('wpcf7mailsent.#work', function(e) {
+        $('.success_message_wrap').fadeIn();
+        $('.contact_popup_holder').addClass('green');
+        var test = $(this).find('.first_name input').val();
+  
+        $('.success_message_wrap .success_message h2 span').text(test);
+      });
+
+      $('.single_form').on('click', function(){
+        $('.single_form').removeClass('active');
+        $(this).addClass('active');
+        var currentForm = $(this).data('formid');
+  
+        $('.form_holder form').removeClass('active');
+  
+        $('form').each(function(){
+          if($(this).attr('id') == currentForm){
+            $(this).addClass('active');
+          }
+        })
+      })
+
+      $('.contact_popup_opener').on('click', function(){
+        contactOpener.play()
+      })
+  
+      $('.close_contact_popup, .close_contact_popup_btn').on('click', function(){
+        $('.success_message_wrap').fadeOut('fast');
+        contactOpener.reverse();
+        $('.contact_popup_holder').removeClass('green');
+      })
+    /*	-----------------------------------------------------------------------------
+      CONTACT OPENER END
+    --------------------------------------------------------------------------------- */
+    
 
     $('.nav_opener').on('click', function(){
       $(this).fadeOut();

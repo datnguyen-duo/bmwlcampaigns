@@ -1,0 +1,354 @@
+.contact_popup_holder{
+    position: fixed;
+    background-color: rgba(4, 145, 181, 0.9);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+
+    &.green{
+        background-color: rgba(125, 222, 146, 0.9);
+    }
+
+    .contact_popup{
+        width: 0%;
+        margin-left: auto;
+        background-color: @color1;
+        height: 100%;
+        position: relative;
+        overflow: auto;
+
+        .success_message_wrap{
+            z-index: 4;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: @color1;
+            display: none;
+
+            .success_message{
+                max-width: 30vw;
+                margin: auto;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                h2{
+                    .small_headline();
+                    margin-bottom: 6.5vw;
+                    text-align: center;
+                }
+
+                h3{
+                    .big_text();
+                    text-align: center;
+                    font-weight: normal;
+                    margin-bottom: 10px;
+                }
+
+                p{
+                    .text();
+                    margin-bottom: 4.5vw;
+                    margin-top: 0px;
+                    text-align: center;
+                }
+                
+            }
+        }
+
+        .close_contact_popup{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+            .transition();
+            z-index: 6;
+            opacity: 0;
+
+            &:hover{
+                opacity: 0.6;
+            }
+
+            span{
+                .text();
+            }
+        }
+
+        .content{
+            padding: 8vw 5vw;
+            box-sizing: border-box;
+            // max-width: 1060px;
+            position: relative;
+            margin: auto;
+            opacity: 0;
+
+            h2{
+                .small_headline();
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            p{
+                .text();
+                margin: auto;
+                margin-bottom: 4.5vw;
+                text-align: center;
+                max-width: 27vw;
+            }
+
+            .form_holder{
+                .form_header{
+                    display: flex;
+
+                    .single_form{
+                        width: 50%;
+                        border: 2px solid @color2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 15px 0;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                        .transition();
+
+                        &.active{
+                            background-color: #fff;
+                        }
+                        
+                        span{
+                            .text();
+                        }
+
+                        &:hover{
+                            background-color: #fff;
+                        }
+
+                        &:first-child{
+                            border-right: 0px;
+                        }
+
+                        &:active{
+                            background-color: #fff;
+                        }
+                    }
+                }
+
+                form{
+                    display: none;
+
+                    &.active{
+                        display: block;
+                    }
+
+                    .wpcf7-response-output{
+                        display: none;
+                    }
+
+                    .wpcf7-form-control-wrap{
+                        position: initial;
+                    }
+
+                    .wpcf7-not-valid-tip{
+                        position: absolute;
+                        bottom: 5px;
+                        left: 35px;
+                        font-size: 12px;
+                        font-family: @font1;
+                        display: block;
+            
+                        @media @tablet-s{
+                            font-size: 16px;
+                        }
+                    }
+
+                    .btn{
+                        width: 100%;
+                        margin-top: 20px;
+                        padding: 0;
+
+                        br, .wpcf7-spinner{
+                            display: none;
+                        }
+
+                        input[type='submit']{
+                            width: 100%;
+                            padding: 18px 75px;
+                            border: none;
+                            background-color: transparent;
+                            width: 100%;
+                            height: 100%;
+                            font-family: @font1;
+                            font-size: 14px;
+
+                            @media @tablet-s {
+                                font-size: 16px;
+                              }
+                        }
+                    }
+                    
+
+                    .input_holder{
+                        position: relative;
+
+                        input:not([type='submit']), textarea{
+                            z-index: 2;
+                            position: relative;
+                            .big_text();
+                            width: 100%;
+                            border: 2px solid @color2;
+                            box-sizing: border-box;
+                            padding: 25px 35px;
+                            border-top: none;
+                            background-color: transparent;
+
+                            &::placeholder{
+                                .big_text();   
+                            }
+                        }
+
+                        textarea{
+                            resize: none;
+                            min-height: 180px;
+                            max-height: 180px;
+                        }
+
+                        &:focus{
+                            outline: none;
+                        }
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            z-index: 0;
+                            right: 0;
+                            top: 0;
+                            background-color: @color4;
+                            width: 0%;
+                            height: 100%;
+                            clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
+                            .transition(all, 600ms);
+                        }
+                    
+                        &:focus-within {
+                            &:after {
+                                width: 100%;
+                                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact_footer{
+            padding: 5vw;
+            box-sizing: border-box;
+            border-top: 2px solid @color2;
+
+            .contact_footer_content{
+                display: flex;
+
+                justify-content: space-between;
+
+                span{
+                    font-size: 12px;
+                    font-family: @font1;
+                    color: @color2;
+                    margin-bottom: 20px;
+                    display: block;
+        
+                    @media @tablet-s{
+                        font-size: 16px;
+                    }
+                }
+
+                .left{
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+
+                    a, p{
+                        .text();
+                        text-align: left;
+                        color: @color2;
+                        margin-top: 0px;
+                    }
+
+                    p{
+                        margin-bottom: 20px;
+                        display: block;
+                        width: 100%;
+                    }
+
+                    a{
+                        text-decoration: underline;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .right{
+                    width: auto;
+
+                    a{
+                        border: 2px solid @color2;
+                        font-size: 12px;
+                        font-family: @font1;
+                        color: @color2;
+                        margin-bottom: 10px;
+                        display: block;
+                        min-width: 225px;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        position: relative;
+
+                        span{
+                            margin-bottom: 0px;
+                            z-index: 3;
+                            position: relative;
+                        }
+            
+                        @media @tablet-s{
+                            font-size: 16px;
+                        }
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            z-index: 0;
+                            right: 0;
+                            top: 0;
+                            width: 0%;
+                            height: 100%;
+                            background-color: @color2;
+                            clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
+                            .transition(all, 600ms);
+                        }
+                    
+                    
+                        &:hover{
+                            span{
+                                color: @color1;
+                            }
+                            &:after{
+                                width: 100%;
+                                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
