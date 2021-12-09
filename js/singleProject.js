@@ -20,7 +20,6 @@
             trigger: ".single_project_wrap .second_section",
             scrub: true,
             pin: true,
-            markers: true,
             pinSpacing: true,
             end: "+=100%",
             scroller: scroller,
