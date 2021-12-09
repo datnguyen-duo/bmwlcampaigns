@@ -29,18 +29,10 @@
       });
       contactOpener.to(contact_content_holder, { width: '50%'});
       contactOpener.to(contact_content, { opacity: 1});
-      contactOpener.from(
-          $(".contact_popup .form_headline .char"),
-          { y: 500, duration: 1, stagger: 0.08, ease: Power1.easeOuteaseOut }, "<"
-        )
-  
-      $(".single_team").on("click", function () {
-          contactOpener.play()
-      });
-
-      $('.close_team_popup').on('click', function(){
-          contactOpener.reverse()
-      });
+      // contactOpener.from(
+      //     $(".contact_popup .form_headline .char"),
+      //     { y: 500, duration: 1, stagger: 0.08, ease: Power1.easeOuteaseOut }, "<"
+      //   )
 
       $('#work').on('wpcf7mailsent.#work', function(e) {
         $('.success_message_wrap').fadeIn();

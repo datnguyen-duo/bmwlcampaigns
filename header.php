@@ -56,7 +56,7 @@
 					</a>
 				</div>
 			</div>
-			<h2 class="letter_wrap_scroll form_headline">How can we help you?</h2>
+			<h2 class="form_headline">How can we help you?</h2>
 			<p>
 				BMWL is ready to talk with you about your campaign and the capabilities we offer to deliver a winning result.
 			</p>
@@ -70,8 +70,8 @@
 					</div>
 				</div>
 				
-				<?php echo do_shortcode('[contact-form-7 id="17" title="Work" html_id="work" html_class="active"]'); ?>
-				<?php echo do_shortcode('[contact-form-7 id="16" title="Meeting" html_id="meeting"]'); ?>
+				<?php echo do_shortcode('[contact-form-7 id="12" title="Work" html_id="work" html_class="active"]'); ?>
+				<?php echo do_shortcode('[contact-form-7 id="11" title="Meeting" html_id="meeting"]'); ?>
 				
 			</div>
 		</div>
