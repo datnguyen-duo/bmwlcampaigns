@@ -366,17 +366,17 @@
         Image Reveal
         --------------------------------------------------------------------------------- */
     let image_reveal = $(
-      ".fifth_section_content .image_holder, .fifth_section_content .image_holder img"
+      ".home_wrap .fifth_section_content .image_holder, .home_wrap .fifth_section_content .image_holder img"
     );
     let textColor = $(".fifth_section_content p");
     let headlineReveal = $(
-      ".fifth_section_content .content .btn, .fifth_section_content p"
+      ".home_wrap .fifth_section_content .content .btn, .home_wrap .fifth_section_content p"
     );
 
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: ".fifth_section",
+          trigger: ".home_wrap .fifth_section",
           scrub: true,
           pin: true,
           pinSpacing: true,

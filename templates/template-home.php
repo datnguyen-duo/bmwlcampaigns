@@ -258,7 +258,7 @@ get_header(); ?>
                         <div class="content">
                             <div class="prev_acordion">
                                 <div class="arrow"></div>
-                                Previous core value
+                                Previous testimonial
                             </div>
                             <div class="next_acordion">
                                 Next testimonial
@@ -283,7 +283,7 @@ get_header(); ?>
                         <div class="content">
                             <div class="prev_acordion">
                                 <div class="arrow"></div>
-                                Previous core value
+                                Previous testimonial
                             </div>
                             <div class="next_acordion">
                                 Next testimonial

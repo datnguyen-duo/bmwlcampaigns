@@ -21,6 +21,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/Draggable.min.js"></script> 
+	
+	
 
 	<?php wp_head(); ?>
 </head>
@@ -33,7 +36,6 @@
 		<div class="close_contact_popup">
 			<span>Close</span>
 		</div>
-
 
 		<div class="content">
 			<div class="success_message_wrap">

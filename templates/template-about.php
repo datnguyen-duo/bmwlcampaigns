@@ -100,6 +100,10 @@ get_header(); ?>
                     </div>
                     <div class="accordion_content">
                         <div class="content">
+                            <div class="prev_acordion">
+                                <div class="arrow"></div>
+                                Previous core value
+                            </div>
                             <div class="next_acordion">
                                 Next core value
                                 <div class="arrow"></div>
@@ -121,6 +125,10 @@ get_header(); ?>
                     </div>
                     <div class="accordion_content">
                         <div class="content">
+                            <div class="prev_acordion">
+                                <div class="arrow"></div>
+                                Previous core value
+                            </div>
                             <div class="next_acordion">
                                 Next core value
                                 <div class="arrow"></div>
@@ -144,7 +152,6 @@ get_header(); ?>
                     <div class="accordion_content">
                         <div class="content">
                             <div class="prev_acordion">
-                                
                                 <div class="arrow"></div>
                                 Previous core value
                             </div>
@@ -171,7 +178,7 @@ get_header(); ?>
                     $i = 0;
                     $len = 8;
                 ?>
-                
+
                 <?php for ($x = 0; $x <= $len; $x++) {?>
                     <?php if ($x != $len) { ?>
                         <a class="single_team">

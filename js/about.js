@@ -75,21 +75,21 @@
         /*	-----------------------------------------------------------------------------
         End of About First Banner
         --------------------------------------------------------------------------------- */
-        let imageSlider = $('.image_slider')
-        gsap.to(imageSlider, {
-            xPercent: -75, 
-            x: () => innerWidth,
-            ease: "none",
-            scrollTrigger: {
-                scroller: scroller,
-                trigger: ".massiveImage",
-                start: "top top",
-                end: () => innerWidth * 3,
-                scrub: true,
-                pin: true,
-                invalidateOnRefresh: true,
-                anticipatePin: 1
-            }
-        })
+        // let imageSlider = $('.about_wrap .image_slider')
+        // gsap.to(imageSlider, {
+        //     xPercent: -75, 
+        //     x: () => innerWidth,
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         scroller: scroller,
+        //         trigger: ".massiveImage",
+        //         start: "top top",
+        //         end: () => innerWidth * 3,
+        //         scrub: true,
+        //         pin: true,
+        //         invalidateOnRefresh: true,
+        //         anticipatePin: 1
+        //     }
+        // })
     })
 }(jQuery));
