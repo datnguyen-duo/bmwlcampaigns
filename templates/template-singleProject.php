@@ -115,21 +115,33 @@ get_header(); ?>
     <div class="sixth_section">
         <div class="sixth_section_content">
             <div class="prev project_nav">
+                <h3>Project Name</h3>
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section2.png" alt="">
+                </div>
+                <div class="prev_project">
+                <div class="arrow"></div>
+                    Previous project
+                    
                 </div>
             </div>
 
             <div class="mid_info">
                 <h2>More work</h2>
                 <p>
-                    Or interested in working together? <a href="">Reach out.</a>
+                    Or interested in working together?
                 </p>
+                <a href="">Reach out.</a>
             </div>
 
             <div class="next project_nav">
+                <h3>Project Name</h3>
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section2.png" alt="">
+                </div>
+                <div class="next_project">
+                    Next project
+                    <div class="arrow"></div>
                 </div>
             </div>
         </div>

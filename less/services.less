@@ -1,0 +1,124 @@
+.services_wrap{
+
+    .service_hero{
+        background-color: @color2;
+        height: 100vh;
+        overflow: hidden;
+        
+        position: relative;
+    
+        h1{
+            .big_headline();
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+    
+        .image_slider{
+            display: flex;
+            overflow: auto;
+            flex-direction: column;
+            align-items: center;
+    
+            .image_holder{
+                position: relative;
+                overflow: hidden;
+                padding-top: 40%;
+                width: 60vw;
+                margin-bottom: 40px;
+                transform: skewY(-5deg);
+    
+                img{
+                    .cropped_image();
+                    top: -10%;
+                    width: 120%;
+                    height: 120%;
+                    transform: skewY(5deg);
+                    margin: 0 -10%;
+                }
+            }
+        }
+    }
+
+    .second_section{
+        background-color: @color2;
+        border-top: 2px solid @color2;
+        padding: 9vw 0;
+        box-sizing: border-box;
+
+        .description{
+            margin: auto;
+            margin-top: 5vw;
+            max-width: 42.5vw;
+            text-align: center;
+
+            p{
+                .text();
+                color: @color1;
+                margin-bottom: 40px;
+            }
+        }
+        
+        .second_section_content{
+            
+            display: flex;
+            position: relative;
+
+            &:after{
+                content: '';
+                height: 50%;
+                left: 50%;
+                top: 80%;
+                background-color: @color1;
+                width: 2px;
+                transform: translate(-50%, -50%);
+                position: absolute;
+            }
+
+            .middle_info{
+                position: absolute;
+                left: 50%;
+                top: 45%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+
+                p{
+                    text-align: center;
+                    .big_text();
+                    color: @color1;
+                }
+
+            }
+
+            .left, .right{
+                width: 50%;
+                box-sizing: border-box;
+
+                .image_holder{
+                    padding-top: 65%;
+                    position: relative;
+                    overflow: hidden;
+                    max-width: 27vw;
+                    margin: auto;
+
+                    img{
+                        .cropped_image();
+                    }
+                }
+
+                h2{
+                    .medium_headline();
+                    position: relative;
+                    color: @color1;
+                    text-align: center;
+                    top: -5vw;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }   
+}

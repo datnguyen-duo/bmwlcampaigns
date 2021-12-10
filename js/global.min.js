@@ -45,8 +45,10 @@ var locoScroll;
   window.addEventListener("load", function () {
     $.getScript(site_data.theme_url + "/js/singleProject.js", function () {});
     $.getScript(site_data.theme_url + "/js/home.js", function () {});
+    $.getScript(site_data.theme_url + "/js/services.js", function () {});
     $.getScript(site_data.theme_url + "/js/about.js", function () {});
     $.getScript(site_data.theme_url + "/js/portfolio.js", function () {});
+    
     if(window.screen.width > 1024){
       smoothScroll();
     }
