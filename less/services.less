@@ -46,7 +46,7 @@
 
     .second_section{
         background-color: @color2;
-        border-top: 2px solid @color2;
+        border-top: 2px solid @color1;
         padding: 9vw 0;
         box-sizing: border-box;
 
@@ -64,7 +64,6 @@
         }
         
         .second_section_content{
-            
             display: flex;
             position: relative;
 
@@ -104,9 +103,22 @@
                     overflow: hidden;
                     max-width: 27vw;
                     margin: auto;
+                    opacity: 0.3;
+                    .transition();
 
                     img{
                         .cropped_image();
+                        transform: scale(1);
+                        .transition();
+                    }
+                }
+
+                &:hover{
+                    .image_holder{
+                        opacity: 1;
+                        img{
+                            transform: scale(1.03)
+                        }
                     }
                 }
 
@@ -120,5 +132,45 @@
                 }
             }
         }
-    }   
+    }
+
+    .third_section{
+        margin-bottom: 500vh;
+        .third_section_conetnt{
+            .service_accordions{
+                .single_accordion{
+                    border-top: 2px solid @color2;
+
+                    .accordion_headline{
+                        padding: 10px 50px;
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .counter, p{
+                            .text();
+                        }
+                    }
+
+                    .accordion_contenet{
+                        height: 0%;
+                        // display: none;
+                        overflow: hidden;
+
+                        h2{
+                            .big_headline();
+                            text-align: center;
+                            color: @color2;
+                        }
+                    }
+
+                    &.active{
+                        .accordion_contenet{
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

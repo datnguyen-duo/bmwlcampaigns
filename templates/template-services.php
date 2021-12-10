@@ -58,6 +58,72 @@ get_header(); ?>
             
         </div>
     </div>
+    <div class="banner services_first_banner">
+        <div class="banner_section">
+            <p>The Right Mix Of Experience And Passion</p>                
+        </div>
+    </div>
+
+    <div class="third_section">
+        <div class="third_section_conetnt">
+            <div class="service_accordions">
+                <div class="single_accordion" role="region">
+                    <div class="accordion_headline">
+                        <div class="conter">01</div>
+                        <p>
+                            Strategy
+                        </p>
+                    </div>
+                    <div class="accordion_contenet">
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                    </div>
+                </div>
+                <div class="single_accordion" role="region">
+                    <div class="accordion_headline">
+                        <div class="conter">02</div>
+                        <p>
+                            Digital
+                        </p>
+                    </div>
+                    <div class="accordion_contenet">
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                    </div>
+                </div>
+                <div class="single_accordion" role="region">
+                    <div class="accordion_headline">
+                        <div class="conter">03</div>
+                        <p>
+                            Media
+                        </p>
+                    </div>
+                    <div class="accordion_contenet">
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                        <h2>TEST</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php
