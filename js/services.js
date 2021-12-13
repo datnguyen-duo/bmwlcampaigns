@@ -13,7 +13,6 @@
             scrub: 0.3,
             start: "top top",
             end:'+=1000', // try diff options here
-            markers: true,
             pin: true
           }
         })

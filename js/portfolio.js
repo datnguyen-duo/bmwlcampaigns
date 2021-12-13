@@ -26,8 +26,7 @@
                 trigger: '.portfolio_paralax_holder',
                 start: 'top top',
                 scrub: true,
-                scroller: scroller,
-                markers: true
+                scroller: scroller
             },
             y: () => heightDiff,
             ease: "none"
