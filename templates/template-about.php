@@ -6,7 +6,7 @@ get_header(); ?>
     <div class="first_section">
         <div class="first_section_content">
             <div class="left">
-                <div class="image_holder">
+                <div class="image_holder fadein_wrap fadeIn">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/first.png" alt="">
                 </div>
             </div>
@@ -43,6 +43,7 @@ get_header(); ?>
                     Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. <br> Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
                 </p>
             </div>
+            
             <div class="image_slider">
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider1.png" alt="">
@@ -54,6 +55,7 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider2.png" alt="">
                 </div>
             </div>
+            
         </div>
     </div>
 
@@ -183,7 +185,7 @@ get_header(); ?>
                     <?php if ($x != $len) { ?>
                         <a class="single_team">
                             <div class="single_team_content">
-                                <div class="image_holder">
+                                <div class="image_holder fadein_wrap fadeIn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
                                 </div>
 
@@ -214,7 +216,7 @@ get_header(); ?>
 
                             <a class="single_team">
                                 <div class="single_team_content">
-                                    <div class="image_holder">
+                                    <div class="image_holder  fadein_wrap fadeIn">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
                                     </div>
 

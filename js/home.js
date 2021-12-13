@@ -6,6 +6,22 @@
     } else {
       var scroller = "body";
     }
+
+    
+  // setTimeout(function(){
+  //     Draggable.create(".single_project_wrap .slider .image_slider", {
+  //       type: "x",
+  //       edgeResistance: 0.5,
+  //       snap: (val) => Math.round(val / 100) * 100,
+  //       inertia: true,
+  //       allowContextMenu : true,	
+  //       onThrowComplete	: function() { console.log(this.x) },
+  //       bounds: {
+  //         minX: -document.querySelector(".single_project_wrap .image_slider").offsetWidth + document.querySelector(".single_project_wrap .slider").offsetWidth,
+  //         maxX: 0
+  //       }
+  //     });
+  // }, 1000)
     /*	-----------------------------------------------------------------------------
     CONTACT OPENER START
     --------------------------------------------------------------------------------- */

@@ -97,7 +97,7 @@ get_header(); ?>
                     Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
                 </p>
             </div>
-            
+            <div class="slider">
             <div class="image_slider">
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider1.png" alt="">
@@ -108,6 +108,7 @@ get_header(); ?>
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider2.png" alt="">
                 </div>
+            </div>
             </div>
         </div>
     </div>

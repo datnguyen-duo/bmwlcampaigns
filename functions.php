@@ -85,10 +85,11 @@ add_action( 'after_setup_theme', 'bmwl_setup' );
 function bmwl_scripts() {
 	wp_enqueue_style( 'bmwl-style', get_stylesheet_uri(), array(), '1.0' );
 	wp_style_add_data( 'bmwl-style', 'rtl', 'replace' );
-
+	
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
 	wp_enqueue_script('loco-scroll', 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js', true);
 	wp_enqueue_script('split-text', get_template_directory_uri() . '/js/SplitText.min.js', true);
+	wp_enqueue_script('inertia', get_template_directory_uri() . '/js/InertiaPlugin.min.js', true);
 	wp_enqueue_script( 'global', get_template_directory_uri() . '/js/global.min.js', array(), '1.0', true );
 
 	wp_localize_script('global','site_data',array(

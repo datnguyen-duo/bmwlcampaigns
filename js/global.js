@@ -5,6 +5,7 @@ var locoScroll;
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(ScrollToPlugin);
+  gsap.registerPlugin(Draggable);
 
   function smoothScroll() {
     locoScroll = new LocomotiveScroll({
