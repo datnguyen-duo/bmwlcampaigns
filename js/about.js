@@ -31,7 +31,7 @@
         teamOpener.to(team_content, { opacity: 1});
         teamOpener.from(
             $(".team_header h2 .char"),
-            { y: 500, duration: 1, stagger: 0.08, ease: Power1.easeOuteaseOut }, "<"
+            { y: 500, duration: 1, stagger: 0.01, ease: Power1.easeOuteaseOut }, "<"
           )
     
         $(".single_team").on("click", function () {

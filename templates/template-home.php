@@ -236,7 +236,7 @@ get_header(); ?>
                     <div class="accordion_content">
                         <div class="content">
                             <div class="next_acordion">
-                                Next testimonial
+                                Next
                                 <div class="arrow"></div>
                             </div>
                             <span>Occupation Year</span>
@@ -258,10 +258,10 @@ get_header(); ?>
                         <div class="content">
                             <div class="prev_acordion">
                                 <div class="arrow"></div>
-                                Previous testimonial
+                                Previous
                             </div>
                             <div class="next_acordion">
-                                Next testimonial
+                                Next
                                 <div class="arrow"></div>
                             </div>
                             <span>Occupation Year</span>
@@ -283,10 +283,10 @@ get_header(); ?>
                         <div class="content">
                             <div class="prev_acordion">
                                 <div class="arrow"></div>
-                                Previous testimonial
+                                Previous
                             </div>
                             <div class="next_acordion">
-                                Next testimonial
+                                Next
                                 <div class="arrow"></div>
                             </div>
                             <span>Occupation Year</span>
@@ -310,7 +310,7 @@ get_header(); ?>
                             <div class="prev_acordion">
                                 
                                 <div class="arrow"></div>
-                                Previous testimonial
+                                Previous
                             </div>
                             <span>Occupation Year</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/images/quotes.svg" alt="">

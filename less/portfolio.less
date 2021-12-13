@@ -1,13 +1,16 @@
 .portfolio_wrap{
     .portfolio_header{
         padding-top: 10vw;
+
         h1{
-            .big_headline();
+            .main_headline();
             text-align: center;
             color: @color2;
+            position: relative;
+            top: 2vw;
             
             .line{
-                line-height: .65em;
+                line-height: .75em;
             }
             
         }
@@ -57,6 +60,10 @@
                 .small_headline();
                 position: relative;
                 z-index: 2;
+
+                .line{
+                    line-height: 1em;
+                }
             }
 
             p{
@@ -68,21 +75,52 @@
             }
         }
     }
+
     .section_parallax{
         position: relative;
         width: 100%;
         height: 100vh;
         overflow: hidden;
 
-        h2{
+        
+        .project_info{
             position: absolute;
             left: 50%;
             transform: translate(-50%, -50%);
-            .big_headline();
-            width: 100%;
-            text-align: center;
             z-index: 2;
-            color: @color1;
+            width: 100%;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+
+            .category{
+                position: relative;
+                transform: rotate(-90deg);
+                left: 13vw;
+                .big_text();
+                color: @color1;
+            }
+
+            .counter{
+                position: relative;
+                transform: rotate(90deg);
+                right: 14vw;
+
+                .curent, .total, span{
+                    .big_text();
+                    color: @color1;
+                    display: inline-block;
+                    
+                }
+
+            }
+
+            h2{
+                .big_headline();
+                text-align: center;
+                color: @color1;
+                max-width:  50vw;
+            }
         }
 
         .image_holder {

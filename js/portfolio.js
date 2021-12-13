@@ -9,14 +9,14 @@
     Headline Movement
     --------------------------------------------------------------------------------- */
     var positionTop = 50;
-    $(".section_parallax h2").each(function(index) { 
+    $(".section_parallax .project_info").each(function(index) { 
         console.log(index);
         $(this).css({ top: positionTop + '%' });
 
         positionTop -= 100;
     });
 
-    gsap.utils.toArray(".section_parallax h2").forEach((section, i) => {
+    gsap.utils.toArray(".section_parallax .project_info").forEach((section, i) => {
 
         const heightDiff = section.parentElement.parentElement.clientHeight;
         
@@ -26,7 +26,8 @@
                 trigger: '.portfolio_paralax_holder',
                 start: 'top top',
                 scrub: true,
-                scroller: scroller
+                scroller: scroller,
+                markers: true
             },
             y: () => heightDiff,
             ease: "none"

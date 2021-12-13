@@ -17,27 +17,74 @@ get_header(); ?>
             </p>
         </div>
     </div>
+    
     <div class="portfolio_paralax_holder">
+        
         <div class="section_parallax">
-            <h2>Project 1</h2>
+            
+            <div class="project_info">
+                <div class="category">
+                    Category
+                </div>
+                <h2>Project Name 1</h2>
+                <div class="counter">
+                    <div class="curent">01</div>
+                    <span>/</span>
+                    <div class="total">04</div>
+                </div>
+            </div>
+
+            
+
             <div class="image_holder" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio1.png');">
                 <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt=""> -->
             </div>
         </div>
         <div class="section_parallax">
-            <h2>Project 2</h2>
+            <div class="project_info">
+                <div class="category">
+                    Category
+                </div>
+                <h2>Project Name 2</h2>
+                <div class="counter">
+                    <div class="curent">02</div>
+                    <span>/</span>
+                    <div class="total">04</div>
+                </div>
+            </div>
             <div class="image_holder" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio2.png');">
                 <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/home/second_section.png" alt=""> -->
             </div>
         </div>
         <div class="section_parallax">
-            <h2>Project 3</h2>
+            <div class="project_info">
+                <div class="category">
+                    Category
+                </div>
+                <h2>Project Name 3</h2>
+                <div class="counter">
+                    <div class="curent">03</div>
+                    <span>/</span>
+                    <div class="total">04</div>
+                </div>
+            </div>
             <div class="image_holder" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio3.png');">
                 <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/home/second_section.png" alt=""> -->
             </div>
         </div>
         <div class="section_parallax">
-            <h2>Project 4</h2>
+            <div class="project_info">
+                <div class="category">
+                    Category
+                </div>
+
+                <h2>Project Name 4</h2>
+                <div class="counter">
+                    <div class="curent">04</div>
+                    <span>/</span>
+                    <div class="total">04</div>
+                </div>
+            </div>
             <div class="image_holder" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/portfolio/portfolio4.png');">
                 <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/home/second_section.png" alt=""> -->
             </div>

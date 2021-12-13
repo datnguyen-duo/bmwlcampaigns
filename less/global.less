@@ -453,6 +453,11 @@ body {
           .transition();
 
           @media @tablet-xl{
+            width: 12px;
+            height: 12px;
+          }
+
+          @media @desktop-s{
             width: 16px;
             height: 16px;
           }
@@ -471,18 +476,25 @@ body {
             width: 11px;
 
             @media @tablet-xl{
+              width: 12px;
+              height: 12px;
+            }
+  
+            @media @desktop-s{
               width: 16px;
               height: 16px;
             }
+
+            
           }
 
           &:before {
-            bottom: 1px;
+            bottom: 0px;
             content: "";
             background-color: @color2;
             height: 16px;
             position: absolute;
-            right: 0;
+            right: -1px;
             transform-origin: bottom;
             width: 2px;
             -moz-transform: rotate(-45deg);
@@ -492,12 +504,28 @@ body {
             .transition();
 
             @media @tablet-xl{
+              height: 22px;
+            }
+
+            @media @desktop-s{
               height: 25px;
             }
           }
         }
 
         @media @tablet-xl{
+          &:hover {
+            .arrow{
+              left: 22px;
+            }
+  
+            .arrow::before {
+              height: 27px;
+            }
+          }
+        }
+
+        @media @desktop-s{
           &:hover {
             .arrow{
               left: 25px;
@@ -525,6 +553,18 @@ body {
         }
 
         @media @tablet-xl{
+          &:hover {
+            .arrow{
+              left: 12px;
+            }
+  
+            .arrow::before {
+              height: 27px;
+            }
+          }
+        }
+
+        @media @desktop-s{
           &:hover {
             .arrow{
               left: 15px;
@@ -576,6 +616,10 @@ body {
       }
 
       .accordion_header {
+        @media @tablet-xl{
+          border-right: 2px solid @color2;
+        }
+
         &:after {
           width: 100%;
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);

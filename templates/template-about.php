@@ -80,7 +80,7 @@ get_header(); ?>
                     <div class="accordion_content">
                         <div class="content">
                             <div class="next_acordion">
-                                Next core value
+                                Next
                                 <div class="arrow"></div>
                             </div>
                             
@@ -102,10 +102,10 @@ get_header(); ?>
                         <div class="content">
                             <div class="prev_acordion">
                                 <div class="arrow"></div>
-                                Previous core value
+                                Previous
                             </div>
                             <div class="next_acordion">
-                                Next core value
+                                Next
                                 <div class="arrow"></div>
                             </div>
                             
@@ -127,10 +127,10 @@ get_header(); ?>
                         <div class="content">
                             <div class="prev_acordion">
                                 <div class="arrow"></div>
-                                Previous core value
+                                Previous
                             </div>
                             <div class="next_acordion">
-                                Next core value
+                                Next
                                 <div class="arrow"></div>
                             </div>
                             
@@ -153,7 +153,7 @@ get_header(); ?>
                         <div class="content">
                             <div class="prev_acordion">
                                 <div class="arrow"></div>
-                                Previous core value
+                                Previous
                             </div>
                             
                             <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
@@ -184,7 +184,7 @@ get_header(); ?>
                         <a class="single_team">
                             <div class="single_team_content">
                                 <div class="image_holder">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/team.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
                                 </div>
 
                                 <div class="team_info">
@@ -215,7 +215,7 @@ get_header(); ?>
                             <a class="single_team">
                                 <div class="single_team_content">
                                     <div class="image_holder">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/team.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
                                     </div>
 
                                     <div class="team_info">
