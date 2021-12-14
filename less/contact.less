@@ -32,13 +32,19 @@
             display: none;
 
             .success_message{
-                max-width: 30vw;
+                padding: 0 40px;
+                box-sizing: border-box;
                 margin: auto;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+
+                @media @tablet-xl{
+                    padding: 0px;
+                    max-width: 30vw;
+                }
 
                 h2{
                     .small_headline();
@@ -82,25 +88,48 @@
         }
 
         .content{
-            padding: 8vw 5vw;
+            padding: 80px 15px;
             box-sizing: border-box;
             // max-width: 1060px;
             position: relative;
             margin: auto;
             opacity: 0;
 
+            @media @tablet-s{
+                padding: 80px 35px;
+            }
+
+            @media @tablet-l{
+                padding: 8vw 5vw;
+            }
+
             h2{
                 .small_headline();
-                margin-bottom: 40px;
+                margin-bottom: 20px;
                 text-align: center;
+
+                @media @tablet-s{
+                    margin-bottom: 40px;
+                }
             }
 
             p{
                 .text();
                 margin: auto;
-                margin-bottom: 4.5vw;
+                margin-bottom: 40px;
                 text-align: center;
-                max-width: 27vw;
+                max-width: 450px;
+                padding: 0 15px;
+                box-sizing: border-box;
+
+                @media @tablet-s{
+                    padding: 0px;
+                    margin-bottom: 4.5vw;
+                }
+
+                @media @tablet-l{
+                    max-width: 27vw;
+                }
             }
 
             .form_holder{
@@ -204,12 +233,16 @@
                             width: 100%;
                             border: 2px solid @color2;
                             box-sizing: border-box;
-                            padding: 25px 35px;
+                            padding: 15px;
                             border-top: none;
                             background-color: transparent;
 
                             &::placeholder{
                                 .big_text();   
+                            }
+
+                            @media @tablet-s{
+                                padding: 25px 35px;
                             }
                         }
 
@@ -248,13 +281,17 @@
         }
 
         .contact_footer{
-            padding: 5vw;
+            padding: 50px 15px;
             box-sizing: border-box;
             border-top: 2px solid @color2;
 
+            @media @tablet-s{
+                padding: 5vw;
+            }
+
             .contact_footer_content{
                 display: flex;
-
+                flex-wrap: wrap;
                 justify-content: space-between;
 
                 span{
@@ -263,22 +300,36 @@
                     color: @color2;
                     margin-bottom: 20px;
                     display: block;
+                    text-align: center;
         
                     @media @tablet-s{
+                        text-align: left;
                         font-size: 16px;
                     }
                 }
 
                 .left{
-                    width: auto;
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
+                    text-align: center;
+                    margin-bottom: 40px;
+
+                    @media @tablet-s{
+                        width: auto;
+                        text-align: left;
+                        margin-bottom: 0px;
+                    }
 
                     a, p{
                         .text();
-                        text-align: left;
                         color: @color2;
                         margin-top: 0px;
+                        text-align: center;
+                        
+                        @media @tablet-s{
+                            text-align: left;
+                        }
                     }
 
                     p{
@@ -294,33 +345,53 @@
                 }
 
                 .right{
-                    width: auto;
+                    width: 100%;
+
+                    @media @tablet-s{
+                        width: auto;
+                    }
+
+                    .right_content{
+                        display: flex;
+
+                        @media @tablet-s{
+                            display: block;
+                        }
+                    }
 
                     a{
                         border: 2px solid @color2;
                         font-size: 12px;
                         font-family: @font1;
                         color: @color2;
-                        margin-bottom: 10px;
                         display: block;
-                        min-width: 225px;
                         padding: 10px;
                         box-sizing: border-box;
                         text-align: center;
                         position: relative;
+                        margin-right: 10px;
+                        flex: 1;
+
+                        &:last-child{
+                            margin-right: 0;
+                        }
 
                         span{
                             margin-bottom: 0px;
                             z-index: 3;
                             position: relative;
+                            text-align: center;
                         }
             
                         @media @tablet-s{
                             font-size: 16px;
-                        }
+                            min-width: 225px;
+                            margin-right: 0;
+                            margin-bottom: 10px;
 
-                        &:last-child{
-                            margin-bottom: 0;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
                         }
 
                         &:after{

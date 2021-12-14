@@ -97,22 +97,24 @@
 					<span>
 						Follow Us
 					</span>
+					<div class="right_content">
+						<a href="">
+							<span>
+								Facebook
+							</span>
+						</a>
+						<a href="">
+							<span>
+								Instagram
+							</span>
+						</a>
+						<a href="">
+							<span>
+								Linkedin
+							</span>
+						</a>
+					</div>
 
-					<a href="">
-						<span>
-							Facebook
-						</span>
-					</a>
-					<a href="">
-						<span>
-							Instagram
-						</span>
-					</a>
-					<a href="">
-						<span>
-							Linkedin
-						</span>
-					</a>
 				</div>
 			</div>
 		</div>

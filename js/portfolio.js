@@ -53,15 +53,15 @@
             marquee.find("> *:first-of-type").clone().appendTo(marquee);
         }
 
-        gsap.to(marquee, {
-            duration: 15,
-            ease: "none",
-            x: "-=" + w,
-            modifiers: {
-            x: gsap.utils.unitize((x) => parseFloat(x) % w),
-            },
-            repeat: -1,
-        });
+        // gsap.to(marquee, {
+        //     duration: 15,
+        //     ease: "none",
+        //     x: "-=" + w,
+        //     modifiers: {
+        //     x: gsap.utils.unitize((x) => parseFloat(x) % w),
+        //     },
+        //     repeat: -1,
+        // });
 
     });
     /*	-----------------------------------------------------------------------------

@@ -33,6 +33,14 @@
       },
     });
 
+    if (window.screen.width > 1024) {
+      var contactFormWidth = "50%";
+    } else if(window.screen.width > 768) {
+      var contactFormWidth = "70%";
+    } else {
+      var contactFormWidth = "100%";
+    }
+
     let contact_holder = $(".contact_popup_holder");
     let contact_content_holder = $(".contact_popup");
     let contact_content = $(".contact_popup .content, .close_contact_popup");
@@ -43,7 +51,7 @@
       duration: 0.7,
       ease: "power2.inOut",
     });
-    contactOpener.to(contact_content_holder, { width: "50%" });
+    contactOpener.to(contact_content_holder, { width: contactFormWidth });
     contactOpener.to(contact_content, { opacity: 1 });
     // contactOpener.from(
     //     $(".contact_popup .form_headline .char"),
