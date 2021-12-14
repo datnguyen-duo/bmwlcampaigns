@@ -11,7 +11,7 @@ var locoScroll;
     locoScroll = new LocomotiveScroll({
       el: document.querySelector("#viewport"),
       smooth: true,
-      lerp: 0.05,
+      lerp: 0.06,
     });
     locoScroll.on("scroll", ScrollTrigger.update);
     ScrollTrigger.scrollerProxy("#viewport", {
@@ -49,12 +49,12 @@ var locoScroll;
     $.getScript(site_data.theme_url + "/js/services.js", function () {});
     $.getScript(site_data.theme_url + "/js/about.js", function () {});
     $.getScript(site_data.theme_url + "/js/portfolio.js", function () {});
-    
-    if(window.screen.width > 1024){
+
+    if (window.screen.width > 1024) {
       smoothScroll();
     }
 
-    if(window.screen.width > 1024){
+    if (window.screen.width > 1024) {
       locoScroll.update();
     }
   });
