@@ -1,6 +1,14 @@
 .portfolio_wrap{
     .portfolio_header{
-        padding-top: 10vw;
+        padding-top: 150px;
+
+        @media @tablet-s{
+            padding-top: 200px;
+        }
+
+        @media @tablet-l{
+            padding-top: 10vw;
+        }
 
         h1{
             .main_headline();
@@ -18,13 +26,17 @@
             
             box-sizing: border-box;
             text-align: center;
-            // border-top: 2px solid @color2;
             border-bottom: 2px solid @color2;
-            padding-top: 5vw;
-            padding-bottom: 5vw;
-            padding-left: 10vw;
-            padding-right: 7vw;
             position: relative;
+            padding: 50px 30px;
+
+            @media @tablet-s{
+                padding-top: 5vw;
+                padding-bottom: 5vw;
+                padding-left: 10vw;
+                padding-right: 7vw;
+            }
+                
 
             &:after{
                 content: '';
@@ -32,12 +44,19 @@
                 background-color: #fff;
                 -webkit-transform: skewX(-20deg);
                 transform: skewX(-15deg);
-                width: 6vw;
-                height: 12vw;
                 display: block;
                 z-index: 1;
                 top: 0;
-                left: 9vw;
+                width: 30px;
+                height: 60px;
+                right: 10px;
+                
+                @media @tablet-s{
+                    right: auto;
+                    width: 6vw;
+                    height: 12vw;
+                    left: 9vw;
+                }
             }
 
             &:before{
@@ -46,12 +65,19 @@
                 background-color: #fff;
                 -webkit-transform: skewX(-20deg);
                 transform: skewX(-15deg);
-                width: 6vw;
-                height: 8vw;
                 display: block;
                 z-index: 0;
                 bottom: 0vw;
-                right: 5.5vw;
+                width: 30px;
+                height: 50px;
+                left: 10px;
+                
+                @media @tablet-s{
+                    left: auto;
+                    width: 6vw;
+                    height: 8vw;
+                    right: 5.5vw;
+                }
             }
 
             h2{
@@ -70,7 +96,11 @@
                 color: @color2;
                 max-width: 620px;
                 margin: auto;
-                margin-top: 40px;
+                margin-top: 20px;
+
+                @media @tablet-s{
+                    margin-top: 40px;
+                }
             }
         }
     }
@@ -81,7 +111,6 @@
         height: 100vh;
         overflow: hidden;
 
-        
         .project_info{
             position: absolute;
             left: 50%;
@@ -91,19 +120,42 @@
             top: 50%;
             display: flex;
             justify-content: space-between;
+            height: 100%;
+            align-items: center;
+
+            @media @tablet-s{
+                height: auto;
+                align-items: initial;
+            }
 
             .category{
-                position: relative;
-                transform: rotate(-90deg);
-                left: 13vw;
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
                 .big_text();
                 color: @color1;
+                
+                @media @tablet-s{
+                    position: relative;
+                    left: auto;
+                    bottom: auto;
+                    transform: rotate(-90deg);
+                    left: 13vw;
+                }
             }
 
             .counter{
-                position: relative;
-                transform: rotate(90deg);
-                right: 14vw;
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                
+                @media @tablet-s{
+                    position: relative;
+                    right: auto;
+                    bottom: auto;
+                    transform: rotate(90deg);
+                    right: 14vw;
+                }
 
                 .curent, .total, span{
                     .big_text();
@@ -118,7 +170,10 @@
                 .big_headline();
                 text-align: center;
                 color: @color1;
-                max-width:  50vw;
+                
+                @media @tablet-s{
+                    max-width: 50vw;
+                }
             }
         }
 
