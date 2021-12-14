@@ -126,6 +126,9 @@
 		</div>
 		<div class="content">
 			<div class="team_header">
+				<div class="image_holder">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/about/team.png" alt="">
+				</div>
 				<h2 class="letter_wrap_scroll">John Whitehurst</h2>
 				<h3>Principal</h3>
 			</div>

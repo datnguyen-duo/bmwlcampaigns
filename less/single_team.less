@@ -39,11 +39,11 @@
         }
 
         .content{
-            padding: 60px 34px;
+            padding: 80px 34px;
             box-sizing: border-box;
             opacity: 0;
 
-            @media @tablet-s{
+            @media @tablet-xl{
                 padding: 5vw 8vw;
             }
 
@@ -52,7 +52,24 @@
                 position: relative;
                 text-align: center;
 
+                .image_holder{
+                    position: relative;
+                    overflow: hidden;
+                    padding-top: 50%;
+                    max-width: 180px;
+                    margin: auto;
+                    margin-bottom: 15px;
+
+                    img{
+                        .cropped_image();
+                    }
+                }
+
                 @media @tablet-s{
+                    .image_holder{
+                        display: none;
+                    }
+
                     text-align: left;
                 }
 
@@ -76,15 +93,22 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    order: 2;
 
                     @media @tablet-s{
                         width: 26%;
+                        order: 1;
                     }
 
                     .image_holder{
                         position: relative;
                         overflow: hidden;
                         padding-top: 84%;
+                        display: none;
+
+                        @media @tablet-s{
+                            display: block;
+                        }
 
                         img{
                             .cropped_image();
@@ -92,6 +116,13 @@
                     }
 
                     .team_info{
+                        display: flex;
+                        justify-content: space-between;
+
+                        @media @tablet-s{
+                            display: block;
+                        }
+
                         .single_info{
                             margin-bottom: 20px;
 
@@ -118,9 +149,17 @@
                 .right{
                     width: 100%;
                     box-sizing: border-box;
+                    order: 1;
+                    margin-bottom: 40px;
 
                     @media @tablet-s{
                         width: 74%;
+                        margin-bottom: 0px;
+                        padding-left: 5vw;
+                        order: 2;
+                    }
+
+                    @media @tablet-xl{
                         padding-left: 10vw;
                     }
 
@@ -130,7 +169,7 @@
                         margin-left: auto;
 
 
-                        @media @tablet-s{
+                        @media @tablet-xl{
                             max-width: 29vw;
                         }
                     }
