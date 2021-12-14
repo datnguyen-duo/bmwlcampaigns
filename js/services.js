@@ -23,10 +23,9 @@
         pin: true,
         pinSpacing: true,
         scrub: true,
-        end: () => "+=" + h * 1.5,
+        end: () => "+=" + h * 1.5, // 1.5 to dampen the scroller
         scroller: scroller,
         start: "top top",
-        markers: true,
       },
     });
 
@@ -34,9 +33,9 @@
       var y = 0;
 
       if (index == 0) {
-        y = winHeight - service.scrollHeight;
+        y = winHeight - service.scrollHeight; // since we start this at the top, offset with the window height
       } else {
-        y = service.scrollHeight;
+        y = service.scrollHeight; // scroll each service container 100% off the screen. (we can use yPercent: -100, but px is usually better performance)
       }
 
       servicesPinTl.to(service, { y: -y });
