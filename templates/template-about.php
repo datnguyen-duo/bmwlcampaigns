@@ -6,12 +6,15 @@ get_header(); ?>
     <div class="first_section">
         <div class="first_section_content">
             <div class="left">
+                <h2 class="letter_wrap mobile">
+                    More than two decades of winning campaigns
+                </h2>
                 <div class="image_holder fadein_wrap fadeIn">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/first.png" alt="">
                 </div>
             </div>
             <div class="right">
-                <h2 class="letter_wrap">
+                <h2 class="letter_wrap desktop">
                     More than two decades of winning campaigns
                 </h2>
 

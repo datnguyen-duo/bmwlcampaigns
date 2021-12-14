@@ -16,6 +16,12 @@
             console.log("complete");
             },
         });
+
+        if(window.screen.width > 750){
+            var teamPopupWidth = '80%';
+        } else{
+            var teamPopupWidth = '100%';
+        }
     
         let team_holder = $(".single_team_popup");
         let team_content_holder = $(".single_team_popup_content");
@@ -27,7 +33,7 @@
             duration: 0.7,
             ease: "power2.inOut",
         });
-        teamOpener.to(team_content_holder, { width: '80%'});
+        teamOpener.to(team_content_holder, { width: teamPopupWidth});
         teamOpener.to(team_content, { opacity: 1});
         teamOpener.from(
             $(".team_header h2 .char"),
