@@ -8,9 +8,9 @@
     }
 
     var winHeight = document.body.clientHeight;
-    var services = document.querySelectorAll(".single_accordion");
+    var services = document.querySelectorAll(".services_wrap .single_accordion");
     var h = 0;
-    var l = document.querySelectorAll(".single_accordion").length; // get number of services
+    var l = document.querySelectorAll(".services_wrap .single_accordion").length; // get number of services
 
     for (var i = 0; i < l; i++) {
       h += services[i].scrollHeight; // get height of all services container
@@ -18,7 +18,7 @@
 
     var servicesPinTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".third_section",
+        trigger: ".services_wrap .third_section",
         invalidateOnRefresh: true,
         pin: true,
         pinSpacing: true,
@@ -31,14 +31,24 @@
 
     gsap.utils.toArray(services).forEach((service, index) => {
       var y = 0;
+      var accordionContent = 0;
 
       if (index == 0) {
-        y = winHeight - service.scrollHeight; // since we start this at the top, offset with the window height
+        y = 0; // since we start this at the top, offset with the window height
+        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * 47);
+
+        servicesPinTl.to(service, { y: -y });
+        servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent }, '<');
       } else {
-        y = service.scrollHeight; // scroll each service container 100% off the screen. (we can use yPercent: -100, but px is usually better performance)
+        y = window.innerHeight - index * 47;
+        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * 47);
+
+        servicesPinTl.to(service, { y: -y });
+        servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent });
       }
 
-      servicesPinTl.to(service, { y: -y });
+      
+      
     });
 
     /*	-----------------------------------------------------------------------------

@@ -75,55 +75,339 @@ get_header(); ?>
                         </p>
                     </div>
                     <div class="accordion_contenet">
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
+                        <div class="content_header">
+                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy.mp4#t=0.1" type="video/mp4">
+                            </video>
+    
+                            <h2>Strategy</h2>
+
+                            <div class="big_description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
+                            </div>
+                            <div class="blurb_content">
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="blurb_description">
+                                    <h3>
+                                        Lorem ipsum dolor sit <br> amet, consectetur
+                                    </h3>
+                                </div>
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
                         <div class="conter">02</div>
                         <p>
-                            Digital
+                            Digital Media
                         </p>
                     </div>
                     <div class="accordion_contenet">
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
+                        <div class="content_header">
+                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                            </video>
+    
+                            <h2>Digital Media</h2>
+
+                            <div class="big_description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
+                            </div>
+                            <div class="blurb_content">
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="blurb_description">
+                                    <h3>
+                                        Lorem ipsum dolor sit <br> amet, consectetur
+                                    </h3>
+                                </div>
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
                         <div class="conter">03</div>
                         <p>
-                            Media
+                            Field Organizing
                         </p>
                     </div>
                     <div class="accordion_contenet">
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
-                        <h2>TEST</h2>
+                        <div class="content_header">
+                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                            </video>
+    
+                            <h2>Field Organizing</h2>
+
+                            <div class="big_description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
+                            </div>
+                            <div class="blurb_content">
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="blurb_description">
+                                    <h3>
+                                        Lorem ipsum dolor sit <br> amet, consectetur
+                                    </h3>
+                                </div>
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_accordion" role="region">
+                    <div class="accordion_headline">
+                        <div class="conter">04</div>
+                        <p>
+                            Direct Mail
+                        </p>
+                    </div>
+                    <div class="accordion_contenet">
+                        <div class="content_header">
+                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                            </video>
+    
+                            <h2>Direct Mail</h2>
+
+                            <div class="big_description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
+                            </div>
+                            <div class="blurb_content">
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="blurb_description">
+                                    <h3>
+                                        Lorem ipsum dolor sit <br> amet, consectetur
+                                    </h3>
+                                </div>
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_accordion" role="region">
+                    <div class="accordion_headline">
+                        <div class="conter">05</div>
+                        <p>
+                            Vote-By-Mail
+                        </p>
+                    </div>
+                    <div class="accordion_contenet">
+                        <div class="content_header">
+                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                            </video>
+    
+                            <h2>Vote-By-Mail</h2>
+
+                            <div class="big_description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
+                            </div>
+                            <div class="blurb_content">
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="blurb_description">
+                                    <h3>
+                                        Lorem ipsum dolor sit <br> amet, consectetur
+                                    </h3>
+                                </div>
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_accordion" role="region">
+                    <div class="accordion_headline">
+                        <div class="conter">06</div>
+                        <p>
+                            Television
+                        </p>
+                    </div>
+                    <div class="accordion_contenet">
+                        <div class="content_header">
+                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                            </video>
+    
+                            <h2>Television</h2>
+
+                            <div class="big_description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
+                            </div>
+                            <div class="blurb_content">
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="blurb_description">
+                                    <h3>
+                                        Lorem ipsum dolor sit <br> amet, consectetur
+                                    </h3>
+                                </div>
+                                <div class="blurb_section">
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                    <div class="single_blurb">
+                                        <h3>Blurb 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <?php get_template_part( 'template-parts/tmplt-footer'); ?>
 </div>
 
 <?php

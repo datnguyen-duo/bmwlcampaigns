@@ -195,7 +195,7 @@
 				<a href="/portfolio">Work</a>
 			</li>
 			<li>
-				<a href="">Services</a>
+				<a href="/services">Services</a>
 			</li>
 		</ul>
 		<div class="btn white contact_popup_opener">
