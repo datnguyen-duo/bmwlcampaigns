@@ -3,7 +3,8 @@
 get_header(); ?>
 
 <div class="single_project_wrap">
-    <div class="project_hero">
+
+    <!-- <div class="project_hero">
         <div class="left">
             <div class="left_content">
                 <div class="headline_wrap">
@@ -36,24 +37,24 @@ get_header(); ?>
         <div class="right">
             <img src="<?php echo get_template_directory_uri(); ?>/images/home/featured_project.png" alt="">
         </div>
-    </div>
+    </div> -->
 
-    <div class="first_section">
+    <!-- <div class="first_section">
         <div class="first_section_content">
             <p>About the Project</p>
             <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. elementum, dui ut cursus egestas.</h2>
         </div>
-    </div>
+    </div> -->
 
-    <div class="second_section">
+    <!-- <div class="second_section">
         <div class="second_section_content">
             <div class="image_holder">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/second_section.png" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="third_section">
+    <!-- <div class="third_section">
         <div class="third_section_content">
             <div class="left">
                 <div class="image_holder_strap">
@@ -80,9 +81,9 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="fourth_section">
+    <!-- <div class="fourth_section">
         <div class="fourth_section_inner">
             <div class="fourth_section_content">
                 <div class="description">
@@ -93,7 +94,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="fifth_section">
         <div class="fifth_section_content">
@@ -104,17 +105,18 @@ get_header(); ?>
                 </p>
             </div>
             <div class="slider">
-            <div class="image_slider">
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider1.png" alt="">
+                <div class="image_slider">
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider1.png" alt="">
+                    </div>
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider3.png" alt="">
+                    </div>
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider2.png" alt="">
+                    </div>
                 </div>
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider3.png" alt="">
-                </div>
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider2.png" alt="">
-                </div>
-            </div>
+                <div class="proxy-slider"></div>
             </div>
         </div>
     </div>
