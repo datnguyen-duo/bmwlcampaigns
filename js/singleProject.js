@@ -10,6 +10,11 @@
         /*-----------------------------------------------------------------------------
         Image Reveal
         --------------------------------------------------------------------------------- */
+        if(window.screen.width > 650){
+            var image_height = '100vh';
+        } else{
+          var image_height = '70vh';
+        }
         let singleProject_image_reveal = $(
             ".single_project_wrap .second_section .image_holder"
         );
@@ -27,7 +32,7 @@
         })
         .to(singleProject_image_reveal, {
           width: "100vw",
-          height: "100vh",
+          height: image_height,
           ease: "none",
         })
   

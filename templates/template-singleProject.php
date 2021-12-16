@@ -72,6 +72,12 @@ get_header(); ?>
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section3.png" alt="">
                 </div>
+
+                <div class="image_holder_second">
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section2.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -114,8 +120,10 @@ get_header(); ?>
     </div>
 
     <div class="sixth_section">
+        <h2 class="mobile_nav_headline">More work</h2>
         <div class="sixth_section_content">
-            <div class="prev project_nav">
+            
+            <a href="/project" class="prev project_nav">
                 <h3>Project Name</h3>
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section2.png" alt="">
@@ -125,17 +133,17 @@ get_header(); ?>
                     Previous project
                     
                 </div>
-            </div>
+            </a>
 
             <div class="mid_info">
                 <h2>More work</h2>
                 <p>
                     Or interested in working together?
                 </p>
-                <a href="">Reach out.</a>
+                <a class="contact_popup_opener">Reach out.</a>
             </div>
 
-            <div class="next project_nav">
+            <a href="/project" class="next project_nav">
                 <h3>Project Name</h3>
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section2.png" alt="">
@@ -144,7 +152,14 @@ get_header(); ?>
                     Next project
                     <div class="arrow"></div>
                 </div>
-            </div>
+            </a>
+        </div>
+
+        <div class="mid_info mobile">
+            <p>
+                Or interested in working together?
+            </p>
+            <a class="contact_popup_opener">Reach out.</a>
         </div>
 
         <?php get_template_part( 'template-parts/tmplt-footer'); ?>
