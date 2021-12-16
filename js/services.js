@@ -16,6 +16,19 @@
       h += services[i].scrollHeight; // get height of all services container
     }
 
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".services_wrap .service_hero",
+        invalidateOnRefresh: true,
+        pin: true,
+        pinSpacing: true,
+        scrub: true,
+        end: "+=250%",
+        scroller: scroller,
+        start: "top top",
+      },
+    }).to($('.services_wrap .image_slider'), { y: -$('.services_wrap .image_slider').height() + window.innerHeight });;
+
     var servicesPinTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".services_wrap .third_section",
@@ -46,9 +59,6 @@
         servicesPinTl.to(service, { y: -y });
         servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent });
       }
-
-      
-      
     });
 
     /*	-----------------------------------------------------------------------------

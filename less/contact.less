@@ -31,6 +31,62 @@
             background-color: @color1;
             display: none;
 
+            &:after {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                -webkit-transform: skewX(-20deg);
+                transform: skewX(-15deg);
+                width: 35px;
+                height: 70px;
+                display: block;
+                z-index: 1;
+                top: 0;
+                left: 30px;
+  
+                @media @tablet-s{
+                    width: 10vw;
+                    height: 13vw;
+                  top: 0;
+                  left: 7vw;
+                }
+
+                @media @tablet-l{
+                    width: 6vw;
+                    height: 7vw;
+                    top: 0;
+                    left: 7vw;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                -webkit-transform: skewX(-20deg);
+                transform: skewX(-15deg);
+                width: 35px;
+                height: 70px;
+                display: block;
+                z-index: 1;
+                bottom: 0px;
+                right: 30px;
+  
+                @media @tablet-s{
+                  bottom: 0vw;
+                  right: 7vw;
+                  width: 10vw;
+                  height: 13vw;
+                }
+
+                @media @tablet-l{
+                    bottom: 0vw;
+                    right: 7vw;
+                    width: 6vw;
+                    height: 7vw;
+                  }
+              }
+
             .success_message{
                 padding: 0 40px;
                 box-sizing: border-box;
@@ -44,6 +100,14 @@
                 @media @tablet-xl{
                     padding: 0px;
                     max-width: 30vw;
+                }
+
+                video{
+                    max-width: 120px;
+
+                    @media @tablet-l{
+                        max-width: 190px;
+                    }
                 }
 
                 h2{

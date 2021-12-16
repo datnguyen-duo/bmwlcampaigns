@@ -69,7 +69,7 @@ get_header(); ?>
             <div class="service_accordions">
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
-                        <div class="conter">01</div>
+                        <div class="counter">01</div>
                         <p>
                             Strategy
                         </p>
@@ -120,12 +120,40 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="image_text_section">
+                                <div class="left">
+                                    <div class="featured">Featured Project</div>
+                                    <div class="image_holder fadein_wrap fadeIn">
+                                
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
+                                    </div>
+                                    <div class="project_name">Project Name</div>
+                                </div>
+
+                                <div class="right">
+                                    <div class="right_content">
+                                        <h3>
+                                            See this in action
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                        </p>
+                                        <a href="" class="btn">
+                                            <span>
+                                                View Project
+                                            </span>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
-                        <div class="conter">02</div>
+                        <div class="counter">02</div>
                         <p>
                             Digital Media
                         </p>
@@ -176,12 +204,39 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="image_text_section">
+                                <div class="left">
+                                    <div class="featured">Featured Project</div>
+                                    <div class="image_holder fadein_wrap fadeIn">
+                                
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
+                                    </div>
+                                    <div class="project_name">Project Name</div>
+                                </div>
+
+                                <div class="right">
+                                    <div class="right_content">
+                                        <h3>
+                                            See this in action
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                        </p>
+                                        <a href="" class="btn">
+                                            <span>
+                                                View Project
+                                            </span>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
-                        <div class="conter">03</div>
+                        <div class="counter">03</div>
                         <p>
                             Field Organizing
                         </p>
@@ -232,12 +287,39 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="image_text_section">
+                                <div class="left">
+                                    <div class="featured">Featured Project</div>
+                                    <div class="image_holder fadein_wrap fadeIn">
+                                
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
+                                    </div>
+                                    <div class="project_name">Project Name</div>
+                                </div>
+
+                                <div class="right">
+                                    <div class="right_content">
+                                        <h3>
+                                            See this in action
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                        </p>
+                                        <a href="" class="btn">
+                                            <span>
+                                                View Project
+                                            </span>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
-                        <div class="conter">04</div>
+                        <div class="counter">04</div>
                         <p>
                             Direct Mail
                         </p>
@@ -288,12 +370,39 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="image_text_section">
+                                <div class="left">
+                                    <div class="featured">Featured Project</div>
+                                    <div class="image_holder fadein_wrap fadeIn">
+                                
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
+                                    </div>
+                                    <div class="project_name">Project Name</div>
+                                </div>
+
+                                <div class="right">
+                                    <div class="right_content">
+                                        <h3>
+                                            See this in action
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                        </p>
+                                        <a href="" class="btn">
+                                            <span>
+                                                View Project
+                                            </span>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
-                        <div class="conter">05</div>
+                        <div class="counter">05</div>
                         <p>
                             Vote-By-Mail
                         </p>
@@ -344,12 +453,39 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="image_text_section">
+                                <div class="left">
+                                    <div class="featured">Featured Project</div>
+                                    <div class="image_holder fadein_wrap fadeIn">
+                                
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
+                                    </div>
+                                    <div class="project_name">Project Name</div>
+                                </div>
+
+                                <div class="right">
+                                    <div class="right_content">
+                                        <h3>
+                                            See this in action
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                        </p>
+                                        <a href="" class="btn">
+                                            <span>
+                                                View Project
+                                            </span>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
-                        <div class="conter">06</div>
+                        <div class="counter">06</div>
                         <p>
                             Television
                         </p>
@@ -398,6 +534,33 @@ get_header(); ?>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
                                         </p>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="image_text_section">
+                                <div class="left">
+                                    <div class="featured">Featured Project</div>
+                                    <div class="image_holder fadein_wrap fadeIn">
+                                
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
+                                    </div>
+                                    <div class="project_name">Project Name</div>
+                                </div>
+
+                                <div class="right">
+                                    <div class="right_content">
+                                        <h3>
+                                            See this in action
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                        </p>
+                                        <a href="" class="btn">
+                                            <span>
+                                                View Project
+                                            </span>
+                                        </a>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
