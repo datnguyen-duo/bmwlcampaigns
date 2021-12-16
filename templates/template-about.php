@@ -211,7 +211,7 @@ get_header(); ?>
                                     Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
                                     </p>
 
-                                    <a href="" class="btn">
+                                    <a class="btn contact_popup_opener">
                                         <span>Contact Us</span>
                                     </a>
                                 </div>
@@ -241,7 +241,7 @@ get_header(); ?>
                                     Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
                                     </p>
 
-                                    <a href="" class="btn">
+                                    <a class="btn contact_popup_opener">
                                         <span>Contact Us</span>
                                     </a>
                                 </div>

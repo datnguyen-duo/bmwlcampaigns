@@ -132,7 +132,7 @@
 		<div class="content">
 			<div class="team_header">
 				<div class="image_holder">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/about/team.png" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
 				</div>
 				<h2 class="letter_wrap_scroll">John Whitehurst</h2>
 				<h3>Principal</h3>
@@ -140,7 +140,7 @@
 			<div class="team_description">
 				<div class="left">
 					<div class="image_holder">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/about/team.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
 					</div>
 
 					<div class="team_info">
@@ -227,7 +227,7 @@
 					<a href="">Services</a>
 				</li>
 				<li>
-					<a href="">Contact</a>
+					<a class="contact_popup_opener">Contact</a>
 				</li>
 			</ul>
 		</div>

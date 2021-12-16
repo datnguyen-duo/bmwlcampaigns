@@ -74,7 +74,7 @@
                     <a href="/portfolio">Portfolio</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a class="contact_popup_opener">Contact</a>
                 </li>
             </ul>
             <div class="copyright">

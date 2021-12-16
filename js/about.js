@@ -40,7 +40,7 @@
             { y: 500, duration: 1, stagger: 0.01, ease: Power1.easeOuteaseOut }, "<"
           )
     
-        $(".single_team").on("click", function () {
+        $(".single_team").not('.join_us_holder').on("click", function () {
             teamOpener.play()
         });
 

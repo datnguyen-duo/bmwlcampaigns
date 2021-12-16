@@ -24,6 +24,7 @@ get_header(); ?>
 
     <div class="second_section">
         <div class="second_section_content">
+            <h2 class="section_headline mobile">experience & passion</h2>
             <div class="left">
                 <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
@@ -49,7 +50,7 @@ get_header(); ?>
                 We bring a winning attitude and a winning track record to every campaign we manage, no matter the complexity. For each type of campaign we run, BMWLdraws upon a mix of tools, knowledge, experience and relationships to produce winning results.
             </p>
             <div class="btn_holder">
-                <a href="" class="btn">
+                <a href="/about" class="btn">
                     <span>
                         About Us
                     </span>
@@ -139,7 +140,7 @@ get_header(); ?>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
                                         </p>
-                                        <a href="" class="btn">
+                                        <a href="/project" class="btn">
                                             <span>
                                                 View Project
                                             </span>
@@ -222,7 +223,7 @@ get_header(); ?>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
                                         </p>
-                                        <a href="" class="btn">
+                                        <a href="/project" class="btn">
                                             <span>
                                                 View Project
                                             </span>
@@ -305,7 +306,7 @@ get_header(); ?>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
                                         </p>
-                                        <a href="" class="btn">
+                                        <a href="/project" class="btn">
                                             <span>
                                                 View Project
                                             </span>
@@ -388,7 +389,7 @@ get_header(); ?>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
                                         </p>
-                                        <a href="" class="btn">
+                                        <a href="/project" class="btn">
                                             <span>
                                                 View Project
                                             </span>
@@ -471,7 +472,7 @@ get_header(); ?>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
                                         </p>
-                                        <a href="" class="btn">
+                                        <a href="/project" class="btn">
                                             <span>
                                                 View Project
                                             </span>
@@ -554,7 +555,7 @@ get_header(); ?>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
                                         </p>
-                                        <a href="" class="btn">
+                                        <a href="/project" class="btn">
                                             <span>
                                                 View Project
                                             </span>

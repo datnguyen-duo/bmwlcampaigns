@@ -43,6 +43,10 @@
             box-sizing: border-box;
             opacity: 0;
 
+            @media @tablet-l{
+                padding: 80px;
+            }
+
             @media @tablet-xl{
                 padding: 5vw 8vw;
             }
@@ -59,9 +63,14 @@
                     max-width: 180px;
                     margin: auto;
                     margin-bottom: 15px;
+                    transform: skewX(-15deg);
 
                     img{
                         .cropped_image();
+                        width: 125%;
+                        height: 120%;
+                        transform: skewX(15deg);
+                        margin-left: -10%;
                     }
                 }
 
@@ -105,6 +114,7 @@
                         overflow: hidden;
                         padding-top: 84%;
                         display: none;
+                        transform: skewX(-15deg);
 
                         @media @tablet-s{
                             display: block;
@@ -112,6 +122,10 @@
 
                         img{
                             .cropped_image();
+                            width: 125%;
+                            height: 120%;
+                            transform: skewX(15deg);
+                            margin-left: -10%;
                         }
                     }
 

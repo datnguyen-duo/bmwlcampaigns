@@ -45,16 +45,23 @@
     gsap.utils.toArray(services).forEach((service, index) => {
       var y = 0;
       var accordionContent = 0;
+      var serviceHeight;
+
+      if (window.screen.width > 768) {
+        serviceHeight = 47;
+      } else {
+        serviceHeight = 30;
+      }
 
       if (index == 0) {
         y = 0; // since we start this at the top, offset with the window height
-        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * 47);
+        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * serviceHeight);
 
         servicesPinTl.to(service, { y: -y });
         servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent }, '<');
       } else {
-        y = window.innerHeight - index * 47;
-        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * 47);
+        y = window.innerHeight - index * serviceHeight;
+        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * serviceHeight);
 
         servicesPinTl.to(service, { y: -y });
         servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent });
