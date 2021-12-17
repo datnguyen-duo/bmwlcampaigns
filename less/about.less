@@ -5,7 +5,7 @@
         .first_section_content{
             display: flex;
             flex-wrap: wrap;
-            padding-top: 120px;
+            padding-top: 80px;
 
             @media @tablet-s{
                 padding-top: 260px;
@@ -34,9 +34,17 @@
                     position: relative;
                     top: 15px;
                     z-index: 2;
+                    
+                    .line{
+                        line-height: 1.1em;
+                    }
 
                     @media @tablet-s{
                         display: none;
+
+                        .line{
+                            line-height: 1em;
+                        }
                     }
                 }
 

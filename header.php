@@ -40,7 +40,7 @@
 			<div class="success_message_wrap">
 				<div class="success_message">
 					<video class="thevideo" loop autoplay playsinline="true" muted="muted">
-						<source src="<?php echo get_template_directory_uri(); ?>/videos/contact.mp4#t=0.1" type="video/mp4">
+						<source src="<?php echo get_template_directory_uri(); ?>/videos/contact_grey.mp4#t=0.1" type="video/mp4">
 					</video>
 					<h2>
 						Thank you, <span>Name</span>!

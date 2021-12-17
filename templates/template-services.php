@@ -78,7 +78,7 @@ get_header(); ?>
                     <div class="accordion_contenet">
                         <div class="content_header">
                             <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy.mp4#t=0.1" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy_grey.mp4#t=0.1" type="video/mp4">
                             </video>
     
                             <h2>Strategy</h2>
@@ -162,7 +162,7 @@ get_header(); ?>
                     <div class="accordion_contenet">
                         <div class="content_header">
                             <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia_grey.mp4#t=0.1" type="video/mp4">
                             </video>
     
                             <h2>Digital Media</h2>
@@ -245,7 +245,7 @@ get_header(); ?>
                     <div class="accordion_contenet">
                         <div class="content_header">
                             <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/fieldorganizing_grey.mp4#t=0.1" type="video/mp4">
                             </video>
     
                             <h2>Field Organizing</h2>
@@ -328,7 +328,7 @@ get_header(); ?>
                     <div class="accordion_contenet">
                         <div class="content_header">
                             <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/directmail_grey.mp4#t=0.1" type="video/mp4">
                             </video>
     
                             <h2>Direct Mail</h2>
@@ -411,7 +411,7 @@ get_header(); ?>
                     <div class="accordion_contenet">
                         <div class="content_header">
                             <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/vbe_grey.mp4#t=0.1" type="video/mp4">
                             </video>
     
                             <h2>Vote-By-Mail</h2>
@@ -494,7 +494,7 @@ get_header(); ?>
                     <div class="accordion_contenet">
                         <div class="content_header">
                             <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia.mp4#t=0.1" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/videos/tv_grey.mp4#t=0.1" type="video/mp4">
                             </video>
     
                             <h2>Television</h2>
