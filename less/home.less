@@ -44,14 +44,13 @@
       z-index: 10;
       color: @color1;
       display: flex;
-      flex-direction: column;
-      opacity: 0;
       align-items: center;
+      opacity: 0;
 
       @media @tablet-s{
-        align-items: initial;
-        right: 11vw;
+        right: 3vw;
         left: auto;
+        bottom: 2vw;
         transform: none;
       }
 
@@ -59,77 +58,21 @@
         display: inline-block;
       }
 
-      .arrow {
-        // margin: 25px;
-        
-        margin-top: 15px;
-        display: inline-block;
-        height: 11px;
+      img{
         position: relative;
-        width: 11px;
-        -moz-transform: rotate(315deg);
-        -ms-transform: rotate(315deg);
-        -webkit-transform: rotate(315deg);
-        transform: rotate(315deg);
-        .transition();
+        height: auto;
+        object-fit: contain;
+        margin-left: 10px;
+        width: 27px;
 
-        @media @tablet-s{
-          left: 24px;
-          width: 24px;
-          height: 24px;
-          left: 20px;
-        }
-
-        &:after {
-          border-bottom-style: solid;
-          border-bottom-width: 2px;
-          border-right-style: solid;
-          border-right-width: 2px;
-          content: "";
-          display: inline-block;
-          height: 11px;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 11px;
-
-          @media @tablet-s{
-            width: 24px;
-            height: 24px;
-          }
-        }
-
-        &:before {
-          bottom: 1px;
-          content: "";
-          background-color: @color1;
-          height: 16px;
-          position: absolute;
-          right: 0;
-          transform-origin: bottom;
-          width: 2px;
-          -moz-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-          .transition();
-
-          @media @tablet-s{
-            height: 45px;
-          }
+        @media @desktop-s{
+          width: 37px;
         }
       }
 
       @media @tablet-xl{
         &:hover {
-  
-          .arrow {
-            left: 34px;
-  
-            &:before {
-              height: 55px;
-            }
-          }
+          opacity: 0.6;
         }
       }
     }
@@ -217,7 +160,7 @@
 
       @media @tablet-s{
         padding-left: 5vw;
-        padding-bottom: 10vw;
+        padding-bottom: 13vw;
       }
 
       h2 {
@@ -245,7 +188,7 @@
         flex-wrap: wrap;
         padding: 0 7vw;
         box-sizing: border-box;
-        margin-top: -5vw;
+        margin-top: -10vw;
 
         .left {
           width: 70%;

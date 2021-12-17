@@ -12,6 +12,13 @@
     var h = 0;
     var l = document.querySelectorAll(".services_wrap .single_accordion").length; // get number of services
 
+    if (window.screen.width > 768) {
+      var serviceHeroScroll = 1.3;
+    } else {
+      var serviceHeroScroll = 1.4; 
+    }
+    
+
     for (var i = 0; i < l; i++) {
       h += services[i].scrollHeight; // get height of all services container
     }
@@ -27,7 +34,7 @@
         scroller: scroller,
         start: "top top",
       },
-    }).to($('.services_wrap .image_slider'), { y: -$('.services_wrap .image_slider').height() + window.innerHeight });;
+    }).to($('.services_wrap .image_slider'), { y: -$('.services_wrap .image_slider').height() / serviceHeroScroll + window.innerHeight });;
 
     var servicesPinTl = gsap.timeline({
       scrollTrigger: {
