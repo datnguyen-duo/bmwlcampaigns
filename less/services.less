@@ -272,7 +272,7 @@
       .service_accordions {
 
         .single_accordion {
-          border-top: 2px solid @color2;
+          // border-top: 2px solid @color2;
           top: 100%;
           position: absolute;
           width: 100%;
@@ -281,8 +281,8 @@
 
           .single_accordion(6);
 
-          @accordionOffset: 30px;
-          @accordionOffsetDesktop: 47px;
+          @accordionOffset: 28px;
+          @accordionOffsetDesktop: 45px;
 
           .single_accordion(@n, @i: 1, @counter: 6) when (@i =< 6) {
 
@@ -313,11 +313,18 @@
 
           &:nth-child(1) {
             top: 0;
+            // border-top: none;
             transform: translateY(0px);
+
+            .accordion_headline{
+              border-top: none;
+            }
           }
 
           .accordion_headline {
             padding: 0px 20px;
+            border-top: 2px solid @color2;
+            border-bottom: 2px solid @color2;
             box-sizing: border-box;
             display: flex;
             position: relative;

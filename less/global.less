@@ -618,7 +618,7 @@ body {
 
       .accordion_header {
         border-bottom: 2px solid @color2;
-        
+
         @media @tablet-xl{
           border-right: 2px solid @color2;
         }
@@ -658,8 +658,9 @@ body {
       display: inline-block;
       .big_text();
       color: @color2;
-      margin-right: 65px;
+      margin-right: 55px;
       position: relative;
+      
 
       @media @tablet-s{
         margin-right: 80px;
@@ -668,21 +669,18 @@ body {
       &:after {
         content: "";
         height: 25px;
-        width: 15px;
+        width: 10px;
         background-color: @color4;
         position: absolute;
         top: 50%;
-        right: -35px;
+        right: -30px;
         display: inline-block;
         transform: skewX(-20deg) translateY(-50%);
-
-        @media @tablet-s{
-          right: -40px;
-        }
       }
-
+      
       @media @tablet-s{
         &:after{
+          right: -40px;
           height: 35px;
           width: 15px;
         }

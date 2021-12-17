@@ -320,8 +320,9 @@ get_header(); ?>
     </div>
 
     <div class="seventh_section">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/home/last_section.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/home/last_section.png" alt="" class="desktop">
         <div class="seventh_section_content">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/last_section.png" alt="" class="mobile">
             <h2 class="letter_wrap">Let’s work</h2>
             <h2 class="letter_wrap">together</h2>
             <a class="btn white contact_popup_opener">

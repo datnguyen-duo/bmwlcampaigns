@@ -55,9 +55,9 @@
       var serviceHeight;
 
       if (window.screen.width > 768) {
-        serviceHeight = 47;
+        serviceHeight = 45;
       } else {
-        serviceHeight = 30;
+        serviceHeight = 28;
       }
 
       if (index == 0) {

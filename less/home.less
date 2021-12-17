@@ -733,6 +733,19 @@
     img {
       .cropped_image();
       object-position: right;
+
+      &.desktop{
+        display: none;
+      }
+
+      @media @tablet-s{
+        &.desktop{
+          display: block;
+        }
+        &.mobile{
+          display: none;
+        }
+      }
     }
 
     .seventh_section_content {
