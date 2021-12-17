@@ -295,19 +295,19 @@
             .single_accordion(@n,(@i + 1), (@counter - 1));
           }
 
-          @media @tablet-s{
-            .single_accordion(6);
-            .single_accordion(@n, @i: 1, @counter: 6) when (@i =< 6) {
+          // @media @tablet-s{
+          //   .single_accordion(6);
+          //   .single_accordion(@n, @i: 1, @counter: 6) when (@i =< 6) {
 
-              @result: @counter * @accordionOffsetDesktop;
+          //     @result: @counter * @accordionOffsetDesktop;
               
-              &:nth-child(@{i}) {
-                transform: translateY(-@result);
-              }
+          //     &:nth-child(@{i}) {
+          //       transform: translateY(-@result);
+          //     }
               
-              .single_accordion(@n,(@i + 1), (@counter - 1));
-            }
-          }
+          //     .single_accordion(@n,(@i + 1), (@counter - 1));
+          //   }
+          // }
 
           
 
@@ -335,13 +335,14 @@
             align-items: center;
 
             @media @tablet-s{
-              padding: 10px 50px;
-              min-height: 47px;
+              padding: 0px 50px;
+              // min-height: 47px;
             }
 
             .counter,
             p {
               .text();
+              font-size: 12px!important;
             }
           }
 
@@ -355,20 +356,20 @@
 
             .content_header{
               text-align: center;
-              padding-top: 12vw;
-              padding-bottom: 12vw;
+              padding-top: 10vw;
+              padding-bottom: 10vw;
               box-sizing: border-box;
 
               h2 {
-                .big_headline();
+                .medium_headline();
                 text-align: center;
                 color: @color2;
-                margin-bottom: 8vw;
+                margin-bottom: 5vw;
                 font-size: 70px;
 
-                @media @tablet-s{
-                  font-size: 18vw;
-                }
+                // @media @tablet-s{
+                //   font-size: 18vw;
+                // }
                 
                 .line{
                   line-height: 1.14em;
@@ -376,8 +377,12 @@
               }
 
               video{
-                max-width: 20vw;
-                margin-bottom: 4vw;
+                max-width: 90px;
+                margin-bottom: 1vw;
+
+                @media @tablet-s{
+                  max-width: 15vw;
+                }
               }
 
               .big_description{
@@ -470,7 +475,7 @@
                     text-align: center;
 
                     @media @tablet-l{
-                      margin-bottom: 30px;
+                      margin-bottom: 10px;
                       text-align: left;
                     }
                     

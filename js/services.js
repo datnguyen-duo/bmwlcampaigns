@@ -53,12 +53,12 @@
       var y = 0;
       var accordionContent = 0;
       var serviceHeight;
-
-      if (window.screen.width > 768) {
-        serviceHeight = 45;
-      } else {
-        serviceHeight = 28;
-      }
+      serviceHeight = 28;
+      // if (window.screen.width > 768) {
+      //   serviceHeight = 45;
+      // } else {
+      //   serviceHeight = 28;
+      // }
 
       if (index == 0) {
         y = 0; // since we start this at the top, offset with the window height
