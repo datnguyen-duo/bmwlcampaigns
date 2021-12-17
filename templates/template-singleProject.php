@@ -3,6 +3,7 @@
 get_header(); ?>
 
 <div class="single_project_wrap">
+
     <div class="project_hero">
         <div class="left">
             <div class="left_content">
@@ -104,17 +105,18 @@ get_header(); ?>
                 </p>
             </div>
             <div class="slider">
-            <div class="image_slider">
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider1.png" alt="">
+                <div class="image_slider">
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider1.png" alt="">
+                    </div>
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider3.png" alt="">
+                    </div>
+                    <div class="image_holder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider2.png" alt="">
+                    </div>
                 </div>
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider3.png" alt="">
-                </div>
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider2.png" alt="">
-                </div>
-            </div>
+                <div class="proxy-slider"></div>
             </div>
         </div>
     </div>
