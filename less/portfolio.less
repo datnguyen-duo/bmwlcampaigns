@@ -15,7 +15,11 @@
             text-align: center;
             color: @color2;
             position: relative;
-            top: 2vw;
+            top: 2px;
+            
+            @media @tablet-l{
+                top: 1.2vw;
+            }
             
             .line{
                 line-height: .75em;
@@ -110,6 +114,7 @@
         width: 100%;
         height: 100vh;
         overflow: hidden;
+        display: block;
 
         .project_info{
             position: absolute;
@@ -132,7 +137,7 @@
                 position: absolute;
                 left: 20px;
                 bottom: 20px;
-                .big_text();
+                .text();
                 color: @color1;
                 
                 @media @tablet-s{
@@ -140,7 +145,7 @@
                     left: auto;
                     bottom: auto;
                     transform: rotate(-90deg);
-                    left: 13vw;
+                    left: 12vw;
                 }
             }
 
@@ -154,11 +159,11 @@
                     right: auto;
                     bottom: auto;
                     transform: rotate(90deg);
-                    right: 14vw;
+                    right: 13vw;
                 }
 
                 .curent, .total, span{
-                    .big_text();
+                    .text();
                     color: @color1;
                     display: inline-block;
                     
@@ -166,7 +171,7 @@
 
             }
 
-            h2{
+            .project_name{
                 .big_headline();
                 text-align: center;
                 color: @color1;

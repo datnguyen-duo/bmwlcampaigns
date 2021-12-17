@@ -117,7 +117,7 @@
           gsap.to(slider.children, {
             duration: 0.4,
             ease: "power1.inOut",
-            scale: 1.05,
+            scale: 1,
             overwrite: true,
           });
           gsap.killTweensOf(slider);

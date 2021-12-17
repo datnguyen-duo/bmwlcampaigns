@@ -218,13 +218,13 @@
 		<div class="nav_content">
 			<ul>
 				<li>
-					<a href="">About</a>
+					<a href="/about">About</a>
 				</li>
 				<li>
-					<a href="">Work</a>
+					<a href="/portfolio">Work</a>
 				</li>
 				<li>
-					<a href="">Services</a>
+					<a href="/services">Services</a>
 				</li>
 				<li>
 					<a class="contact_popup_opener">Contact</a>

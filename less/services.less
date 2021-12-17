@@ -6,7 +6,7 @@
 
     position: relative;
 
-    
+
     h1 {
       .big_headline();
       position: absolute;
@@ -282,10 +282,7 @@
           .single_accordion(6);
 
           @accordionOffset: 30px;
-
-          @media @tablet-s{
-            @accordionOffset: 47px;
-          }
+          @accordionOffsetDesktop: 47px;
 
           .single_accordion(@n, @i: 1, @counter: 6) when (@i =< 6) {
 
@@ -297,6 +294,22 @@
             
             .single_accordion(@n,(@i + 1), (@counter - 1));
           }
+
+          @media @tablet-s{
+            .single_accordion(6);
+            .single_accordion(@n, @i: 1, @counter: 6) when (@i =< 6) {
+
+              @result: @counter * @accordionOffsetDesktop;
+              
+              &:nth-child(@{i}) {
+                transform: translateY(-@result);
+              }
+              
+              .single_accordion(@n,(@i + 1), (@counter - 1));
+            }
+          }
+
+          
 
           &:nth-child(1) {
             top: 0;

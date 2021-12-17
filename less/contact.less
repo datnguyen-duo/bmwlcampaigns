@@ -293,6 +293,7 @@
                         input:not([type='submit']), textarea{
                             z-index: 2;
                             position: relative;
+                            margin: 0px;
                             .big_text();
                             width: 100%;
                             border: 2px solid @color2;
@@ -302,11 +303,16 @@
                             background-color: transparent;
 
                             &::placeholder{
-                                .big_text();   
+                                .big_text();
+                                opacity: 1; 
                             }
 
                             @media @tablet-s{
                                 padding: 25px 35px;
+                            }
+
+                            &:focus{
+                                outline: none;
                             }
                         }
 
@@ -316,9 +322,7 @@
                             max-height: 180px;
                         }
 
-                        &:focus{
-                            outline: none;
-                        }
+                        
 
                         &:after {
                             content: "";
