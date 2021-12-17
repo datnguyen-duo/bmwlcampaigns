@@ -67,7 +67,7 @@
         servicesPinTl.to(service, { y: -y });
         servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent }, '<');
       } else {
-        y = window.innerHeight - index * serviceHeight;
+        y = window.screen.height - index * serviceHeight;
         accordionContent = $(service).find('.accordion_contenet').height() - (window.screen.height - 6 * serviceHeight);
 
         servicesPinTl.to(service, { y: -y });
