@@ -71,6 +71,7 @@ get_header(); ?>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
                         <div class="counter">01</div>
+                        <!-- <p class="back_to_top">Back to Top</p> -->
                         <p>
                             Strategy
                         </p>
@@ -404,6 +405,7 @@ get_header(); ?>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
                         <div class="counter">05</div>
+                        
                         <p>
                             Vote-By-Mail
                         </p>

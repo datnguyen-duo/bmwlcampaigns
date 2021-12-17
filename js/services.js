@@ -12,12 +12,12 @@
     var h = 0;
     var l = document.querySelectorAll(".services_wrap .single_accordion").length; // get number of services
 
+
     if (window.screen.width > 768) {
       var serviceHeroScroll = 1.3;
     } else {
       var serviceHeroScroll = 1.4; 
     }
-    
 
     for (var i = 0; i < l; i++) {
       h += services[i].scrollHeight; // get height of all services container
@@ -59,6 +59,7 @@
       // } else {
       //   serviceHeight = 28;
       // }
+      
 
       if (index == 0) {
         y = 0; // since we start this at the top, offset with the window height
