@@ -34,7 +34,7 @@
         scroller: scroller,
         start: "top top",
       },
-    }).to($('.services_wrap .image_slider'), { y: -$('.services_wrap .image_slider').height() / serviceHeroScroll + window.innerHeight });;
+    }).to($('.services_wrap .image_slider'), { y: -$('.services_wrap .image_slider').height() / serviceHeroScroll + window.screen.height });;
 
     var servicesPinTl = gsap.timeline({
       scrollTrigger: {
