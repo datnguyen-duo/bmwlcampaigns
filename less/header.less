@@ -13,13 +13,21 @@ header {
   }
 
   .logo_holder {
-    position: absolute;
-    left: 10px;
-    // top: 50%;
-    // transform: translateY(-50%);
     width: 80px;
     z-index: 101;
+    margin-left: 10px;
+    position: relative;
 
+    img {
+      .transition();
+    }
+
+    .dark {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
     @media @tablet-s {
       left: 2vw;
       width: 130px;
@@ -324,7 +332,18 @@ header {
     }
   }
 
-  &.dark {
+  body.page-template-template-portfolio &,
+  body.page-template-template-about & {
+    .logo_holder {
+      img {
+        &.light {
+          opacity: 0;
+        }
+        &.dark {
+          opacity: 1;
+        }
+      }
+    }
     .nav_opener {
       span {
         background-color: @color2;

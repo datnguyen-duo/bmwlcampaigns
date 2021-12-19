@@ -42,7 +42,7 @@ get_header(); ?>
     <div class="first_section">
         <div class="first_section_content">
             <p>About the Project</p>
-            <h2 class="letter_wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. elementum, dui ut cursus egestas.</h2>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. elementum, dui ut cursus egestas.</h2>
         </div>
     </div>
 
@@ -58,24 +58,24 @@ get_header(); ?>
         <div class="third_section_content">
             <div class="left">
                 <div class="image_holder_strap">
-                    <div class="image_holder fadein_wrap fadeIn">
+                    <div class="image_holder">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section1.png" alt="">
                     </div>
                 </div>
 
                 <div class="image_holder_second">
-                    <div class="image_holder fadein_wrap fadeIn">
+                    <div class="image_holder">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section2.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="right">
-                <div class="image_holder fadein_wrap fadeIn">
+                <div class="image_holder">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section3.png" alt="">
                 </div>
 
                 <div class="image_holder_second">
-                    <div class="image_holder fadein_wrap fadeIn">
+                    <div class="image_holder">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/singleProject/third_section2.png" alt="">
                     </div>
                 </div>

@@ -167,13 +167,10 @@
 
 <div id="viewport">
 
-<header class="<?php if (is_page_template('templates/template-about.php') || is_page_template('templates/template-portfolio.php')): ?>dark<?php endif; ?>">
+<header>
 	<a href="/" class="logo_holder">
-		<?php if (is_page_template('templates/template-about.php') || is_page_template('templates/template-portfolio.php')): ?>
-			<img src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="">
-		<?php else: ?>
-			<img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="">
-		<?php endif; ?>
+		<img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="logo" class="light">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo" class="dark">
 	</a>
 
 	<div class="close_nav">
@@ -191,13 +188,13 @@
 	<nav class="desktop">
 		<ul>
 			<li>
-				<a href="/bmwlcampaigns/about">About</a>
+				<a href="/about">About</a>
 			</li>
 			<li>
-				<a href="/bmwlcampaigns/portfolio">Work</a>
+				<a href="/portfolio">Work</a>
 			</li>
 			<li>
-				<a href="/bmwlcampaigns/services">Services</a>
+				<a href="/services">Services</a>
 			</li>
 		</ul>
 		<div class="btn white contact_popup_opener">

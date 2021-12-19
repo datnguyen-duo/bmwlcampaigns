@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 
     @media @tablet-l {
-        height: 100vh;
+      height: 100vh;
     }
 
     .left {
@@ -18,15 +18,14 @@
       }
 
       .left_content {
-          
-        @media @tablet-s{
-              border-right: 2px solid @color1;
+        @media @tablet-s {
+          border-right: 2px solid @color1;
         }
 
-        @media @tablet-l{
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+        @media @tablet-l {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
         }
 
         .headline_wrap {
@@ -50,8 +49,9 @@
           }
 
           h1 {
-            .big_headline();
+            .medium_headline();
             text-align: center;
+            color: #fff;
 
             @media @tablet-s {
               text-align: left;
@@ -59,24 +59,23 @@
           }
         }
 
-        .project_info { 
-            
-            padding: 30px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            border-top: 2px solid #fff;
-            
-            @media @tablet-s {
-                padding: 20px 30px;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            
-            @media @tablet-l {
-                margin-top: auto;
-                padding: 2vw 4vw;
-            }
+        .project_info {
+          padding: 30px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          border-top: 2px solid #fff;
+
+          @media @tablet-s {
+            padding: 20px 30px;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+
+          @media @tablet-l {
+            margin-top: auto;
+            padding: 2vw 4vw;
+          }
 
           .single_info {
             text-align: center;
@@ -190,8 +189,8 @@
         .text();
         position: relative;
         z-index: 5;
-        
-        @media @tablet-s{
+
+        @media @tablet-s {
           margin-bottom: 20px;
         }
       }
@@ -559,9 +558,9 @@
             margin-right: 10px;
             transform: skewX(-15deg);
 
-            @media @tablet-s{
-                padding-top: 20%;
-                margin-right: 20px;
+            @media @tablet-s {
+              padding-top: 20%;
+              margin-right: 20px;
             }
 
             img {
@@ -571,7 +570,7 @@
               height: 120%;
               transform: skewX(15deg);
 
-              @media @tablet-s{
+              @media @tablet-s {
                 width: 120%;
                 margin-left: -8%;
               }

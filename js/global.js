@@ -10,6 +10,12 @@ var locoScroll;
 
   //LOAD PAGE SCRIPTS
   function loadIndexScripts() {
+    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
+      type: "lines, words, chars",
+      wordsClass: "word word++",
+      linesClass: "line line++",
+      charsClass: "char char++",
+    });
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -509,6 +515,12 @@ var locoScroll;
     ScrollTrigger.refresh();
   }
   function loadAboutScripts() {
+    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
+      type: "lines, words, chars",
+      wordsClass: "word word++",
+      linesClass: "line line++",
+      charsClass: "char char++",
+    });
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -633,13 +645,18 @@ var locoScroll;
         trigger: "footer",
         start: "top 50%",
         scroller: scroller,
-        markers: true,
         onEnter: () => $(".footer_content").addClass("active"),
       },
     });
     ScrollTrigger.refresh();
   }
   function loadPortfolioScripts() {
+    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
+      type: "lines, words, chars",
+      wordsClass: "word word++",
+      linesClass: "line line++",
+      charsClass: "char char++",
+    });
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -750,6 +767,12 @@ var locoScroll;
     ScrollTrigger.refresh();
   }
   function loadServicesScripts() {
+    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
+      type: "lines, words, chars",
+      wordsClass: "word word++",
+      linesClass: "line line++",
+      charsClass: "char char++",
+    });
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -883,6 +906,12 @@ var locoScroll;
     ScrollTrigger.refresh();
   }
   function loadSingleProjectScripts() {
+    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
+      type: "lines, words, chars",
+      wordsClass: "word word++",
+      linesClass: "line line++",
+      charsClass: "char char++",
+    });
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -1069,13 +1098,6 @@ var locoScroll;
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
   }
-
-  var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
-    type: "lines, words, chars",
-    wordsClass: "word word++",
-    linesClass: "line line++",
-    charsClass: "char char++",
-  });
 
   // $.getScript(site_data.theme_url + "/js/singleProject.js", function () {});
   // $.getScript(site_data.theme_url + "/js/home.js", function () {});
