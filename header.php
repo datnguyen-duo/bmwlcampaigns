@@ -27,7 +27,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class("loading"); ?>>
+<body <?php body_class(); ?>  data-barba="wrapper">
 <?php wp_body_open(); ?>
 
 <div class="contact_popup_holder">
@@ -166,7 +166,6 @@
 </div>
 
 <div id="viewport">
-<div id="page" class="site">
 
 <header class="<?php if (is_page_template('templates/template-about.php') || is_page_template('templates/template-portfolio.php')): ?>dark<?php endif; ?>">
 	<a href="/" class="logo_holder">
@@ -192,13 +191,13 @@
 	<nav class="desktop">
 		<ul>
 			<li>
-				<a href="/about">About</a>
+				<a href="/bmwlcampaigns/about">About</a>
 			</li>
 			<li>
-				<a href="/portfolio">Work</a>
+				<a href="/bmwlcampaigns/portfolio">Work</a>
 			</li>
 			<li>
-				<a href="/services">Services</a>
+				<a href="/bmwlcampaigns/services">Services</a>
 			</li>
 		</ul>
 		<div class="btn white contact_popup_opener">
@@ -247,3 +246,5 @@
 		</div>
 	</div>
 </header>
+
+<div id="page" class="site barba-container" data-barba="container" data-barba-namespace="<?php echo the_title()?>">
