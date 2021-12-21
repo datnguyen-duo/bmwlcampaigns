@@ -8,45 +8,8 @@ var locoScroll;
   gsap.registerPlugin(ScrollToPlugin);
   gsap.registerPlugin(Draggable);
 
-  //LOAD PAGE SCRIPTS
-  function loadIndexScripts() {
-  
-    var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
-    
-    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-    window.addEventListener('resize', function () {
-      // We execute the same script as before
-      var vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-    });
-    
-    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
-      type: "lines, words, chars",
-      wordsClass: "word word++",
-      linesClass: "line line++",
-      charsClass: "char char++",
-    });
-    if (window.screen.width > 1024) {
-      var scroller = "#viewport";
-    } else {
-      var scroller = "body";
-    }
-
-    // setTimeout(function(){
-    //     Draggable.create(".single_project_wrap .slider .image_slider", {
-    //       type: "x",
-    //       edgeResistance: 0.5,
-    //       snap: (val) => Math.round(val / 100) * 100,
-    //       inertia: true,
-    //       allowContextMenu : true,
-    //       onThrowComplete	: function() { console.log(this.x) },
-    //       bounds: {
-    //         minX: -document.querySelector(".single_project_wrap .image_slider").offsetWidth + document.querySelector(".single_project_wrap .slider").offsetWidth,
-    //         maxX: 0
-    //       }
-    //     });
-    // }, 1000)
-    /*	-----------------------------------------------------------------------------
+  function globalScripts() {
+        /*	-----------------------------------------------------------------------------
     CONTACT OPENER START
     --------------------------------------------------------------------------------- */
     var contactOpener = gsap.timeline({
@@ -143,6 +106,47 @@ var locoScroll;
       $(".close_nav").fadeOut();
       $(".mobile_nav").fadeOut();
     });
+  }
+  //LOAD PAGE SCRIPTS
+  function loadIndexScripts() {
+  
+    var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
+    
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+    window.addEventListener('resize', function () {
+      // We execute the same script as before
+      var vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+    });
+    
+    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
+      type: "lines, words, chars",
+      wordsClass: "word word++",
+      linesClass: "line line++",
+      charsClass: "char char++",
+    });
+    if (window.screen.width > 1024) {
+      var scroller = "#viewport";
+    } else {
+      var scroller = "body";
+    }
+
+    // setTimeout(function(){
+    //     Draggable.create(".single_project_wrap .slider .image_slider", {
+    //       type: "x",
+    //       edgeResistance: 0.5,
+    //       snap: (val) => Math.round(val / 100) * 100,
+    //       inertia: true,
+    //       allowContextMenu : true,
+    //       onThrowComplete	: function() { console.log(this.x) },
+    //       bounds: {
+    //         minX: -document.querySelector(".single_project_wrap .image_slider").offsetWidth + document.querySelector(".single_project_wrap .slider").offsetWidth,
+    //         maxX: 0
+    //       }
+    //     });
+    // }, 1000)
+
+
     document.body.classList.remove("loading");
 
     var rows = document.querySelectorAll(".fourth_section .single_item");
@@ -215,10 +219,9 @@ var locoScroll;
 
     if ($(window).width() > 765) {
       letterAnaimation = -10;
-      console.log("vece");
+      
     } else {
       letterAnaimation = 0;
-      console.log("manje");
     }
 
     gsap.utils.toArray(".letter_wrap").forEach((section) => {
@@ -1055,6 +1058,7 @@ var locoScroll;
       linesClass: "line line++",
       charsClass: "char char++",
     });
+    
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -1092,7 +1096,7 @@ var locoScroll;
       }
 
       gsap.utils.toArray(".letter_wrap").forEach((section) => {
-        if (section.parentElement.className == "seventh_section_content") {
+        if (section.parentElement.className == "home_wrap seventh_section_content") {
           if ($(window).width() > 765) {
             letterAnaimation = -30;
           } else {
@@ -1124,7 +1128,7 @@ var locoScroll;
     if (window.screen.width > 650) {
       var image_height = "100vh";
     } else {
-      var image_height = "70vh";
+      var image_height = "100vh";
     }
     let singleProject_image_reveal = $(
       ".single_project_wrap .second_section .image_holder"
@@ -1387,6 +1391,7 @@ var locoScroll;
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
             loadIndexScripts();
+            globalScripts();
           });
         },
       },
@@ -1395,6 +1400,7 @@ var locoScroll;
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
             loadAboutScripts();
+            globalScripts();
           });
         },
       },
@@ -1403,6 +1409,7 @@ var locoScroll;
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
             loadPortfolioScripts();
+            globalScripts();
           });
         },
       },
@@ -1411,6 +1418,7 @@ var locoScroll;
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
             loadServicesScripts();
+            globalScripts();
           });
         },
       },
@@ -1419,6 +1427,7 @@ var locoScroll;
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
             loadSingleProjectScripts();
+            globalScripts();
           });
         },
       },

@@ -205,17 +205,13 @@
 
   .second_section {
     .second_section_content {
-      height: 70vh;
+      height: 100vh;
       position: relative;
-
-      @media @tablet-s {
-        height: 100vh;
-      }
 
       .image_holder {
         z-index: 2;
-        width: 50vw;
-        height: 50vh;
+        width: 80vw;
+        height: 80vh;
         top: 0;
         left: 0;
         bottom: 0;
@@ -598,7 +594,11 @@
         max-width: 100px;
         margin: auto;
         margin-top: 20px;
-        
+
+        @media @tablet-xl{
+          display: none;
+        }
+
         span{
           font-size: 14px;
           font-family: @font1;
@@ -782,9 +782,13 @@
         }
 
         &:hover {
-          .image_holder,
+          
           h3 {
             opacity: 1;
+          }
+
+          .image_holder{
+            opacity: 0.55;
           }
 
           .prev_project,

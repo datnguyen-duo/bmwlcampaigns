@@ -87,7 +87,7 @@ get_header(); ?>
         <div class="fourth_section_inner">
             <div class="fourth_section_content">
                 <div class="description">
-                    <h2>Lorem ipsum dolor sit.</h2>
+                    <h2 class="letter_wrap">Lorem ipsum dolor sit.</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at est facilisis, vulputate elit vitae, dapibus lectus. Sed finibus dui ut elementum dapibus. In sollicitudin tortor eu lacus placerat, non gravida dui hendrerit. Nullam sed dui mattis, ultricies sapien eget, volutpat urna. Phasellus at turpis laoreet leo egestas gravida vel sed ligula. Proin pretium elementum dictum. Nam viverra mi eu nisi rutrum tincidunt. Sed nec nisi quis nisi rhoncus tincidunt nec et enim. Donec in massa dignissim, varius tellus in, finibus arcu. Aenean egestas tristique dui eget efficitur.
                     </p>
@@ -99,7 +99,7 @@ get_header(); ?>
     <div class="fifth_section">
         <div class="fifth_section_content">
             <div class="fifth_section_header">
-                <h2>Media & <br> mail samples</h2>
+                <h2 class="letter_wrap">Media & <br> mail samples</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
                 </p>
@@ -128,7 +128,7 @@ get_header(); ?>
     </div>
 
     <div class="sixth_section">
-        <h2 class="mobile_nav_headline">More work</h2>
+        <h2 class="mobile_nav_headline letter_wrap">More work</h2>
         <div class="sixth_section_content">
             
             <a href="/project" class="prev project_nav">
@@ -144,7 +144,7 @@ get_header(); ?>
             </a>
 
             <div class="mid_info">
-                <h2>More work</h2>
+                <h2 class="letter_wrap">More work</h2>
                 <p>
                     Or interested in working together?
                 </p>
