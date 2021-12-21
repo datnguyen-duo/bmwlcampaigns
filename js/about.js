@@ -1,8 +1,9 @@
 (function ($) {
   //document ready
-  console.log("load about");
 
   function loadAboutScripts() {
+    
+
     console.log("load about");
     if (window.screen.width > 1024) {
       var scroller = "#viewport";

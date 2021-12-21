@@ -515,6 +515,7 @@ var locoScroll;
     ScrollTrigger.refresh();
   }
   function loadAboutScripts() {
+    
     var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
       type: "lines, words, chars",
       wordsClass: "word word++",
@@ -639,6 +640,63 @@ var locoScroll;
       $(this).parent().parent().parent().prev().addClass("active");
       e.stopImmediatePropagation();
     });
+
+    /*-----------------------------------------------------------------------------
+      Fade Image/Text Animation
+      --------------------------------------------------------------------------------- */
+      let animationTrigger = $(".fadein_wrap");
+
+      animationTrigger.each(function () {
+        let trigger = $(this);
+
+        gsap.to(animationTrigger, {
+          scrollTrigger: {
+            trigger: trigger,
+            start: "top 60%",
+            scroller: scroller,
+
+            onEnter: function () {
+              $(trigger).addClass("in_view");
+            },
+          },
+        });
+      });
+
+      var letterAnaimation;
+
+      if ($(window).width() > 765) {
+        letterAnaimation = -10;
+
+      } else {
+        letterAnaimation = 0;
+      }
+
+      gsap.utils.toArray(".letter_wrap").forEach((section) => {
+        if (section.parentElement.className == "seventh_section_content") {
+          if ($(window).width() > 765) {
+            letterAnaimation = -30;
+          } else {
+            letterAnaimation = 0;
+          }
+        }
+
+        gsap.from(section.querySelectorAll("div.char"), {
+          scrollTrigger: {
+            trigger: section,
+            scroller: scroller,
+          },
+
+          y: 500,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.007,
+          ease: "Power1.easeOut",
+        });
+      });
+
+      /*-----------------------------------------------------------------------------
+          End Of Fade Image/Text Animation
+          --------------------------------------------------------------------------------- */
 
     gsap.to("footer", {
       scrollTrigger: {
@@ -778,6 +836,17 @@ var locoScroll;
     } else {
       var scroller = "body";
     }
+    
+    $(".back_to_top").click (function(e) {
+      if (window.screen.width > 1024) {
+        e.preventDefault()
+        let target = e.target.getAttribute("href")
+        console.log(target)
+        locoScroll.scrollTo(target);
+      } else {
+        gsap.to(window, 1, {scrollTo:{y:0}, ease:Power2.easeInOut});
+      }
+    })
 
     var winHeight = document.body.clientHeight;
     var services = document.querySelectorAll(
@@ -797,6 +866,63 @@ var locoScroll;
     for (var i = 0; i < l; i++) {
       h += services[i].scrollHeight; // get height of all services container
     }
+
+    /*-----------------------------------------------------------------------------
+      Fade Image/Text Animation
+      --------------------------------------------------------------------------------- */
+      let animationTrigger = $(".fadein_wrap");
+
+      animationTrigger.each(function () {
+        let trigger = $(this);
+
+        gsap.to(animationTrigger, {
+          scrollTrigger: {
+            trigger: trigger,
+            start: "top 60%",
+            scroller: scroller,
+
+            onEnter: function () {
+              $(trigger).addClass("in_view");
+            },
+          },
+        });
+      });
+
+      var letterAnaimation;
+
+      if ($(window).width() > 765) {
+        letterAnaimation = -10;
+
+      } else {
+        letterAnaimation = 0;
+      }
+
+      gsap.utils.toArray(".letter_wrap").forEach((section) => {
+        if (section.parentElement.className == "seventh_section_content") {
+          if ($(window).width() > 765) {
+            letterAnaimation = -30;
+          } else {
+            letterAnaimation = 0;
+          }
+        }
+
+        gsap.from(section.querySelectorAll("div.char"), {
+          scrollTrigger: {
+            trigger: section,
+            scroller: scroller,
+          },
+
+          y: 500,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.007,
+          ease: "Power1.easeOut",
+        });
+      });
+
+      /*-----------------------------------------------------------------------------
+          End Of Fade Image/Text Animation
+          --------------------------------------------------------------------------------- */
 
     gsap
       .timeline({
@@ -1076,6 +1202,7 @@ var locoScroll;
       smooth: true,
       lerp: 0.06,
     });
+
     locoScroll.on("scroll", ScrollTrigger.update);
     ScrollTrigger.scrollerProxy("#viewport", {
       scrollTop(value) {

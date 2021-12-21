@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <div class="services_wrap">
-    <div class="service_hero">
+    <div class="service_hero" id="top">
         <h1 class="letter_wrap">How we win</h1>
 
         <div class="image_slider">
@@ -71,7 +71,7 @@ get_header(); ?>
                 <div class="single_accordion" role="region">
                     <div class="accordion_headline">
                         <div class="counter">01</div>
-                        <!-- <p class="back_to_top">Back to Top</p> -->
+                        <a href="#top" class="back_to_top">Back to Top</a>
                         <p>
                             Strategy
                         </p>
