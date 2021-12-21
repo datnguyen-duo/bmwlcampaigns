@@ -118,6 +118,12 @@ get_header(); ?>
                 </div>
                 <div class="proxy-slider"></div>
             </div>
+
+            <div class="swiper_indicator">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+                <span>Swipe</span>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+            </div>
         </div>
     </div>
 

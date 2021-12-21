@@ -587,6 +587,32 @@
           z-index: 10;
         }
       }
+
+      .swiper_indicator{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+        align-items: center;
+        background-color: @color4;
+        max-width: 100px;
+        margin: auto;
+        margin-top: 20px;
+        
+        span{
+          font-size: 14px;
+          font-family: @font1;
+        }
+
+        img{
+          max-width: 12px;
+          position: relative;
+
+          &:first-child{
+            transform: rotate(180deg);
+          }
+        }
+      }
     }
   }
 

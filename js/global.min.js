@@ -10,6 +10,16 @@ var locoScroll;
 
   //LOAD PAGE SCRIPTS
   function loadIndexScripts() {
+  
+    var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
+    
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+    window.addEventListener('resize', function () {
+      // We execute the same script as before
+      var vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+    });
+    
     var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
       type: "lines, words, chars",
       wordsClass: "word word++",
@@ -836,6 +846,13 @@ var locoScroll;
     } else {
       var scroller = "body";
     }
+
+    // $(".single_accordion").click (function(e) {
+    //   var clickTarget= -(window.innerHeight - 28);
+    //   gsap.to($(this), 1, {y: clickTarget, ease:Power2.easeInOut});
+    //   locoScroll.scrollTo($(this));
+      
+    // })
     
     $(".back_to_top").click (function(e) {
       if (window.screen.width > 1024) {
@@ -1043,6 +1060,63 @@ var locoScroll;
     } else {
       var scroller = "body";
     }
+
+        /*-----------------------------------------------------------------------------
+      Fade Image/Text Animation
+      --------------------------------------------------------------------------------- */
+      let animationTrigger = $(".fadein_wrap");
+
+      animationTrigger.each(function () {
+        let trigger = $(this);
+
+        gsap.to(animationTrigger, {
+          scrollTrigger: {
+            trigger: trigger,
+            start: "top 60%",
+            scroller: scroller,
+
+            onEnter: function () {
+              $(trigger).addClass("in_view");
+            },
+          },
+        });
+      });
+
+      var letterAnaimation;
+
+      if ($(window).width() > 765) {
+        letterAnaimation = -10;
+
+      } else {
+        letterAnaimation = 0;
+      }
+
+      gsap.utils.toArray(".letter_wrap").forEach((section) => {
+        if (section.parentElement.className == "seventh_section_content") {
+          if ($(window).width() > 765) {
+            letterAnaimation = -30;
+          } else {
+            letterAnaimation = 0;
+          }
+        }
+
+        gsap.from(section.querySelectorAll("div.char"), {
+          scrollTrigger: {
+            trigger: section,
+            scroller: scroller,
+          },
+
+          y: 500,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.007,
+          ease: "Power1.easeOut",
+        });
+      });
+
+      /*-----------------------------------------------------------------------------
+          End Of Fade Image/Text Animation
+          --------------------------------------------------------------------------------- */
 
     /*-----------------------------------------------------------------------------
         Image Reveal
