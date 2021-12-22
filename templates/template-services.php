@@ -68,7 +68,7 @@ get_header(); ?>
     <div class="third_section">
         <div class="third_section_conetnt">
             <div class="service_accordions">
-                <div class="single_accordion" role="region">
+                <div class="single_accordion" id="strategy" role="region">
                     <div class="accordion_headline">
                         <div class="counter">01</div>
                         <a href="#top" class="back_to_top">Back to Top</a>

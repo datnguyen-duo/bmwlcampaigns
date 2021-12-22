@@ -9,7 +9,8 @@ var locoScroll;
   gsap.registerPlugin(Draggable);
 
   function globalScripts() {
-        /*	-----------------------------------------------------------------------------
+    
+    /*	-----------------------------------------------------------------------------
     CONTACT OPENER START
     --------------------------------------------------------------------------------- */
     var contactOpener = gsap.timeline({
@@ -91,6 +92,10 @@ var locoScroll;
     /*	-----------------------------------------------------------------------------
       CONTACT OPENER END
     --------------------------------------------------------------------------------- */
+
+    /*	-----------------------------------------------------------------------------
+    mobile nav OPENER START
+    --------------------------------------------------------------------------------- */
     var menuOpen = gsap.timeline({
       paused: true,
       reversed: true,
@@ -127,17 +132,29 @@ var locoScroll;
 
     $(".mobile_nav .nav_content ul li, .logo_holder").on('click', function(){
       menuOpen.reverse();
-      $(".nav_opener").fadeIn();
       $(".close_nav").fadeOut();
       $("header").css("position", "absolute");
+      
+      if($(window).width() < 650){
+        $(".nav_opener").fadeIn();
+      }
     });
+    /*	-----------------------------------------------------------------------------
+    mobile nav OPENER END
+    --------------------------------------------------------------------------------- */
     
   }
+
   //LOAD PAGE SCRIPTS
   function loadIndexScripts() {
-  
+    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
+      type: "lines, words, chars",
+      wordsClass: "word word++",
+      linesClass: "line line++",
+      charsClass: "char char++",
+    });
+
     var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
-    
     document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
     window.addEventListener('resize', function () {
       // We execute the same script as before
@@ -145,12 +162,6 @@ var locoScroll;
       document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
     });
     
-    var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
-      type: "lines, words, chars",
-      wordsClass: "word word++",
-      linesClass: "line line++",
-      charsClass: "char char++",
-    });
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -918,13 +929,6 @@ var locoScroll;
     } else {
       var scroller = "body";
     }
-
-    // $(".single_accordion").click (function(e) {
-    //   var clickTarget= -(window.innerHeight - 28);
-    //   gsap.to($(this), 1, {y: clickTarget, ease:Power2.easeInOut});
-    //   locoScroll.scrollTo($(this));
-      
-    // })
     
     $(".back_to_top").click (function(e) {
       if (window.screen.width > 1024) {
@@ -1054,6 +1058,12 @@ var locoScroll;
       // } else {
       //   serviceHeight = 28;
       // }
+      
+
+      // $(service).on('click', function() { 
+      //   var clickTarget= -(window.innerHeight - index * 28);
+      //   gsap.to($(this), 1, {y: clickTarget, ease:Power2.easeInOut});
+      // });
 
       if (index == 0) {
         y = 0; // since we start this at the top, offset with the window height
@@ -1454,8 +1464,8 @@ var locoScroll;
         namespace: "Home",
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
-            loadIndexScripts();
             globalScripts();
+            loadIndexScripts();
           });
         },
       },
@@ -1472,8 +1482,8 @@ var locoScroll;
         namespace: "Portfolio",
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
-            loadPortfolioScripts();
             globalScripts();
+            loadPortfolioScripts();
           });
         },
       },
@@ -1481,8 +1491,8 @@ var locoScroll;
         namespace: "Services",
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
-            loadServicesScripts();
             globalScripts();
+            loadServicesScripts();
           });
         },
       },
@@ -1490,8 +1500,8 @@ var locoScroll;
         namespace: "Project",
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
-            loadSingleProjectScripts();
             globalScripts();
+            loadSingleProjectScripts();
           });
         },
       },
