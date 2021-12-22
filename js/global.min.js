@@ -824,7 +824,6 @@ var locoScroll;
           scrollTrigger: {
             trigger: ".portfolio_paralax_holder",
             start: "top top",
-            markers: true,
             scrub: true,
             scroller: scroller,
           },
