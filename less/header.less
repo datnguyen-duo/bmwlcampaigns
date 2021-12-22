@@ -81,13 +81,17 @@ header {
 
   .mobile_nav {
     position: fixed;
-    display: none;
+    // display: none;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 0vh;
     background-color: #0491b5;
     z-index: 100;
+
+    @media @tablet-s{
+      display: none;
+    }
 
     .form_holder {
       position: absolute;
@@ -95,6 +99,7 @@ header {
       width: 100%;
       padding: 0 30px;
       box-sizing: border-box;
+      opacity: 0;
 
       span {
         display: block;
@@ -237,6 +242,9 @@ header {
       ul {
         li {
           text-align: center;
+          position: relative;
+          opacity: 0;
+          top: 20px;
           margin-bottom: 5px;
 
           a {

@@ -91,21 +91,47 @@ var locoScroll;
     /*	-----------------------------------------------------------------------------
       CONTACT OPENER END
     --------------------------------------------------------------------------------- */
+    var menuOpen = gsap.timeline({
+      paused: true,
+      reversed: true,
+      onComplete: function () {
+        
+      },
+    });
+
+    let nav_holder = $(".mobile_nav");
+    let listItem = $(".mobile_nav .nav_content ul li");
+    let mobileNavForm = $(".mobile_nav .form_holder");
+    menuOpen.to(nav_holder, {
+      visibility: "visible",
+      height: "100vh",
+      duration: 0.7,
+      ease: "power2.inOut",
+    });
+    menuOpen.to(listItem, { top: 0, opacity: 1, stagger: 0.1 });
+    menuOpen.to(mobileNavForm, { opacity: 1 });
 
     $(".nav_opener").on("click", function () {
       $(this).fadeOut();
-      $(".mobile_nav").fadeIn();
+      menuOpen.play()
       $(".close_nav").fadeIn().css("display", "flex");
       $("header").css("position", "fixed");
     });
 
     $(".close_nav").on("click", function () {
       $(this).fadeOut();
+      menuOpen.reverse()
       $("header").css("position", "absolute");
       $(".nav_opener").fadeIn();
-      $(".close_nav").fadeOut();
-      $(".mobile_nav").fadeOut();
     });
+
+    $(".mobile_nav .nav_content ul li, .logo_holder").on('click', function(){
+      menuOpen.reverse();
+      $(".nav_opener").fadeIn();
+      $(".close_nav").fadeOut();
+      $("header").css("position", "absolute");
+    });
+    
   }
   //LOAD PAGE SCRIPTS
   function loadIndexScripts() {
@@ -131,22 +157,6 @@ var locoScroll;
       var scroller = "body";
     }
 
-    // setTimeout(function(){
-    //     Draggable.create(".single_project_wrap .slider .image_slider", {
-    //       type: "x",
-    //       edgeResistance: 0.5,
-    //       snap: (val) => Math.round(val / 100) * 100,
-    //       inertia: true,
-    //       allowContextMenu : true,
-    //       onThrowComplete	: function() { console.log(this.x) },
-    //       bounds: {
-    //         minX: -document.querySelector(".single_project_wrap .image_slider").offsetWidth + document.querySelector(".single_project_wrap .slider").offsetWidth,
-    //         maxX: 0
-    //       }
-    //     });
-    // }, 1000)
-
-
     document.body.classList.remove("loading");
 
     var rows = document.querySelectorAll(".fourth_section .single_item");
@@ -157,7 +167,9 @@ var locoScroll;
           this.classList.contains("animate") &&
           !this.classList.contains("init")
         ) {
-          this.querySelector("video").play();
+          this.querySelector("video").play().bind('ended', function () { 
+            this.currentTime = 0;
+          });
           this.classList.add("init");
         }
       });
@@ -528,13 +540,13 @@ var locoScroll;
     ScrollTrigger.refresh();
   }
   function loadAboutScripts() {
-    
     var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
       type: "lines, words, chars",
       wordsClass: "word word++",
       linesClass: "line line++",
       charsClass: "char char++",
     });
+
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -574,7 +586,7 @@ var locoScroll;
     teamOpener.to(team_content, { opacity: 1 });
     teamOpener.from(
       $(".team_header h2 .char"),
-      { y: 500, duration: 1, stagger: 0.01, ease: Power1.easeOuteaseOut },
+      { y: 500, duration: 0.3, stagger: 0.01, ease: Power1.easeOuteaseOut },
       "<"
     );
 
@@ -728,6 +740,63 @@ var locoScroll;
       linesClass: "line line++",
       charsClass: "char char++",
     });
+
+        /*-----------------------------------------------------------------------------
+      Fade Image/Text Animation
+      --------------------------------------------------------------------------------- */
+      let animationTrigger = $(".fadein_wrap");
+
+      animationTrigger.each(function () {
+        let trigger = $(this);
+
+        gsap.to(animationTrigger, {
+          scrollTrigger: {
+            trigger: trigger,
+            start: "top 60%",
+            scroller: scroller,
+
+            onEnter: function () {
+              $(trigger).addClass("in_view");
+            },
+          },
+        });
+      });
+
+      var letterAnaimation;
+
+      if ($(window).width() > 765) {
+        letterAnaimation = -10;
+
+      } else {
+        letterAnaimation = 0;
+      }
+
+      gsap.utils.toArray(".letter_wrap").forEach((section) => {
+        if (section.parentElement.className == "seventh_section_content") {
+          if ($(window).width() > 765) {
+            letterAnaimation = -30;
+          } else {
+            letterAnaimation = 0;
+          }
+        }
+
+        gsap.from(section.querySelectorAll("div.char"), {
+          scrollTrigger: {
+            trigger: section,
+            scroller: scroller,
+          },
+          y: 500,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.007,
+          ease: "Power1.easeOut",
+        });
+      });
+
+      /*-----------------------------------------------------------------------------
+          End Of Fade Image/Text Animation
+          --------------------------------------------------------------------------------- */
+
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -749,12 +818,13 @@ var locoScroll;
       .toArray(".section_parallax .project_info")
       .forEach((section, i) => {
         const heightDiff = section.parentElement.parentElement.clientHeight;
-
+        
         gsap.to(section, {
-          y: heightDiff,
+          // y: heightDiff,
           scrollTrigger: {
             trigger: ".portfolio_paralax_holder",
             start: "top top",
+            markers: true,
             scrub: true,
             scroller: scroller,
           },
@@ -861,7 +931,7 @@ var locoScroll;
       if (window.screen.width > 1024) {
         e.preventDefault()
         let target = e.target.getAttribute("href")
-        console.log(target)
+        
         locoScroll.scrollTo(target);
       } else {
         gsap.to(window, 1, {scrollTo:{y:0}, ease:Power2.easeInOut});
@@ -931,7 +1001,6 @@ var locoScroll;
             trigger: section,
             scroller: scroller,
           },
-
           y: 500,
           opacity: 0,
           duration: 0.5,
@@ -1280,13 +1349,10 @@ var locoScroll;
       smooth: true,
       lerp: 0.06,
     });
-
-    locoScroll.on("scroll", ScrollTrigger.update);
+    
     ScrollTrigger.scrollerProxy("#viewport", {
       scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
-          : locoScroll.scroll.instance.scroll.y;
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
       },
       getBoundingClientRect() {
         return {
@@ -1296,12 +1362,11 @@ var locoScroll;
           height: window.innerHeight,
         };
       },
-      pinType: document.querySelector("#viewport").style.transform
-        ? "transform"
-        : "fixed",
+      pinType: document.querySelector("#viewport").style.transform ? "transform" : "fixed"
     });
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
+    locoScroll.on("scroll", ScrollTrigger.update);
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   }
 
   // $.getScript(site_data.theme_url + "/js/singleProject.js", function () {});
@@ -1316,7 +1381,7 @@ var locoScroll;
     // }
 
     if (window.screen.width > 1024) {
-      locoScroll.update();
+      // locoScroll.update();
     }
   });
 
@@ -1399,8 +1464,8 @@ var locoScroll;
         namespace: "About",
         afterEnter({ next }) {
           imagesLoaded(document.querySelector("#viewport"), function () {
-            loadAboutScripts();
             globalScripts();
+            loadAboutScripts();
           });
         },
       },
