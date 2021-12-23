@@ -188,13 +188,13 @@
 	<nav class="desktop">
 		<ul>
 			<li>
-				<a href="/bmwlcampaigns/about">About</a>
+				<a href="/about">About</a>
 			</li>
 			<li>
-				<a href="/bmwlcampaigns/portfolio">Work</a>
+				<a href="/portfolio">Work</a>
 			</li>
 			<li>
-				<a href="/bmwlcampaigns/services">Services</a>
+				<a href="/services">Services</a>
 			</li>
 		</ul>
 		<div class="btn white contact_popup_opener">
