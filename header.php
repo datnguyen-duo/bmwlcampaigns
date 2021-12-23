@@ -165,7 +165,7 @@
 	</div>
 </div>
 
-<div id="viewport">
+<div id="viewport" class="loading">
 
 <header>
 	<a href="/" class="logo_holder">
@@ -188,13 +188,13 @@
 	<nav class="desktop">
 		<ul>
 			<li>
-				<a href="/about">About</a>
+				<a href="/bmwlcampaigns/about">About</a>
 			</li>
 			<li>
-				<a href="/portfolio">Work</a>
+				<a href="/bmwlcampaigns/portfolio">Work</a>
 			</li>
 			<li>
-				<a href="/services">Services</a>
+				<a href="/bmwlcampaigns/services">Services</a>
 			</li>
 		</ul>
 		<div class="btn white contact_popup_opener">

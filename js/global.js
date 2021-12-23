@@ -9,7 +9,6 @@ var locoScroll;
   gsap.registerPlugin(Draggable);
 
   function globalScripts() {
-    
     /*	-----------------------------------------------------------------------------
     CONTACT OPENER START
     --------------------------------------------------------------------------------- */
@@ -99,9 +98,7 @@ var locoScroll;
     var menuOpen = gsap.timeline({
       paused: true,
       reversed: true,
-      onComplete: function () {
-        
-      },
+      onComplete: function () {},
     });
 
     let nav_holder = $(".mobile_nav");
@@ -118,31 +115,33 @@ var locoScroll;
 
     $(".nav_opener").on("click", function () {
       $(this).fadeOut();
-      menuOpen.play()
+      menuOpen.play();
       $(".close_nav").fadeIn().css("display", "flex");
       $("header").css("position", "fixed");
     });
 
     $(".close_nav").on("click", function () {
       $(this).fadeOut();
-      menuOpen.reverse()
+      menuOpen.reverse();
       $("header").css("position", "absolute");
       $(".nav_opener").fadeIn();
     });
 
-    $(".mobile_nav .nav_content ul li, .logo_holder").on('click', function(){
+    $(".mobile_nav .nav_content ul li, .logo_holder").on("click", function () {
       menuOpen.reverse();
       $(".close_nav").fadeOut();
       $("header").css("position", "absolute");
-      
-      if($(window).width() < 650){
+
+      if ($(window).width() < 650) {
         $(".nav_opener").fadeIn();
       }
     });
     /*	-----------------------------------------------------------------------------
     mobile nav OPENER END
     --------------------------------------------------------------------------------- */
-    
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
   }
 
   //LOAD PAGE SCRIPTS
@@ -155,20 +154,18 @@ var locoScroll;
     });
 
     var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-    window.addEventListener('resize', function () {
+    document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
+    window.addEventListener("resize", function () {
       // We execute the same script as before
       var vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+      document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
     });
-    
+
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
       var scroller = "body";
     }
-
-    document.body.classList.remove("loading");
 
     var rows = document.querySelectorAll(".fourth_section .single_item");
 
@@ -178,9 +175,11 @@ var locoScroll;
           this.classList.contains("animate") &&
           !this.classList.contains("init")
         ) {
-          this.querySelector("video").play().bind('ended', function () { 
-            this.currentTime = 0;
-          });
+          this.querySelector("video")
+            .play()
+            .bind("ended", function () {
+              this.currentTime = 0;
+            });
           this.classList.add("init");
         }
       });
@@ -242,7 +241,6 @@ var locoScroll;
 
     if ($(window).width() > 765) {
       letterAnaimation = -10;
-      
     } else {
       letterAnaimation = 0;
     }
@@ -326,12 +324,13 @@ var locoScroll;
     //   onEnter: () => $(".footer_content").addClass("active"),
     // });
 
-    gsap.to("footer", {
+    gsap.from(".footer_content", {
+      opacity: 0,
+      top: "200px",
       scrollTrigger: {
         trigger: "footer",
         start: "top 50%",
         scroller: scroller,
-        onEnter: () => $(".footer_content").addClass("active"),
       },
     });
 
@@ -548,7 +547,9 @@ var locoScroll;
         End of Home Second Banner
         --------------------------------------------------------------------------------- */
 
-    ScrollTrigger.refresh();
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
   }
   function loadAboutScripts() {
     var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
@@ -680,69 +681,71 @@ var locoScroll;
     /*-----------------------------------------------------------------------------
       Fade Image/Text Animation
       --------------------------------------------------------------------------------- */
-      let animationTrigger = $(".fadein_wrap");
+    let animationTrigger = $(".fadein_wrap");
 
-      animationTrigger.each(function () {
-        let trigger = $(this);
+    animationTrigger.each(function () {
+      let trigger = $(this);
 
-        gsap.to(animationTrigger, {
-          scrollTrigger: {
-            trigger: trigger,
-            start: "top 60%",
-            scroller: scroller,
+      gsap.to(animationTrigger, {
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top 60%",
+          scroller: scroller,
 
-            onEnter: function () {
-              $(trigger).addClass("in_view");
-            },
+          onEnter: function () {
+            $(trigger).addClass("in_view");
           },
-        });
+        },
       });
+    });
 
-      var letterAnaimation;
+    var letterAnaimation;
 
-      if ($(window).width() > 765) {
-        letterAnaimation = -10;
+    if ($(window).width() > 765) {
+      letterAnaimation = -10;
+    } else {
+      letterAnaimation = 0;
+    }
 
-      } else {
-        letterAnaimation = 0;
+    gsap.utils.toArray(".letter_wrap").forEach((section) => {
+      if (section.parentElement.className == "seventh_section_content") {
+        if ($(window).width() > 765) {
+          letterAnaimation = -30;
+        } else {
+          letterAnaimation = 0;
+        }
       }
 
-      gsap.utils.toArray(".letter_wrap").forEach((section) => {
-        if (section.parentElement.className == "seventh_section_content") {
-          if ($(window).width() > 765) {
-            letterAnaimation = -30;
-          } else {
-            letterAnaimation = 0;
-          }
-        }
+      gsap.from(section.querySelectorAll("div.char"), {
+        scrollTrigger: {
+          trigger: section,
+          scroller: scroller,
+        },
 
-        gsap.from(section.querySelectorAll("div.char"), {
-          scrollTrigger: {
-            trigger: section,
-            scroller: scroller,
-          },
-
-          y: 500,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.007,
-          ease: "Power1.easeOut",
-        });
+        y: 500,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.007,
+        ease: "Power1.easeOut",
       });
+    });
 
-      /*-----------------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
           End Of Fade Image/Text Animation
           --------------------------------------------------------------------------------- */
 
-    gsap.to("footer", {
+    gsap.from(".footer_content", {
+      opacity: 0,
+      top: "200px",
       scrollTrigger: {
         trigger: "footer",
         start: "top 50%",
         scroller: scroller,
-        onEnter: () => $(".footer_content").addClass("active"),
       },
     });
-    ScrollTrigger.refresh();
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
   }
   function loadPortfolioScripts() {
     var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
@@ -752,59 +755,58 @@ var locoScroll;
       charsClass: "char char++",
     });
 
-        /*-----------------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
       Fade Image/Text Animation
       --------------------------------------------------------------------------------- */
-      let animationTrigger = $(".fadein_wrap");
+    let animationTrigger = $(".fadein_wrap");
 
-      animationTrigger.each(function () {
-        let trigger = $(this);
+    animationTrigger.each(function () {
+      let trigger = $(this);
 
-        gsap.to(animationTrigger, {
-          scrollTrigger: {
-            trigger: trigger,
-            start: "top 60%",
-            scroller: scroller,
+      gsap.to(animationTrigger, {
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top 60%",
+          scroller: scroller,
 
-            onEnter: function () {
-              $(trigger).addClass("in_view");
-            },
+          onEnter: function () {
+            $(trigger).addClass("in_view");
           },
-        });
+        },
       });
+    });
 
-      var letterAnaimation;
+    var letterAnaimation;
 
-      if ($(window).width() > 765) {
-        letterAnaimation = -10;
+    if ($(window).width() > 765) {
+      letterAnaimation = -10;
+    } else {
+      letterAnaimation = 0;
+    }
 
-      } else {
-        letterAnaimation = 0;
+    gsap.utils.toArray(".letter_wrap").forEach((section) => {
+      if (section.parentElement.className == "seventh_section_content") {
+        if ($(window).width() > 765) {
+          letterAnaimation = -30;
+        } else {
+          letterAnaimation = 0;
+        }
       }
 
-      gsap.utils.toArray(".letter_wrap").forEach((section) => {
-        if (section.parentElement.className == "seventh_section_content") {
-          if ($(window).width() > 765) {
-            letterAnaimation = -30;
-          } else {
-            letterAnaimation = 0;
-          }
-        }
-
-        gsap.from(section.querySelectorAll("div.char"), {
-          scrollTrigger: {
-            trigger: section,
-            scroller: scroller,
-          },
-          y: 500,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.007,
-          ease: "Power1.easeOut",
-        });
+      gsap.from(section.querySelectorAll("div.char"), {
+        scrollTrigger: {
+          trigger: section,
+          scroller: scroller,
+        },
+        y: 500,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.007,
+        ease: "Power1.easeOut",
       });
+    });
 
-      /*-----------------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
           End Of Fade Image/Text Animation
           --------------------------------------------------------------------------------- */
 
@@ -829,7 +831,7 @@ var locoScroll;
       .toArray(".section_parallax .project_info")
       .forEach((section, i) => {
         const heightDiff = section.parentElement.parentElement.clientHeight;
-        
+
         gsap.to(section, {
           // y: heightDiff,
           scrollTrigger: {
@@ -906,16 +908,19 @@ var locoScroll;
   End of Images Paralax
   --------------------------------------------------------------------------------- */
 
-    gsap.to("footer", {
+    gsap.from(".footer_content", {
+      opacity: 0,
+      top: "200px",
       scrollTrigger: {
         trigger: "footer",
         start: "top 50%",
         scroller: scroller,
-        onEnter: () => $(".footer_content").addClass("active"),
       },
     });
 
-    ScrollTrigger.refresh();
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
   }
   function loadServicesScripts() {
     var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
@@ -929,17 +934,17 @@ var locoScroll;
     } else {
       var scroller = "body";
     }
-    
-    $(".back_to_top").click (function(e) {
+
+    $(".back_to_top").click(function (e) {
       if (window.screen.width > 1024) {
-        e.preventDefault()
-        let target = e.target.getAttribute("href")
-        
+        e.preventDefault();
+        let target = e.target.getAttribute("href");
+
         locoScroll.scrollTo(target);
       } else {
-        gsap.to(window, 1, {scrollTo:{y:0}, ease:Power2.easeInOut});
+        gsap.to(window, 1, { scrollTo: { y: 0 }, ease: Power2.easeInOut });
       }
-    })
+    });
 
     var winHeight = document.body.clientHeight;
     var services = document.querySelectorAll(
@@ -963,56 +968,55 @@ var locoScroll;
     /*-----------------------------------------------------------------------------
       Fade Image/Text Animation
       --------------------------------------------------------------------------------- */
-      let animationTrigger = $(".fadein_wrap");
+    let animationTrigger = $(".fadein_wrap");
 
-      animationTrigger.each(function () {
-        let trigger = $(this);
+    animationTrigger.each(function () {
+      let trigger = $(this);
 
-        gsap.to(animationTrigger, {
-          scrollTrigger: {
-            trigger: trigger,
-            start: "top 60%",
-            scroller: scroller,
+      gsap.to(animationTrigger, {
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top 60%",
+          scroller: scroller,
 
-            onEnter: function () {
-              $(trigger).addClass("in_view");
-            },
+          onEnter: function () {
+            $(trigger).addClass("in_view");
           },
-        });
+        },
       });
+    });
 
-      var letterAnaimation;
+    var letterAnaimation;
 
-      if ($(window).width() > 765) {
-        letterAnaimation = -10;
+    if ($(window).width() > 765) {
+      letterAnaimation = -10;
+    } else {
+      letterAnaimation = 0;
+    }
 
-      } else {
-        letterAnaimation = 0;
+    gsap.utils.toArray(".letter_wrap").forEach((section) => {
+      if (section.parentElement.className == "seventh_section_content") {
+        if ($(window).width() > 765) {
+          letterAnaimation = -30;
+        } else {
+          letterAnaimation = 0;
+        }
       }
 
-      gsap.utils.toArray(".letter_wrap").forEach((section) => {
-        if (section.parentElement.className == "seventh_section_content") {
-          if ($(window).width() > 765) {
-            letterAnaimation = -30;
-          } else {
-            letterAnaimation = 0;
-          }
-        }
-
-        gsap.from(section.querySelectorAll("div.char"), {
-          scrollTrigger: {
-            trigger: section,
-            scroller: scroller,
-          },
-          y: 500,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.007,
-          ease: "Power1.easeOut",
-        });
+      gsap.from(section.querySelectorAll("div.char"), {
+        scrollTrigger: {
+          trigger: section,
+          scroller: scroller,
+        },
+        y: 500,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.007,
+        ease: "Power1.easeOut",
       });
+    });
 
-      /*-----------------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
           End Of Fade Image/Text Animation
           --------------------------------------------------------------------------------- */
 
@@ -1058,9 +1062,8 @@ var locoScroll;
       // } else {
       //   serviceHeight = 28;
       // }
-      
 
-      // $(service).on('click', function() { 
+      // $(service).on('click', function() {
       //   var clickTarget= -(window.innerHeight - index * 28);
       //   gsap.to($(this), 1, {y: clickTarget, ease:Power2.easeInOut});
       // });
@@ -1119,15 +1122,18 @@ var locoScroll;
     /*	-----------------------------------------------------------------------------
         End of Services First Banner
         --------------------------------------------------------------------------------- */
-    gsap.to("footer", {
+    gsap.from(".footer_content", {
+      opacity: 0,
+      top: "200px",
       scrollTrigger: {
         trigger: "footer",
         start: "top 50%",
         scroller: scroller,
-        onEnter: () => $(".footer_content").addClass("active"),
       },
     });
-    ScrollTrigger.refresh();
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
   }
   function loadSingleProjectScripts() {
     var mySplitText = new SplitText($(".letter_wrap, .letter_wrap_scroll"), {
@@ -1136,67 +1142,68 @@ var locoScroll;
       linesClass: "line line++",
       charsClass: "char char++",
     });
-    
+
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
       var scroller = "body";
     }
 
-        /*-----------------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
       Fade Image/Text Animation
       --------------------------------------------------------------------------------- */
-      let animationTrigger = $(".fadein_wrap");
+    let animationTrigger = $(".fadein_wrap");
 
-      animationTrigger.each(function () {
-        let trigger = $(this);
+    animationTrigger.each(function () {
+      let trigger = $(this);
 
-        gsap.to(animationTrigger, {
-          scrollTrigger: {
-            trigger: trigger,
-            start: "top 60%",
-            scroller: scroller,
+      gsap.to(animationTrigger, {
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top 60%",
+          scroller: scroller,
 
-            onEnter: function () {
-              $(trigger).addClass("in_view");
-            },
+          onEnter: function () {
+            $(trigger).addClass("in_view");
           },
-        });
+        },
       });
+    });
 
-      var letterAnaimation;
+    var letterAnaimation;
 
-      if ($(window).width() > 765) {
-        letterAnaimation = -10;
+    if ($(window).width() > 765) {
+      letterAnaimation = -10;
+    } else {
+      letterAnaimation = 0;
+    }
 
-      } else {
-        letterAnaimation = 0;
+    gsap.utils.toArray(".letter_wrap").forEach((section) => {
+      if (
+        section.parentElement.className == "home_wrap seventh_section_content"
+      ) {
+        if ($(window).width() > 765) {
+          letterAnaimation = -30;
+        } else {
+          letterAnaimation = 0;
+        }
       }
 
-      gsap.utils.toArray(".letter_wrap").forEach((section) => {
-        if (section.parentElement.className == "home_wrap seventh_section_content") {
-          if ($(window).width() > 765) {
-            letterAnaimation = -30;
-          } else {
-            letterAnaimation = 0;
-          }
-        }
+      gsap.from(section.querySelectorAll("div.char"), {
+        scrollTrigger: {
+          trigger: section,
+          scroller: scroller,
+        },
 
-        gsap.from(section.querySelectorAll("div.char"), {
-          scrollTrigger: {
-            trigger: section,
-            scroller: scroller,
-          },
-
-          y: 500,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.007,
-          ease: "Power1.easeOut",
-        });
+        y: 500,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.007,
+        ease: "Power1.easeOut",
       });
+    });
 
-      /*-----------------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
           End Of Fade Image/Text Animation
           --------------------------------------------------------------------------------- */
 
@@ -1341,15 +1348,18 @@ var locoScroll;
       wrap: document.querySelector(".slider"),
     });
 
-    gsap.to("footer", {
+    gsap.from(".footer_content", {
+      opacity: 0,
+      top: "200px",
       scrollTrigger: {
         trigger: "footer",
         start: "top 50%",
         scroller: scroller,
-        onEnter: () => $(".footer_content").addClass("active"),
       },
     });
-    ScrollTrigger.refresh();
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
   }
 
   function smoothScroll() {
@@ -1358,10 +1368,12 @@ var locoScroll;
       smooth: true,
       lerp: 0.06,
     });
-    
+
     ScrollTrigger.scrollerProxy("#viewport", {
       scrollTop(value) {
-        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        return arguments.length
+          ? locoScroll.scrollTo(value, 0, 0)
+          : locoScroll.scroll.instance.scroll.y;
       },
       getBoundingClientRect() {
         return {
@@ -1371,7 +1383,9 @@ var locoScroll;
           height: window.innerHeight,
         };
       },
-      pinType: document.querySelector("#viewport").style.transform ? "transform" : "fixed"
+      pinType: document.querySelector("#viewport").style.transform
+        ? "transform"
+        : "fixed",
     });
     ScrollTrigger.refresh();
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -1420,6 +1434,8 @@ var locoScroll;
     );
     var bodyClasses = $(response).filter("notbody").attr("class");
     $("body").attr("class", bodyClasses);
+
+    document.getElementById("viewport").classList.add("loading");
   });
 
   barba.hooks.beforeEnter((data) => {
@@ -1466,6 +1482,7 @@ var locoScroll;
           imagesLoaded(document.querySelector("#viewport"), function () {
             globalScripts();
             loadIndexScripts();
+            document.getElementById("viewport").classList.remove("loading");
           });
         },
       },
@@ -1475,6 +1492,7 @@ var locoScroll;
           imagesLoaded(document.querySelector("#viewport"), function () {
             globalScripts();
             loadAboutScripts();
+            document.getElementById("viewport").classList.remove("loading");
           });
         },
       },
@@ -1484,6 +1502,7 @@ var locoScroll;
           imagesLoaded(document.querySelector("#viewport"), function () {
             globalScripts();
             loadPortfolioScripts();
+            document.getElementById("viewport").classList.remove("loading");
           });
         },
       },
@@ -1493,6 +1512,7 @@ var locoScroll;
           imagesLoaded(document.querySelector("#viewport"), function () {
             globalScripts();
             loadServicesScripts();
+            document.getElementById("viewport").classList.remove("loading");
           });
         },
       },
@@ -1502,6 +1522,7 @@ var locoScroll;
           imagesLoaded(document.querySelector("#viewport"), function () {
             globalScripts();
             loadSingleProjectScripts();
+            document.getElementById("viewport").classList.remove("loading");
           });
         },
       },
