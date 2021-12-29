@@ -1,33 +1,64 @@
 <?php
 /* Template Name: About */
+
+$first_section_image = get_field('first_section_image');
+$first_section_headline = get_field('first_section_headline');
+$first_section_description = get_field('first_section_description');
+$first_section_button = get_field('first_section_button');
+
+$second_section_headline = get_field('second_section_headline');
+$second_section_description = get_field('second_section_description');
+$second_section_gallery = get_field('second_section_gallery');
+
+$third_section_first_headline = get_field('third_section_first_headline');
+$third_section_second_headline = get_field('third_section_second_headline');
+$third_section_banner_text = get_field('third_section_banner_text');
+$third_section_core_values = get_field('third_section_core_values');
+
+$fourth_section_headline = get_field('fourth_section_headline');
+$fourth_section_team = get_field('fourth_section_team');
+$fourth_section_call_to_action_headline = get_field('fourth_section_call_to_action_headline');
+$fourth_section_call_to_action_description = get_field('fourth_section_call_to_action_description');
+$fourth_section_call_to_action_text = get_field('fourth_section_call_to_action_text');
+
 get_header(); ?>
 
 <div class="about_wrap">
     <div class="first_section">
         <div class="first_section_content">
             <div class="left">
-                <h2 class="letter_wrap mobile">
-                    More than two decades of winning campaigns
-                </h2>
-                <div class="image_holder fadein_wrap fadeIn">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/first.png" alt="">
-                </div>
+                <?php if($first_section_headline): ?>
+                    <h2 class="letter_wrap mobile">
+                        <?php echo $first_section_headline; ?>
+                    </h2>
+                <?php endif; ?>
+                <?php if($first_section_image): ?>
+                    <div class="image_holder fadein_wrap fadeIn">
+                        <img src="<?php echo $first_section_image['url'] ?>" alt="<?php echo $first_section_image['alt'] ?>">
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="right">
-                <h2 class="letter_wrap desktop">
-                    More than two decades of winning campaigns
-                </h2>
+                <?php if($first_section_headline): ?>
+                    <h2 class="letter_wrap desktop">
+                        <?php echo $first_section_headline; ?>
+                    </h2>
+                <?php endif; ?>
 
                 <div class="content">
-                    <p>
-                    Our combined campaign experience in state and local ballot measures, independent expenditures, issue advocacy, candidate campaigns, and labor union communications gives you the best possible chance of winning. <br><br> Our combined campaign experience in state and local ballot measures, independent expenditures, issue advocacy, candidate campaigns, and labor union communications gives you the best possible chance of winning.
-                    </p>
-
-                    <a href="" class="btn">
-                        <span>
-                            Learn more
-                        </span>
-                    </a>
+                    <?php if($first_section_description): ?>
+                        <p>
+                            <?php echo $first_section_description; ?>
+                        </p>
+                    <?php endif; ?>
+                    
+                    <?php if($first_section_button): ?>
+                        <a href="<?php echo $first_section_button['url'] ?>" target="<?php echo $first_section_button['target'] ?>" class="btn">
+                            <span>
+                                <?php echo $first_section_button['title'] ?>
+                            </span>
+                        </a>
+                    <?php endif; ?>
                 </div>
                 
             </div>
@@ -37,26 +68,27 @@ get_header(); ?>
     <div class="second_section">
         <div class="second_section_content">
             <div class="headline_holder">
-                <h2 class="letter_wrap">
-                    Our commitment <br> to every campaign
-                </h2>
+                <?php if($second_section_headline): ?>
+                    <h2 class="letter_wrap">
+                        <?php echo $second_section_headline; ?>
+                    </h2>
+                <?php endif; ?>
             </div>
             <div class="description">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor. <br> Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
-                </p>
+                <?php if($second_section_description): ?>
+                    <p>
+                        <?php echo $second_section_description; ?>
+                    </p>
+                <?php endif; ?>
             </div>
             
             <div class="image_slider">
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider1.png" alt="">
-                </div>
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider3.png" alt="">
-                </div>
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/slider2.png" alt="">
-                </div>
+                
+                <?php foreach ($second_section_gallery as $singleImage): ?>
+                    <div class="image_holder">
+                        <img src="<?php echo $singleImage['image']['url']; ?>" alt="<?php echo $singleImage['image']['alt']; ?>">
+                    </div>
+                <?php endforeach; ?>
             </div>
             
         </div>
@@ -65,109 +97,53 @@ get_header(); ?>
     <div class="third_section">
         <div class="third_section_content">
             <div class="headline_holder">
-                <h2 class="letter_wrap">Our core</h2>
-                <h2 class="letter_wrap">values</h2>
-            </div>
-            <div class="banner about_first_banner">
-                <div class="banner_section">
-                    <p>The Right Mix Of Experience And Passion</p>                
-                </div>
+                <?php if($third_section_first_headline): ?>
+                    <h2 class="letter_wrap"><?php echo $third_section_first_headline; ?></h2>
+                <?php endif; ?>
+                <?php if($third_section_second_headline): ?>
+                    <h2 class="letter_wrap"><?php echo $third_section_second_headline; ?></h2>
+                <?php endif; ?>
             </div>
 
+            <?php if($third_section_banner_text): ?>
+                <div class="banner about_first_banner">
+                    <div class="banner_section">
+                        <p><?php echo $third_section_banner_text; ?></p>                
+                    </div>
+                </div>
+            <?php endif; ?>
+
             <div class="accordions">
-                <div class="single_accordion active">
-                    <div class="accordion_header">
-                        <span>/01</span>
-                        <p>
-                            Core Value
-                        </p>
-                    </div>
-                    <div class="accordion_content">
-                        <div class="content">
-                            <div class="next_acordion">
-                                Next
-                                <div class="arrow"></div>
-                            </div>
-                            
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
+                <?php $i=1; foreach ($third_section_core_values as $coreValue): ?>
+                    <div class="single_accordion <?php if($i == 1): ?>active<?php endif; ?>">
+                        <div class="accordion_header">
+                            <span>/0<?php echo $i; ?></span>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. Donec elementum, dui ut cursus egestas, orci orci ullamcorper est.
+                                <?php echo $coreValue['core_value_name'] ?>
                             </p>
                         </div>
-                    </div>
-                </div>
-                <div class="single_accordion">
-                    <div class="accordion_header">
-                        <span>/02</span>
-                        <p>
-                            Core Value
-                        </p>
-                    </div>
-                    <div class="accordion_content">
-                        <div class="content">
-                            <div class="prev_acordion">
-                                <div class="arrow"></div>
-                                Previous
+                        <div class="accordion_content">
+                            <div class="content">
+                                <?php if($i != 1): ?>
+                                    <div class="prev_acordion">
+                                        <div class="arrow"></div>
+                                        Previous
+                                    </div>
+                                <?php endif; ?>
+                                <div class="next_acordion">
+                                    Next
+                                    <div class="arrow"></div>
+                                </div>
+                                
+                                <img src="<?php echo $coreValue['core_value_image']['url'] ?>" alt="<?php echo $coreValue['core_value_image']['alt'] ?>">
+                                <p>
+                                    <?php echo $coreValue['core_value_description'] ?>
+                                </p>
                             </div>
-                            <div class="next_acordion">
-                                Next
-                                <div class="arrow"></div>
-                            </div>
-                            
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. Donec elementum, dui ut cursus egestas, orci orci ullamcorper est.
-                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="single_accordion">
-                    <div class="accordion_header">
-                        <span>/03</span>
-                        <p>
-                            Core Value
-                        </p>
-                    </div>
-                    <div class="accordion_content">
-                        <div class="content">
-                            <div class="prev_acordion">
-                                <div class="arrow"></div>
-                                Previous
-                            </div>
-                            <div class="next_acordion">
-                                Next
-                                <div class="arrow"></div>
-                            </div>
-                            
-                            
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. Donec elementum, dui ut cursus egestas, orci orci ullamcorper est.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_accordion">
-                    <div class="accordion_header">
-                        <span>/04</span>
-                        <p>
-                            Core Value
-                        </p>
-                    </div>
-                    <div class="accordion_content">
-                        <div class="content">
-                            <div class="prev_acordion">
-                                <div class="arrow"></div>
-                                Previous
-                            </div>
-                            
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. Donec elementum, dui ut cursus egestas, orci orci ullamcorper est.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    <?php $i++; ?>
+                <?php endforeach; ?>
             </div>    
         </div>
     </div>
@@ -175,57 +151,57 @@ get_header(); ?>
     <div class="fourth_section">
         <div class="fourth_section_content">
             <h2 class="letter_wrap">
-                Our team
+                <?php echo $fourth_section_headline; ?>
             </h2>
 
             <div class="team_holder">
                 <?php 
-                    $i = 0;
-                    $len = 8;
+                    $counter = 0;
+                    $len = count($fourth_section_team);
                 ?>
-
-                <?php for ($x = 0; $x <= $len; $x++) {?>
-                    <?php if ($x != $len) { ?>
+                
+                <?php foreach ($fourth_section_team as $singleTeam): ?>
+                    <?php if ($counter != $len) { ?>
                         <a class="single_team">
                             <div class="single_team_content">
                                 <div class="image_holder fadein_wrap fadeIn">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
+                                    <img src="<?php echo $singleTeam['team_member_image']['url']; ?>" alt="<?php echo $singleTeam['team_member_image']['alt']; ?>">
                                 </div>
-
+    
                                 <div class="team_info">
-                                    <p>Jonh Whitehurst</p>
-                                    <p>Principal</p>
+                                    <p><?php echo $singleTeam['team_member_name'] ?></p>
+                                    <p><?php echo $singleTeam['team_member_position'] ?></p>
                                 </div>    
                             </div>
                         </a>
                     <?php } ?>
-
-                    <?php if ($i == $len - 1) { ?>
+    
+                    <?php if ($counter == $len - 1) { ?>
                         <?php if($len % 2 == 0): ?>
                             
                             <div class="single_team join_us_holder">
                                 <div class="join_us">
-                                    <h3 class="letter_wrap">Join our team</h3>
-
+                                    <h3 class="letter_wrap"><?php echo $fourth_section_call_to_action_headline; ?></h3>
+    
                                     <p>
-                                    Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
+                                    <?php echo $fourth_section_call_to_action_description; ?>
                                     </p>
-
+    
                                     <a class="btn contact_popup_opener">
-                                        <span>Contact Us</span>
+                                        <span><?php echo $fourth_section_call_to_action_text; ?></span>
                                     </a>
                                 </div>
                             </div>
-
+    
                             <a class="single_team">
                                 <div class="single_team_content">
                                     <div class="image_holder  fadein_wrap fadeIn">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/about/team1.png" alt="">
+                                        <img src="<?php echo $singleTeam['team_member_image']['url']; ?>" alt="<?php echo $singleTeam['team_member_image']['alt']; ?>">
                                     </div>
-
+    
                                     <div class="team_info">
-                                        <p>Jonh Whitehurst</p>
-                                        <p>Principal</p>
+                                        <p><?php echo $singleTeam['team_member_name'] ?></p>
+                                        <p><?php echo $singleTeam['team_member_position'] ?></p>
                                     </div>    
                                 </div>
                             </a>
@@ -233,25 +209,25 @@ get_header(); ?>
                             
                             <div class="single_team join_us_holder">
                                 
-
+    
                                 <div class="join_us">
-                                    <h3 class="letter_wrap">Join our team</h3>
-
+                                <h3 class="letter_wrap"><?php echo $fourth_section_call_to_action_headline; ?></h3>
+    
                                     <p>
-                                    Lorem ipsum dolor sit amet, consectetur e elefend. Vestibulum semper ultrices nisi, a eleifend turpis, lorem ipsum dolor.
+                                    <?php echo $fourth_section_call_to_action_description; ?>
                                     </p>
-
+    
                                     <a class="btn contact_popup_opener">
-                                        <span>Contact Us</span>
+                                    <span><?php echo $fourth_section_call_to_action_text; ?></span>
                                     </a>
                                 </div>
                             </div>
-
+    
                         <?php endif; ?>
                         
-                    <?php } $i++; ?>
-                    
-                <?php } ?>
+                    <?php } $counter++; ?>
+                <?php endforeach; ?>
+                
 
             </div>
         </div>

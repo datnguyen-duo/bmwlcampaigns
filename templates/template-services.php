@@ -1,574 +1,193 @@
 <?php
 /* Template Name: Services */
+
+$hero_section_headline = get_field('hero_section_headline');
+$hero_section_images = get_field('hero_section_images');
+
+$first_section_headline = get_field('first_section_headline');
+$first_section_description = get_field('first_section_description');
+$first_section_button = get_field('first_section_button');
+$first_section_first_image = get_field('first_section_first_image');
+$first_section_first_text = get_field('first_section_first_text');
+$first_section_second_image = get_field('first_section_second_image');
+$first_section_second_text = get_field('first_section_second_text');
+
+$services_section_banner_text = get_field('services_section_banner_text');
+$services = get_field('services');
+
 get_header(); ?>
 
 <div class="services_wrap">
     <div class="service_hero" id="top">
-        <h1 class="letter_wrap">How we win</h1>
+        <?php if($hero_section_headline): ?>
+            <h1 class="letter_wrap"><?php echo $hero_section_headline; ?></h1>
+        <?php endif; ?>
 
-        <div class="image_slider">
-            <div class="image_holder">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/services/services1.png" alt="">
+        <?php if($hero_section_images): ?>
+            <div class="image_slider">
+                <?php foreach ($hero_section_images as $singleImage): ?>
+                    <div class="image_holder">
+                        <img src="<?php echo $singleImage['image']['url'] ?>" alt="<?php echo $singleImage['image']['alt'] ?>">
+                    </div>
+                <?php endforeach; ?>
             </div>
-            <div class="image_holder">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/services/services2.png" alt="">
-            </div>
-            <div class="image_holder">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/services/services3.png" alt="">
-            </div>
-            <div class="image_holder">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/services/services2.png" alt="">
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 
     <div class="second_section">
         <div class="second_section_content">
-            <h2 class="section_headline mobile">experience & passion</h2>
+            
+            <h2 class="section_headline mobile"><?php echo $first_section_first_text; ?> <?php echo $first_section_second_text; ?></h2>
             <div class="left">
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
-                </div>
-                <h2 class="letter_wrap">experience</h2>
+                <?php if($first_section_first_image): ?>
+                    <div class="image_holder">
+                        <img src="<?php echo $first_section_first_image['url'] ?>" alt="<?php echo $first_section_first_image['alt'] ?>">
+                    </div>
+                <?php endif; ?>
+
+                <?php if($first_section_first_text): ?>    
+                    <h2 class="letter_wrap"><?php echo $first_section_first_text; ?></h2>
+                <?php endif; ?>
+                
             </div>
 
             <div class="middle_info">
-                <p>
-                The Right <br> Mix Of
-                </p>
+                <?php if($first_section_headline): ?>
+                    <p>
+                        <?php echo $first_section_headline; ?>
+                    </p>
+                <?php endif; ?>
             </div>
 
             <div class="right">
-                <div class="image_holder">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about/accrodion.png" alt="">
-                </div>
-                <h2 class="letter_wrap">& passion</h2>
+                <?php if($first_section_second_image): ?>
+                    <div class="image_holder">
+                        <img src="<?php echo $first_section_second_image['url'] ?>" alt="<?php echo $first_section_second_image['alt'] ?>">
+                    </div>
+                <?php endif; ?>
+                <?php if($first_section_second_text): ?>    
+                    <h2 class="letter_wrap"><?php echo $first_section_second_text; ?></h2>
+                <?php endif; ?>
             </div>
         </div>
         <div class="description">
-            <p>
-                We bring a winning attitude and a winning track record to every campaign we manage, no matter the complexity. For each type of campaign we run, BMWLdraws upon a mix of tools, knowledge, experience and relationships to produce winning results.
-            </p>
+        
+            <?php if($first_section_description): ?>
+                <p>
+                    <?php echo $first_section_description; ?>
+                </p>
+            <?php endif; ?>
+
             <div class="btn_holder">
-                <a href="/about" class="btn">
-                    <span>
-                        About Us
-                    </span>
-                </a>
+                <?php if($first_section_button): ?>
+                    <a href="<?php echo $first_section_button['url'] ?>" target="<?php echo $first_section_button['target'] ?>" class="btn">
+                        <span>
+                            <?php echo $first_section_button['title'] ?>
+                        </span>
+                    </a>
+                <?php endif; ?>
             </div>
             
         </div>
     </div>
-    <div class="banner services_first_banner">
-        <div class="banner_section">
-            <p>The Right Mix Of Experience And Passion</p>                
+    <?php if($services_section_banner_text): ?>
+        <div class="banner services_first_banner">
+            <div class="banner_section">
+                <p><?php echo $services_section_banner_text; ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 
     <div class="third_section">
         <div class="third_section_conetnt">
             <div class="service_accordions">
-                <div class="single_accordion" id="strategy" role="region">
-                    <div class="accordion_headline">
-                        <div class="counter">01</div>
-                        <a href="#top" class="back_to_top">Back to Top</a>
-                        <p>
-                            Strategy
-                        </p>
-                    </div>
-                    <div class="accordion_contenet">
-                        <div class="content_header">
-                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/strategy_grey.mp4#t=0.1" type="video/mp4">
-                            </video>
-    
-                            <h2>Strategy</h2>
-
-                            <div class="big_description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
-                            </div>
-                            <div class="blurb_content">
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="blurb_description">
-                                    <h3>
-                                        Lorem ipsum dolor sit <br> amet, consectetur
-                                    </h3>
-                                </div>
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="image_text_section">
-                                <div class="left">
-                                    <div class="featured">Featured Project</div>
-                                    <div class="image_holder fadein_wrap fadeIn">
-                                
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
-                                    </div>
-                                    <div class="project_name">Project Name</div>
-                                </div>
-
-                                <div class="right">
-                                    <div class="right_content">
-                                        <h3>
-                                            See this in action
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                        </p>
-                                        <a href="/project" class="btn">
-                                            <span>
-                                                View Project
-                                            </span>
-                                        </a>
-                                    </div>
+                <?php $servicesCounter = 1; foreach ($services as $singleService): ?>
+                    <div class="single_accordion" role="region">
+                        <div class="accordion_headline">
+                            <div class="counter">0<?php echo $servicesCounter; ?></div>
+                            <a href="#top" class="back_to_top">Back to Top</a>
+                            <p>
+                                <?php echo $singleService['service_main_headline'] ?>
+                            </p>
+                        </div>
+                        <div class="accordion_contenet">
+                            <div class="content_header">
+                                <video class="thevideo" loop autoplay playsinline="true" muted="muted">
                                     
+                                    <source src="<?php echo $singleService['service_video']['url'] ?>#t=0.1" type="video/mp4">
+                                </video>
+        
+                                <h2><?php echo $singleService['service_main_headline'] ?></h2>
+
+                                <div class="big_description">
+                                    <?php echo $singleService['service_main_description'] ?>
+                                </div>
+                                <div class="blurb_content">
+                                    <div class="blurb_section">
+                                        <div class="single_blurb">
+                                            <h3><?php echo $singleService['service_blurb_headline_1'] ?></h3>
+                                            <p>
+                                                <?php echo $singleService['service_blurb_1'] ?>
+                                            </p>
+                                        </div>
+                                        <div class="single_blurb">
+                                            <h3><?php echo $singleService['service_blurb_headline_2'] ?></h3>
+                                            <p>
+                                            <?php echo $singleService['service_blurb_2'] ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="blurb_description">
+                                        <h3>
+                                            <?php echo $singleService['service_blubs_headline'] ?>
+                                        </h3>
+                                    </div>
+                                    <div class="blurb_section">
+                                        <div class="single_blurb">
+                                            <h3><?php echo $singleService['service_blurb_headline_3'] ?></h3>
+                                            <p>
+                                                <?php echo $singleService['service_blurb_3'] ?>
+                                            </p>
+                                        </div>
+                                        <div class="single_blurb">
+                                            <h3><?php echo $singleService['service_blurb_headline_4'] ?></h3>
+                                            <p>
+                                                <?php echo $singleService['service_blurb_4'] ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="image_text_section">
+                                    <div class="left">
+                                        <div class="featured">Featured Project</div>
+                                        <div class="image_holder fadein_wrap fadeIn">
+                                            <img src="<?php echo $singleService['featured_project_image']['url']; ?>" alt="<?php echo $singleService['featured_project_image']['alt']; ?>">
+                                        </div>
+                                        <div class="project_name"><?php echo $singleService['featured_project_name'] ?></div>
+                                    </div>
+
+                                    <div class="right">
+                                        <div class="right_content">
+                                            <h3>
+                                                <?php echo $singleService['featured_project_headline'] ?>
+                                            </h3>
+                                            <p>
+                                                <?php echo $singleService['featured_project_description'] ?>
+                                            </p>
+                                            <a href="<?php echo $singleService['featured_project_link']['url']; ?>" target="<?php echo $singleService['featured_project_link']['url']; ?>" class="btn">
+                                                <span>
+                                                    <?php echo $singleService['featured_project_link']['title']; ?>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="single_accordion" role="region">
-                    <div class="accordion_headline">
-                        <div class="counter">02</div>
-                        <p>
-                            Digital Media
-                        </p>
-                    </div>
-                    <div class="accordion_contenet">
-                        <div class="content_header">
-                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/digitalmedia_grey.mp4#t=0.1" type="video/mp4">
-                            </video>
-    
-                            <h2>Digital Media</h2>
-
-                            <div class="big_description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
-                            </div>
-                            <div class="blurb_content">
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="blurb_description">
-                                    <h3>
-                                        Lorem ipsum dolor sit <br> amet, consectetur
-                                    </h3>
-                                </div>
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image_text_section">
-                                <div class="left">
-                                    <div class="featured">Featured Project</div>
-                                    <div class="image_holder fadein_wrap fadeIn">
-                                
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
-                                    </div>
-                                    <div class="project_name">Project Name</div>
-                                </div>
-
-                                <div class="right">
-                                    <div class="right_content">
-                                        <h3>
-                                            See this in action
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                        </p>
-                                        <a href="/project" class="btn">
-                                            <span>
-                                                View Project
-                                            </span>
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_accordion" role="region">
-                    <div class="accordion_headline">
-                        <div class="counter">03</div>
-                        <p>
-                            Field Organizing
-                        </p>
-                    </div>
-                    <div class="accordion_contenet">
-                        <div class="content_header">
-                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/fieldorganizing_grey.mp4#t=0.1" type="video/mp4">
-                            </video>
-    
-                            <h2>Field Organizing</h2>
-
-                            <div class="big_description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
-                            </div>
-                            <div class="blurb_content">
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="blurb_description">
-                                    <h3>
-                                        Lorem ipsum dolor sit <br> amet, consectetur
-                                    </h3>
-                                </div>
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image_text_section">
-                                <div class="left">
-                                    <div class="featured">Featured Project</div>
-                                    <div class="image_holder fadein_wrap fadeIn">
-                                
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
-                                    </div>
-                                    <div class="project_name">Project Name</div>
-                                </div>
-
-                                <div class="right">
-                                    <div class="right_content">
-                                        <h3>
-                                            See this in action
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                        </p>
-                                        <a href="/project" class="btn">
-                                            <span>
-                                                View Project
-                                            </span>
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_accordion" role="region">
-                    <div class="accordion_headline">
-                        <div class="counter">04</div>
-                        <p>
-                            Direct Mail
-                        </p>
-                    </div>
-                    <div class="accordion_contenet">
-                        <div class="content_header">
-                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/directmail_grey.mp4#t=0.1" type="video/mp4">
-                            </video>
-    
-                            <h2>Direct Mail</h2>
-
-                            <div class="big_description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
-                            </div>
-                            <div class="blurb_content">
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="blurb_description">
-                                    <h3>
-                                        Lorem ipsum dolor sit <br> amet, consectetur
-                                    </h3>
-                                </div>
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image_text_section">
-                                <div class="left">
-                                    <div class="featured">Featured Project</div>
-                                    <div class="image_holder fadein_wrap fadeIn">
-                                
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
-                                    </div>
-                                    <div class="project_name">Project Name</div>
-                                </div>
-
-                                <div class="right">
-                                    <div class="right_content">
-                                        <h3>
-                                            See this in action
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                        </p>
-                                        <a href="/project" class="btn">
-                                            <span>
-                                                View Project
-                                            </span>
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_accordion" role="region">
-                    <div class="accordion_headline">
-                        <div class="counter">05</div>
-                        
-                        <p>
-                            Vote-By-Mail
-                        </p>
-                    </div>
-                    <div class="accordion_contenet">
-                        <div class="content_header">
-                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/vbe_grey.mp4#t=0.1" type="video/mp4">
-                            </video>
-    
-                            <h2>Vote-By-Mail</h2>
-
-                            <div class="big_description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
-                            </div>
-                            <div class="blurb_content">
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="blurb_description">
-                                    <h3>
-                                        Lorem ipsum dolor sit <br> amet, consectetur
-                                    </h3>
-                                </div>
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image_text_section">
-                                <div class="left">
-                                    <div class="featured">Featured Project</div>
-                                    <div class="image_holder fadein_wrap fadeIn">
-                                
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
-                                    </div>
-                                    <div class="project_name">Project Name</div>
-                                </div>
-
-                                <div class="right">
-                                    <div class="right_content">
-                                        <h3>
-                                            See this in action
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                        </p>
-                                        <a href="/project" class="btn">
-                                            <span>
-                                                View Project
-                                            </span>
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_accordion" role="region">
-                    <div class="accordion_headline">
-                        <div class="counter">06</div>
-                        <p>
-                            Television
-                        </p>
-                    </div>
-                    <div class="accordion_contenet">
-                        <div class="content_header">
-                            <video class="thevideo" loop autoplay playsinline="true" muted="muted">
-                                <source src="<?php echo get_template_directory_uri(); ?>/videos/tv_grey.mp4#t=0.1" type="video/mp4">
-                            </video>
-    
-                            <h2>Television</h2>
-
-                            <div class="big_description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra.
-                            </div>
-                            <div class="blurb_content">
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="blurb_description">
-                                    <h3>
-                                        Lorem ipsum dolor sit <br> amet, consectetur
-                                    </h3>
-                                </div>
-                                <div class="blurb_section">
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                    <div class="single_blurb">
-                                        <h3>Blurb 1</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image_text_section">
-                                <div class="left">
-                                    <div class="featured">Featured Project</div>
-                                    <div class="image_holder fadein_wrap fadeIn">
-                                
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/services/service_featured_project.png" alt="">
-                                    </div>
-                                    <div class="project_name">Project Name</div>
-                                </div>
-
-                                <div class="right">
-                                    <div class="right_content">
-                                        <h3>
-                                            See this in action
-                                        </h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing. Vestibulum semper ultrices nisi, a eleifend turpis. Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                        </p>
-                                        <a href="/project" class="btn">
-                                            <span>
-                                                View Project
-                                            </span>
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php $servicesCounter++; endforeach; ?>
             </div>
         </div>
     </div>
