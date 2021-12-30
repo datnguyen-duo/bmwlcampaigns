@@ -1498,7 +1498,7 @@ var currentProject;
       {
         namespace: "Home",
         afterEnter({ next }) {
-          imagesLoaded(document.querySelector("#viewport"), function () {
+          imagesLoaded(document.getElementById("viewport"), function () {
             globalScripts();
             loadIndexScripts();
             document.getElementById("viewport").classList.remove("loading");
@@ -1506,9 +1506,9 @@ var currentProject;
         },
       },
       {
-        namespace: $('.project_hero .left_content h1').text(),
+        namespace: "Single Project",
         afterEnter({ next }) {
-          imagesLoaded(document.querySelector("#viewport"), function () {
+          imagesLoaded(document.getElementById("viewport"), function () {
             globalScripts();
             loadSingleProjectScripts()
             document.getElementById("viewport").classList.remove("loading");
@@ -1518,7 +1518,7 @@ var currentProject;
       {
         namespace: "About",
         afterEnter({ next }) {
-          imagesLoaded(document.querySelector("#viewport"), function () {
+          imagesLoaded(document.getElementById("viewport"), function () {
             globalScripts();
             loadAboutScripts();
             document.getElementById("viewport").classList.remove("loading");
@@ -1528,7 +1528,7 @@ var currentProject;
       {
         namespace: "Portfolio",
         afterEnter({ next }) {
-          imagesLoaded(document.querySelector("#viewport"), function () {
+          imagesLoaded(document.getElementById("viewport"), function () {
             globalScripts();
             loadPortfolioScripts();
             document.getElementById("viewport").classList.remove("loading");
@@ -1538,7 +1538,7 @@ var currentProject;
       {
         namespace: "Services",
         afterEnter({ next }) {
-          imagesLoaded(document.querySelector("#viewport"), function () {
+          imagesLoaded(document.getElementById("viewport"), function () {
             globalScripts();
             loadServicesScripts();
             document.getElementById("viewport").classList.remove("loading");

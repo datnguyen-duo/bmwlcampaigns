@@ -17,8 +17,12 @@ $contact_headline = get_field('contact_headline', 'option');
 $contact_description = get_field('contact_description', 'option');
 $contact_thank_you_message_first = get_field('contact_thank_you_message_first', 'option');
 $contact_thank_you_message_second = get_field('contact_thank_you_message_second', 'option');
+
+$template_path = get_post_meta(get_the_ID(), '_wp_page_template', true);
+$templates = wp_get_theme()->get_page_templates();
+
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -235,4 +239,4 @@ $contact_thank_you_message_second = get_field('contact_thank_you_message_second'
 	</div>
 </header>
 
-<div id="page" class="site barba-container" data-barba="container" data-barba-namespace="<?php echo the_title()?>">
+<div id="page" class="site barba-container" data-barba="container" data-barba-namespace="<?php echo $templates[$template_path]; ?>">
