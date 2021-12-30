@@ -105,7 +105,9 @@ get_header(); ?>
                     <div class="single_accordion" role="region">
                         <div class="accordion_headline">
                             <div class="counter">0<?php echo $servicesCounter; ?></div>
-                            <a href="#top" class="back_to_top">Back to Top</a>
+                            <?php if($servicesCounter == 1): ?>
+                                <a href="#top" class="back_to_top">Back to Top</a>
+                            <?php endif; ?>
                             <p>
                                 <?php echo $singleService['service_main_headline'] ?>
                             </p>
