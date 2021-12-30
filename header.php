@@ -230,17 +230,7 @@ $contact_thank_you_message_second = get_field('contact_thank_you_message_second'
 		</div>
 		<div class="form_holder">
 			<span>Sign Up For Email Updates</span>
-			<form action="">
-				<input type="email" placeholder="Enter your email">
-
-				<div class="button_holder">
-					
-					<button class="arrow">
-						
-					</button>
-					
-				</div>
-			</form>
+			<?php echo do_shortcode('[contact-form-7 id="243" title="Footer Form"]'); ?>
 		</div>
 	</div>
 </header>

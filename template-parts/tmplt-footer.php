@@ -10,18 +10,8 @@
         <div class="top_section">
             <div class="left">
                 <span>Sign Up For Email Updates</span>
-                <div class="form_holder">
-                    <form action="">
-                        <input type="email" placeholder="Enter your email">
-
-                        <div class="button_holder">
-                            
-                            <button class="arrow">
-                                
-                            </button>
-                            
-                        </div>
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 id="243" title="Footer Form"]'); ?>
+                    
                 </div>
 
                 <?php if($social_networks): ?>
