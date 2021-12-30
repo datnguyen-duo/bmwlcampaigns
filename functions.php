@@ -40,6 +40,8 @@ if ( ! function_exists( 'bmwl_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'bmwl' ),
+				'menu-2' => esc_html__( 'Footer1', 'bmwl' ),
+				'menu-3' => esc_html__( 'Mobile', 'bmwl' ),
 			)
 		);
 
@@ -108,5 +110,63 @@ function bmwl_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'bmwl_scripts' );
+
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
+        'page_title'    => 'Global Settings',
+        'menu_title'    => 'Global Settings',
+        'menu_slug'     => 'global-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+}
+
+function bmwl_post_types() {
+    register_post_type('work',array(
+        'supports' => array('title', 'thumbnail', 'page-attributes'),
+        'has_archive' => false,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Work',
+            'add_new_item' => 'Add New',
+            'edit_item' => 'Edit',
+            'all_items' => 'All',
+            'singular_name' => 'Work',
+            'search_items' => 'Search',
+            'featured_image' => 'Work Image',
+            'set_featured_image' => 'Set Work Image',
+            'remove_featured_image' => 'Remove Work Image',
+            'use_featured_image' => 'Use as Work Image'
+        ),
+        'menu_icon' => 'dashicons-clipboard',
+    ));
+}
+add_action('init', 'bmwl_post_types');
+
+function bmwl_taxonomies() {
+    $labels = array(
+        'name'              => _x( 'Category', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Category', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Search', 'textdomain' ),
+        'all_items'         => __( 'All', 'textdomain' ),
+        'parent_item'       => __( 'Parent Type', 'textdomain' ),
+        'parent_item_colon' => __( 'Parent Type:', 'textdomain' ),
+        'edit_item'         => __( 'Edit Type', 'textdomain' ),
+        'update_item'       => __( 'Update Type', 'textdomain' ),
+        'add_new_item'      => __( 'Add New Type', 'textdomain' ),
+        'new_item_name'     => __( 'New Type Name', 'textdomain' ),
+        'menu_name'         => __( 'Category', 'textdomain' ),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+    register_taxonomy( 'categories', array( 'work' ), $args );
+
+}
+add_action( 'init', 'bmwl_taxonomies', 0 );
 
 

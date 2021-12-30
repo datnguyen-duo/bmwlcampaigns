@@ -203,32 +203,49 @@ get_header(); ?>
         </div>
     </div>
     <?php if($show_featured_project == 'yes'): ?>
-    <div class="fifth_section">
-        <div class="fifth_section_content">
-            <div class="image_holder">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home/featured_project.png" alt="">
+
+        <?php
+        $args = array(
+            'post_type'=>'work', 
+            'orderby'=>'rand', 
+            'posts_per_page'=>'1'
+        );
+
+        $testimonials=new WP_Query($args);
+
+        while ($testimonials->have_posts()) : $testimonials->the_post(); 
+        ?>
+        
+            <div class="fifth_section">
+                <div class="fifth_section_content">
+                    <div class="image_holder">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+
+                    <p class="left">
+                        Featured Project
+                    </p>
+
+                    <div class="content">
+                        <p>
+                            <h2 class="letter_wrap_scroll"><?php the_title(); ?></h2>
+                        </p>
+                        <a href="<?php the_permalink() ?>" class="btn">
+                            <span>
+                                View Project
+                            </span>
+                        </a>
+                    </div>
+
+                    <a href="/portfolio" class="right">
+                        View all projects
+                    </a>
+                </div>
             </div>
-
-            <p class="left">
-                Featured Project
-            </p>
-
-            <div class="content">
-                <p>
-                    <h2 class="letter_wrap_scroll"> Project Name</h2>
-                </p>
-                <a href="/project" class="btn">
-                    <span>
-                        View Project
-                    </span>
-                </a>
-            </div>
-
-            <p class="right">
-                View all projects
-            </p>
-        </div>
-    </div>
+        <?php 
+            endwhile;
+            wp_reset_postdata();
+        ?>
     <?php endif; ?>
 
     <div class="sixth_section">

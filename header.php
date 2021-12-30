@@ -9,6 +9,14 @@
  * @package bmwl
  */
 
+$email = get_field('email', 'option');
+$phone = get_field('phone', 'option');
+$address = get_field('address', 'option');
+$social_networks = get_field('social_networks', 'option');
+$contact_headline = get_field('contact_headline', 'option');
+$contact_description = get_field('contact_description', 'option');
+$contact_thank_you_message_first = get_field('contact_thank_you_message_first', 'option');
+$contact_thank_you_message_second = get_field('contact_thank_you_message_second', 'option');
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -47,10 +55,10 @@
 					</h2>
 
 					<h3>
-						Your Message Has Been Sent.
+						<?php echo $contact_thank_you_message_first; ?>
 					</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis et diam feugiat placerat. In interdum nisl a tincidunt pharetra. elementum, dui ut cursus egestas.
+						<?php echo $contact_thank_you_message_second; ?>
 					</p>
 
 					<a class="btn close_contact_popup_btn">
@@ -60,9 +68,9 @@
 					</a>
 				</div>
 			</div>
-			<h2 class="form_headline">How can we help you?</h2>
+			<h2 class="form_headline"><?php echo $contact_headline; ?></h2>
 			<p>
-				BMWL is ready to talk with you about your campaign and the capabilities we offer to deliver a winning result.
+				<?php echo $contact_description; ?>
 			</p>
 			<div class="form_holder">
 				<div class="form_header">
@@ -85,39 +93,39 @@
 					<span>
 						Contact Us
 					</span>
+					<?php if($address): ?>
+						<p>
+							<?php echo $address; ?>
+						</p>
+					<?php endif; ?>
 
-					<p>
-					312 Clay St, Suite 300 <br> Oakland, CA 94607
-					</p>
-					<a href="">
-						415.615.0311
-					</a>
-					<a href="">
-						info@whitehurstmosher.com
-					</a>
+					<?php if($phone): ?>
+						<a href="tel:<?php echo $phone; ?>">
+							<?php echo $phone; ?>
+						</a>
+					<?php endif; ?>
+
+					<?php if($email): ?>
+						<a href="mailto:<?php echo $email; ?>">
+							<?php echo $email; ?>
+						</a>
+					<?php endif; ?>
 				</div>
 				<div class="right">
 					<span>
 						Follow Us
 					</span>
-					<div class="right_content">
-						<a href="">
-							<span>
-								Facebook
-							</span>
-						</a>
-						<a href="">
-							<span>
-								Instagram
-							</span>
-						</a>
-						<a href="">
-							<span>
-								Linkedin
-							</span>
-						</a>
-					</div>
-
+					<?php if($social_networks): ?>
+						<div class="right_content">
+							<?php foreach ($social_networks as $singleNetwork): ?>
+								<a href="<?php echo $singleNetwork['single_network']['url'] ?>" target="<?php echo $singleNetwork['single_network']['target'] ?>">
+									<span>
+										<?php echo $singleNetwork['single_network']['title'] ?>
+									</span>
+								</a>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -144,15 +152,15 @@
 					</div>
 
 					<div class="team_info">
-						<div class="single_info">
+						<div class="single_info contact">
 							<span>Contact</span>
-							<a>Email Address</a>
+							<a href="" class="contact">Email Address</a>
 						</div>
-						<div class="single_info">
+						<!-- <div class="single_info">
 							<span>Follow</span>
 							<a>Social Media 1</a>
 							<a>Social Media 1</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<div class="right">
@@ -186,17 +194,15 @@
 	</div>
 
 	<nav class="desktop">
-		<ul>
-			<li>
-				<a href="/about">About</a>
-			</li>
-			<li>
-				<a href="/portfolio">Work</a>
-			</li>
-			<li>
-				<a href="/services">Services</a>
-			</li>
-		</ul>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary',
+					'container' => false,
+				)
+			);
+		?>
 		<div class="btn white contact_popup_opener">
 			<span>
 				Contact
@@ -212,20 +218,15 @@
 
 	<div class="mobile_nav">
 		<div class="nav_content">
-			<ul>
-				<li>
-					<a href="/about">About</a>
-				</li>
-				<li>
-					<a href="/portfolio">Work</a>
-				</li>
-				<li>
-					<a href="/services">Services</a>
-				</li>
-				<li>
-					<a class="contact_popup_opener">Contact</a>
-				</li>
-			</ul>
+			<?php
+			wp_nav_menu(
+					array(
+						'theme_location' => 'menu-3',
+						'menu_id'        => 'mobile',
+						'container' => false,
+					)
+				);
+			?>
 		</div>
 		<div class="form_holder">
 			<span>Sign Up For Email Updates</span>

@@ -359,15 +359,29 @@
                         }
                     }
 
+                    &.last{
+                        padding-right: 0vw;
+                        padding-left: 0vw;
+
+                        @media @tablet-s{
+                            padding-left: 6vw;
+                        }
+
+                    }
+
 
                     .single_team_content{
                         position: relative;
                     }
 
                     &.join_us_holder{
-                        display: flex;
+                        display: none;
                         align-items: center;
                         padding-right: 7vw;
+
+                        @media @tablet-s{
+                            display: flex;
+                        }
                     }
 
                     .join_us{
@@ -451,6 +465,12 @@
                                 margin-bottom: 10px;
                             }
                         }
+                    }
+
+                    .single_info.social{
+                        position: absolute;
+                        visibility: hidden;
+                        opacity: 0;
                     }
 
 

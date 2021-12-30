@@ -156,13 +156,20 @@ get_header(); ?>
 
             <div class="team_holder">
                 <?php 
-                    $counter = 0;
+                    $counter = 1;
                     $len = count($fourth_section_team);
+                    
                 ?>
-                
+                <?php $lastElement = end($fourth_section_team); ?>
                 <?php foreach ($fourth_section_team as $singleTeam): ?>
-                    <?php if ($counter != $len) { ?>
-                        <a class="single_team">
+                    <?php if ($len % 2 == 0): ?>
+                        <div class="single_team" 
+                        data-description="<?php echo $singleTeam['team_member_description'] ?>" 
+                        data-name="<?php echo $singleTeam['team_member_name'] ?>" 
+                        data-position="<?php echo $singleTeam['team_member_position'] ?>" 
+                        data-image="<?php echo $singleTeam['team_member_image']['url']; ?>" 
+                        data-contact="<?php echo $singleTeam['team_member_contact']; ?>">
+                        
                             <div class="single_team_content">
                                 <div class="image_holder fadein_wrap fadeIn">
                                     <img src="<?php echo $singleTeam['team_member_image']['url']; ?>" alt="<?php echo $singleTeam['team_member_image']['alt']; ?>">
@@ -171,14 +178,19 @@ get_header(); ?>
                                 <div class="team_info">
                                     <p><?php echo $singleTeam['team_member_name'] ?></p>
                                     <p><?php echo $singleTeam['team_member_position'] ?></p>
-                                </div>    
+                                </div>
+                                <?php if($singleTeam['team_member_social']): ?>
+                                    <div class="single_info social">
+                                        <span>Follow</span>
+                                        <?php foreach ($singleTeam['team_member_social'] as $singleSocial): ?>
+                                            <a href="<?php echo $singleSocial['social_network']['url'] ?>" target="_blank"><?php echo $singleSocial['social_network']['title'] ?></a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
                             </div>
-                        </a>
-                    <?php } ?>
-    
-                    <?php if ($counter == $len - 1) { ?>
-                        <?php if($len % 2 == 0): ?>
-                            
+                        </div>
+
+                        <?php if($counter == $len): ?>
                             <div class="single_team join_us_holder">
                                 <div class="join_us">
                                     <h3 class="letter_wrap"><?php echo $fourth_section_call_to_action_headline; ?></h3>
@@ -192,40 +204,105 @@ get_header(); ?>
                                     </a>
                                 </div>
                             </div>
-    
-                            <a class="single_team">
-                                <div class="single_team_content">
-                                    <div class="image_holder  fadein_wrap fadeIn">
-                                        <img src="<?php echo $singleTeam['team_member_image']['url']; ?>" alt="<?php echo $singleTeam['team_member_image']['alt']; ?>">
-                                    </div>
-    
-                                    <div class="team_info">
-                                        <p><?php echo $singleTeam['team_member_name'] ?></p>
-                                        <p><?php echo $singleTeam['team_member_position'] ?></p>
-                                    </div>    
-                                </div>
-                            </a>
-                        <?php else: ?>
-                            
-                            <div class="single_team join_us_holder">
-                                
-    
-                                <div class="join_us">
-                                <h3 class="letter_wrap"><?php echo $fourth_section_call_to_action_headline; ?></h3>
-    
-                                    <p>
-                                    <?php echo $fourth_section_call_to_action_description; ?>
-                                    </p>
-    
-                                    <a class="btn contact_popup_opener">
-                                    <span><?php echo $fourth_section_call_to_action_text; ?></span>
-                                    </a>
-                                </div>
-                            </div>
-    
                         <?php endif; ?>
+                        <?php $counter++; ?>
+                    <?php else: ?>
+                        <div class="single_team <?php if($counter == $len): ?>last<?php endif; ?>" 
+                        data-description="<?php echo $singleTeam['team_member_description'] ?>" 
+                        data-name="<?php echo $singleTeam['team_member_name'] ?>" 
+                        data-position="<?php echo $singleTeam['team_member_position'] ?>" 
+                        data-image="<?php echo $singleTeam['team_member_image']['url']; ?>" 
+                        data-contact="<?php echo $singleTeam['team_member_contact']; ?>"
+                        data-social="<?php echo $singleTeam['team_member_social']; ?>">
                         
-                    <?php } $counter++; ?>
+                            <div class="single_team_content">
+                                <div class="image_holder fadein_wrap fadeIn">
+                                    <img src="<?php echo $singleTeam['team_member_image']['url']; ?>" alt="<?php echo $singleTeam['team_member_image']['alt']; ?>">
+                                </div>
+    
+                                <div class="team_info">
+                                    <p><?php echo $singleTeam['team_member_name'] ?></p>
+                                    <p><?php echo $singleTeam['team_member_position'] ?></p>
+                                </div>
+                                
+                                <?php if($singleTeam['team_member_social']): ?>
+                                    <div class="single_info social">
+                                        <span>Follow</span>
+                                        <?php foreach ($singleTeam['team_member_social'] as $singleSocial): ?>
+                                            <a href="<?php echo $singleSocial['social_network']['url'] ?>" target="_blank"><?php echo $singleSocial['social_network']['title'] ?></a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <?php if ($counter == $len - 1) { ?>
+                            <?php if($len % 2 == 0): ?>
+                                
+                                <div class="single_team join_us_holder">
+                                    <div class="join_us">
+                                        <h3 class="letter_wrap"><?php echo $fourth_section_call_to_action_headline; ?></h3>
+        
+                                        <p>
+                                        <?php echo $fourth_section_call_to_action_description; ?>
+                                        </p>
+        
+                                        <a class="btn contact_popup_opener">
+                                            <span><?php echo $fourth_section_call_to_action_text; ?></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="single_team" 
+                                    data-description="<?php echo $singleTeam['team_member_description'] ?>" 
+                                    data-name="<?php echo $singleTeam['team_member_name'] ?>" 
+                                    data-position="<?php echo $singleTeam['team_member_position'] ?>" 
+                                    data-image="<?php echo $singleTeam['team_member_image']['url']; ?>" 
+                                    data-contact="<?php echo $singleTeam['team_member_contact']; ?>"
+                                    data-social="<?php echo $singleTeam['team_member_social']; ?>">
+                                    
+                                    <div class="single_team_content">
+                                        <div class="image_holder fadein_wrap fadeIn">
+                                            <img src="<?php echo $singleTeam['team_member_image']['url']; ?>" alt="<?php echo $singleTeam['team_member_image']['alt']; ?>">
+                                        </div>
+            
+                                        <div class="team_info">
+                                            <p><?php echo $singleTeam['team_member_name'] ?></p>
+                                            <p><?php echo $singleTeam['team_member_position'] ?></p>
+                                        </div>
+                                        
+                                        <?php if($singleTeam['team_member_social']): ?>
+                                            <div class="single_info social">
+                                                <span>Follow</span>
+                                                <?php foreach ($singleTeam['team_member_social'] as $singleSocial): ?>
+                                                    <a href="<?php echo $singleSocial['social_network']['url'] ?>" target="_blank"><?php echo $singleSocial['social_network']['title'] ?></a>
+                                                <?php endforeach; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+        
+                            <?php else: ?>
+                                
+                                <div class="single_team join_us_holder right">
+        
+                                    <div class="join_us">
+                                    <h3 class="letter_wrap"><?php echo $fourth_section_call_to_action_headline; ?></h3>
+        
+                                        <p>
+                                        <?php echo $fourth_section_call_to_action_description; ?>
+                                        </p>
+        
+                                        <a class="btn contact_popup_opener">
+                                        <span><?php echo $fourth_section_call_to_action_text; ?></span>
+                                        </a>
+                                    </div>
+                                </div>
+        
+                            <?php endif; ?>
+                            
+                        <?php } $counter++; ?>
+
+                    <?php endif; ?>
                 <?php endforeach; ?>
                 
 

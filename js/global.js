@@ -439,9 +439,9 @@ var locoScroll;
     let image_reveal = $(
       ".home_wrap .fifth_section_content .image_holder, .home_wrap .fifth_section_content .image_holder img"
     );
-    let textColor = $(".fifth_section_content p");
+    let textColor = $(".fifth_section_content p, .fifth_section_content a");
     let headlineReveal = $(
-      ".home_wrap .fifth_section_content .content .btn, .home_wrap .fifth_section_content p"
+      ".home_wrap .fifth_section_content .content .btn, .home_wrap .fifth_section_content p, .home_wrap .fifth_section_content a"
     );
 
     gsap
@@ -602,11 +602,24 @@ var locoScroll;
       "<"
     );
 
-    $(".single_team")
-      .not(".join_us_holder")
-      .on("click", function () {
+    $(".single_team").not(".join_us_holder").on("click", function () {
+        var teamDescription = $(this).data('description');
+        var teamName = $(this).data('name');
+        var teamPosition = $(this).data('position');
+        var teamImage = $(this).data('image');
+        var teamContact = $(this).data('contact');
+        $(".single_team_popup .team_description .team_info .single_info.social").remove();
+
+        $(this).find('.single_info.social').clone().insertAfter(".single_team_popup .team_description .team_info .single_info.contact");
+
+        $('.single_team_popup h2').text(teamName);
+        $('.single_team_popup h3').text(teamPosition);
+        $('.single_team_popup .team_description .left img').attr('src', teamImage);
+        $('.single_team_popup .team_description .left .team_info .contact a').text(teamContact);
+        $('.single_team_popup .team_description .left .team_info .contact a').attr('href', 'mailto:'+teamContact);
+        $('.single_team_popup .team_description .right p').html(teamDescription);
         teamOpener.play();
-      });
+    });
 
     $(".close_team_popup").on("click", function () {
       teamOpener.reverse();
@@ -1415,7 +1428,7 @@ var locoScroll;
   /*	-----------------------------------------------------------------------------
   BARBA
 --------------------------------------------------------------------------------- */
-
+var currentProject;
   function delay(n) {
     n = n || 2000;
     return new Promise((done) => {
@@ -1434,47 +1447,53 @@ var locoScroll;
     );
     var bodyClasses = $(response).filter("notbody").attr("class");
     $("body").attr("class", bodyClasses);
-
+      
     document.getElementById("viewport").classList.add("loading");
+    
   });
 
   barba.hooks.beforeEnter((data) => {
     window.scrollTo(0, 0);
     smoothScroll();
+    
   });
-
+  
   // barba.hooks.beforeOnce((data) => {});
-
-  // barba.hooks.enter((data) => {});
-
+  
+  // barba.hooks.enter((data) => {
+  // });
+  
   barba.init({
     sync: true,
-
+    
     transitions: [
       {
         async leave(data) {
           locoScroll.destroy();
           const done = this.async();
-
+          
           gsap.to(data.current.container, {
             opacity: 0,
           });
-
+          
           await delay(650);
-
+          
           done();
+          
         },
-
+        
         async enter(data) {
           gsap.from(data.next.container, {
             opacity: 0,
           });
         },
+        
+        // async once(data) {
 
-        // async once(data) {},
+        // },
       },
     ],
-
+    
     views: [
       {
         namespace: "Home",
@@ -1482,6 +1501,16 @@ var locoScroll;
           imagesLoaded(document.querySelector("#viewport"), function () {
             globalScripts();
             loadIndexScripts();
+            document.getElementById("viewport").classList.remove("loading");
+          });
+        },
+      },
+      {
+        namespace: $('.project_hero .left_content h1').text(),
+        afterEnter({ next }) {
+          imagesLoaded(document.querySelector("#viewport"), function () {
+            globalScripts();
+            loadSingleProjectScripts()
             document.getElementById("viewport").classList.remove("loading");
           });
         },
@@ -1512,16 +1541,6 @@ var locoScroll;
           imagesLoaded(document.querySelector("#viewport"), function () {
             globalScripts();
             loadServicesScripts();
-            document.getElementById("viewport").classList.remove("loading");
-          });
-        },
-      },
-      {
-        namespace: "Project",
-        afterEnter({ next }) {
-          imagesLoaded(document.querySelector("#viewport"), function () {
-            globalScripts();
-            loadSingleProjectScripts();
             document.getElementById("viewport").classList.remove("loading");
           });
         },
