@@ -238,5 +238,6 @@ $templates = wp_get_theme()->get_page_templates();
 		</div>
 	</div>
 </header>
+<div id="page" class="site barba-container" data-barba="container" 
+data-barba-namespace="<?php if ($template_path) {echo $templates[$template_path];} else {echo get_post_type();}?>">
 
-<div id="page" class="site barba-container" data-barba="container" data-barba-namespace="<?php echo $templates[$template_path]; ?>">
