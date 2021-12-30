@@ -10,7 +10,8 @@
         <div class="top_section">
             <div class="left">
                 <span>Sign Up For Email Updates</span>
-                    <?php echo do_shortcode('[contact-form-7 id="243" title="Footer Form"]'); ?>
+                <div class="form_holder">
+                    <?php echo do_shortcode('[contact-form-7 id="290" title="Footer Form"]'); ?>
                     
                 </div>
 
