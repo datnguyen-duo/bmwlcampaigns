@@ -1,16 +1,15 @@
 .swiper_indicator_desktop{
-  pointer-events: none;
+  pointer-events: none!important;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   justify-content: space-between;
   padding: 10px;
   box-sizing: border-box;
   align-items: center;
   background-color: @color3;
-  max-width: 150px;
+  max-width: 125px;
   width: 100%;
   margin: auto;
   margin-top: 20px;
@@ -23,7 +22,7 @@
   }
 
   span{
-    font-size: 16px;
+    font-size: 18px;
     font-family: @font1;
   }
 
@@ -35,6 +34,10 @@
       transform: rotate(180deg);
     }
   }
+}
+
+.swiper_indicator_desktop:focus {
+  outline: none;
 }
 
 .single_project_wrap {

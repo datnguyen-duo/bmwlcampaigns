@@ -29,6 +29,10 @@ $more_work_headline = get_field('more_work_headline', get_the_ID());
 $more_work_call_to_action_question = get_field('more_work_call_to_action_question', get_the_ID());
 $more_work_call_to_action = get_field('more_work_call_to_action', get_the_ID());
 
+$more_work_headline = get_field('more_work_headline', 'option');
+$more_work_call_to_action_question = get_field('more_work_call_to_action_question', 'option');
+$more_work_call_to_action = get_field('more_work_call_to_action', 'option');
+
 ?>
 
 <div class="single_project_wrap">
@@ -216,7 +220,7 @@ $more_work_call_to_action = get_field('more_work_call_to_action', get_the_ID());
 			endif;
 
 		?>
-		<h2 class="mobile_nav_headline letter_wrap">More work</h2>
+		<h2 class="mobile_nav_headline letter_wrap"><?php echo $more_work_headline ?></h2>
 		<div class="sixth_section_content">
 			
 			<a href="<?php echo get_the_permalink($prev_post->ID); ?>" class="prev project_nav">
@@ -233,11 +237,11 @@ $more_work_call_to_action = get_field('more_work_call_to_action', get_the_ID());
 			</a>
 
 			<div class="mid_info">
-				<h2 class="letter_wrap">More work</h2>
+				<h2 class="letter_wrap"><?php echo $more_work_headline ?></h2>
 				<p>
-					Or interested in working together?
+					<?php echo $more_work_call_to_action_question; ?>
 				</p>
-				<a class="contact_popup_opener">Reach out.</a>
+				<a class="contact_popup_opener"><?php echo $more_work_call_to_action; ?></a>
 			</div>
 
 			<a href="<?php echo get_the_permalink($next_post->ID); ?>" class="next project_nav">
@@ -254,9 +258,9 @@ $more_work_call_to_action = get_field('more_work_call_to_action', get_the_ID());
 
 		<div class="mid_info mobile">
 			<p>
-				Or interested in working together?
+				<?php echo $more_work_call_to_action_question; ?>
 			</p>
-			<a class="contact_popup_opener">Reach out.</a>
+			<a class="contact_popup_opener"><?php echo $more_work_call_to_action; ?></a>
 		</div>
 
 		<?php get_template_part( 'template-parts/tmplt-footer'); ?>

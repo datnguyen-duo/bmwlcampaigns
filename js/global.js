@@ -1180,6 +1180,66 @@ var locoScroll;
       var scroller = "body";
     }
 
+    var button = document.querySelector('.swiper_indicator_desktop');
+    var buttonText = document.querySelector('.swiper_indicator_desktop span');
+    var followArea = document.querySelector('.fifth_section_content .slider');
+    var page = document.querySelector('.fifth_section_content .slider');
+
+    // Follow Animation
+    // ************
+    var moveCircle = (e)  => {
+      gsap.to(button, 0.25, {
+        css: {
+          left: e.pageX,
+          top: e.pageY
+        }
+      });
+    }
+
+    followArea.addEventListener('mouseover', () => {
+      gsap.to(button, 0.25, {
+        scale: 1,
+        autoAlpha: 1
+      });
+  
+      page.addEventListener('mousemove', moveCircle);
+    });
+  
+    followArea.addEventListener('mouseout', () => {
+      gsap.to(button, 0.25, {
+        scale: 0.5,
+        autoAlpha: 0
+      });
+    });
+  
+    followArea.addEventListener('mousedown', () => {
+  
+  
+      gsap.to(button, 0.5, {
+        css: { transform: `translate(-50%, -50%) scale(0.75)` }
+      });
+  
+      gsap.to(buttonText, 0.25, {
+        css: { opacity: 1  }
+      });
+    });
+  
+    followArea.addEventListener('mouseup', () => {
+      // gsap.to(button, 1, {
+      //   css: { background: `transparent` }
+      // });
+  
+      gsap.to(button, 0.5, {
+        css: { transform: `translate(-50%, -50%) scale(1)` }
+      });
+  
+      gsap.to(buttonText, 0.25, {
+        css: {
+          opacity: 1
+        }
+      });
+    });
+
     /*-----------------------------------------------------------------------------
       Fade Image/Text Animation
       --------------------------------------------------------------------------------- */
