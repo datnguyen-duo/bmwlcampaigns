@@ -1,3 +1,42 @@
+.swiper_indicator_desktop{
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: @color3;
+  max-width: 150px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  z-index: 1000;
+  opacity: 0;
+  display: none;
+
+  @media @tablet-xl{
+    display: flex;
+  }
+
+  span{
+    font-size: 16px;
+    font-family: @font1;
+  }
+
+  img{
+    max-width: 20px;
+    position: relative;
+
+    &:first-child{
+      transform: rotate(180deg);
+    }
+  }
+}
+
 .single_project_wrap {
   .project_hero {
     display: flex;
@@ -496,6 +535,7 @@
     overflow: hidden;
 
     .fifth_section_content {
+
       .fifth_section_header {
         display: flex;
         justify-content: space-between;

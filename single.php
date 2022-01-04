@@ -156,6 +156,7 @@ $more_work_call_to_action = get_field('more_work_call_to_action', get_the_ID());
 
 	<div class="fifth_section">
 		<div class="fifth_section_content">
+			
 			<div class="fifth_section_header">
 				<?php if($project_gallery_headline): ?>
 					<h2 class="letter_wrap"><?php echo $project_gallery_headline; ?></h2>
@@ -169,7 +170,7 @@ $more_work_call_to_action = get_field('more_work_call_to_action', get_the_ID());
 			</div>
 			<div class="slider">
 				<div class="image_slider">
-					<?php echo $project_gallery ?>
+					
 					<?php foreach ($project_gallery as $singleImage): ?>
 						<div class="image_holder">
 							<img src="<?php echo $singleImage['image']['url'] ?>" alt="">

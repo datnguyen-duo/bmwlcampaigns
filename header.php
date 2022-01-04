@@ -41,7 +41,11 @@ $templates = wp_get_theme()->get_page_templates();
 
 <body <?php body_class(); ?>  data-barba="wrapper">
 <?php wp_body_open(); ?>
-
+<div class="swiper_indicator_desktop">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+				<span>Drag</span>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/black_arrow.svg" alt="">
+			</div>
 <div class="contact_popup_holder">
 	<div class="contact_popup">
 		<div class="close_contact_popup">
