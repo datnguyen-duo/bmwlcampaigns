@@ -22,7 +22,7 @@ $about_project_second_headline = get_field('about_project_second_headline', get_
 $about_project_second_description = get_field('about_project_second_description', get_the_ID());
 
 $project_gallery_headline = get_field('project_gallery_headline', get_the_ID());
-$project_gallery_description = get_field('about_project_second_description', get_the_ID());
+$project_gallery_description = get_field('project_gallery_description', get_the_ID());
 $project_gallery = get_field('project_gallery', get_the_ID());
 
 $more_work_headline = get_field('more_work_headline', get_the_ID());
