@@ -512,6 +512,7 @@
               .left {
                 width: 100%;
                 margin: auto;
+                position: relative;
 
                 @media @tablet-s {
                   margin: 0;
@@ -535,51 +536,91 @@
                   position: relative;
                 }
 
+                &:after {
+                  content: "";
+                  position: absolute;
+                  background-color: #fff;
+                  -webkit-transform: skewX(-20deg);
+                  transform: skewX(-15deg);
+                  width: 35px;
+                  height: 100px;
+                  display: block;
+                  z-index: 2;
+                  top: 0;
+                  left: -10px;
+
+                  @media @tablet-s {
+                    width: 6vw;
+                    height: 15vw;
+                    top: 0;
+                    left: -1vw;
+                  }
+                }
+
+                &:before {
+                  content: "";
+                  position: absolute;
+                  background-color: #fff;
+                  -webkit-transform: skewX(-20deg);
+                  transform: skewX(-15deg);
+                  width: 35px;
+                  height: 100px;
+                  display: block;
+                  z-index: 2;
+                  bottom: -40px;
+                  right: 0px;
+
+                  @media @tablet-s {
+                    bottom: -5vw;
+                    right: 0vw;
+                    width: 6vw;
+                    height: 15vw;
+                  }
+                }
+
                 .image_holder {
                   position: relative;
                   padding-top: 79%;
 
                   &:after {
-                    content: "";
+                    content: '';
                     position: absolute;
-                    background-color: #fff;
-                    -webkit-transform: skewX(-20deg);
-                    transform: skewX(-15deg);
-                    width: 35px;
-                    height: 100px;
-                    display: block;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                    bottom: 0;
+                    width: 0;
+                    height: 0;
+                    border-right: 0 solid transparent;
+                    border-left: 18vw solid transparent;
+                    border-bottom: 65vw solid #ededed;
+                    clear: both;
+        
+                    @media @tablet-s{
+                      border-left: 9.5vw solid transparent;
+                      border-bottom: 32.5vw solid #ededed;
+                    }
+                  }
+        
+                  &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
                     z-index: 1;
                     top: 0;
-                    left: -10px;
-
-                    @media @tablet-s {
-                      width: 6vw;
-                      height: 15vw;
-                      top: 0;
-                      left: -1vw;
+                    width: 0;
+                    height: 0;
+                    border-right: 18vw solid transparent;
+                    border-top: 65vw solid #ededed;
+                    border-left: 0vw solid transparent;
+                    clear: both;
+        
+                    @media @tablet-s{
+                      border-right: 9.5vw solid transparent;
+                      border-top: 32.5vw solid #ededed;
                     }
                   }
 
-                  &:before {
-                    content: "";
-                    position: absolute;
-                    background-color: #fff;
-                    -webkit-transform: skewX(-20deg);
-                    transform: skewX(-15deg);
-                    width: 35px;
-                    height: 100px;
-                    display: block;
-                    z-index: 1;
-                    bottom: -40px;
-                    right: 0px;
-
-                    @media @tablet-s {
-                      bottom: -5vw;
-                      right: 0vw;
-                      width: 6vw;
-                      height: 15vw;
-                    }
-                  }
 
                   img {
                     .cropped_image();
