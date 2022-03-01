@@ -91,11 +91,13 @@
           }
 
           h1 {
-            .medium_headline();
+            font-size: 50px;
+            .font2R();
             text-align: center;
             color: #fff;
-
+            
             @media @tablet-s {
+              font-size: 7.2vw;
               text-align: left;
             }
           }
@@ -128,6 +130,8 @@
             }
 
             @media @tablet-s {
+              padding-right: 40px;
+              box-sizing: border-box;
               text-align: left;
               margin-bottom: 0px;
             }
@@ -238,9 +242,14 @@
       }
 
       h2 {
-        .small_headline();
+        font-size: 30px;
+        .font2R();
         position: relative;
         z-index: 5;
+
+        @media @tablet-s {
+          font-size: 3.6vw;
+        }
       }
     }
   }
