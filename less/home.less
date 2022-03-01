@@ -416,6 +416,46 @@
             padding-top: 102%;
           }
 
+          &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-right: 0 solid transparent;
+            border-left: 15vw solid transparent;
+            border-bottom: 50vw solid #1c2021;
+            clear: both;
+
+            @media @tablet-s{
+              border-left: 13vw solid transparent;
+              border-bottom: 46vw solid #1c2021;
+            }
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-right: 15vw solid transparent;
+            border-top: 50vw solid #1c2021;
+            border-left: 0vw solid transparent;
+            clear: both;
+
+            @media @tablet-s{
+              display: none;
+              border-right: 8vw solid transparent;
+              border-top: 23vw solid #1c2021;
+            }
+          }
+
           img {
             .cropped_image();
             &.desktop{
