@@ -196,48 +196,50 @@
           margin: auto;
           position: relative;
 
-          &:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 1;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-right: 0 solid transparent;
-            border-left: 15vw solid transparent;
-            border-bottom: 50vw solid #ededed;
-            clear: both;
-
-            @media @tablet-s{
-              border-left: 8vw solid transparent;
-              border-bottom: 23vw solid #ededed;
-            }
-          }
-
-          &:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            z-index: 1;
-            top: 0;
-            width: 0;
-            height: 0;
-            border-right: 15vw solid transparent;
-            border-top: 50vw solid #ededed;
-            border-left: 0vw solid transparent;
-            clear: both;
-
-            @media @tablet-s{
-              border-right: 8vw solid transparent;
-              border-top: 23vw solid #ededed;
-            }
-          }
 
           @media @tablet-s{
             margin: 0;
             width: 35%;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            transform: skewX(-20deg);
+            width: 35px;
+            height: 100px;
+            display: block;
+            z-index: 2;
+            top: 0;
+            left: -20px;
+
+            @media @tablet-s{
+              width: 6vw;
+              height: 15vw;
+              top: 0;
+              left: -3vw;
+            }
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            transform: skewX(-20deg);
+            width: 35px;
+            height: 100px;
+            display: block;
+            z-index: 2;
+            bottom: -40px;
+            right: -10px;
+
+            @media @tablet-s{
+              bottom: -5vw;
+            right: -2vw;
+              width: 6vw;
+              height: 15vw;
+            }
           }
 
           .image_holder {
@@ -245,44 +247,44 @@
             padding-top: 79%;
 
             &:after {
-              content: "";
+              content: '';
               position: absolute;
-              background-color: #fff;
-              transform: skewX(-20deg);
-              width: 35px;
-              height: 100px;
-              display: block;
-              z-index: 2;
+              right: 0;
               top: 0;
-              left: -20px;
-
+              z-index: 1;
+              bottom: 0;
+              width: 0;
+              height: 0;
+              border-right: 0 solid transparent;
+              border-left: 15vw solid transparent;
+              border-bottom: 50vw solid #ededed;
+              clear: both;
+  
               @media @tablet-s{
-                width: 6vw;
-                height: 15vw;
-                top: 0;
-                left: -3vw;
+                border-left: 8vw solid transparent;
+                border-bottom: 23vw solid #ededed;
               }
             }
-
+  
             &:before {
-              content: "";
+              content: '';
               position: absolute;
-              background-color: #fff;
-              transform: skewX(-20deg);
-              width: 35px;
-              height: 100px;
-              display: block;
-              z-index: 2;
-              bottom: -40px;
-              right: -10px;
-
+              left: 0;
+              z-index: 1;
+              top: 0;
+              width: 0;
+              height: 0;
+              border-right: 15vw solid transparent;
+              border-top: 50vw solid #ededed;
+              border-left: 0vw solid transparent;
+              clear: both;
+  
               @media @tablet-s{
-                bottom: -5vw;
-              right: -2vw;
-                width: 6vw;
-                height: 15vw;
+                border-right: 8vw solid transparent;
+                border-top: 23vw solid #ededed;
               }
             }
+
 
             img {
               .cropped_image();
