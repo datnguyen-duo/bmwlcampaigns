@@ -316,7 +316,7 @@ body {
       cursor: pointer;
 
       @media @tablet-xl {
-        padding: 10vw 3.55vw;
+        padding: 0vw 3.55vw;
         padding-top: 3vw;
         width: 100px;
         flex-direction: column;
@@ -372,13 +372,19 @@ body {
       }
 
       p {
-        .small_headline();
         position: relative;
-        white-space: nowrap;
         z-index: 1;
         order: 1;
+        width: 100%;
+        font-size: 35px;
+        .font2R();
 
+        @media @tablet-s {
+          font-size: 3.6vw;
+        }
+        
         @media @tablet-xl {
+          white-space: nowrap;
           order: 2;
           transform: rotate(-90deg);
         }
