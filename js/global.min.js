@@ -628,6 +628,10 @@ var locoScroll;
           "src",
           teamImage
         );
+        $(".single_team_popup .team_header img").attr(
+          "src",
+          teamImage
+        );
         $(
           ".single_team_popup .team_description .left .team_info .contact a"
         ).text(teamContact);
