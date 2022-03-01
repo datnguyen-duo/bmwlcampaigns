@@ -721,6 +721,17 @@
         position: absolute;
         overflow: hidden;
 
+        &:after{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.4);
+          z-index: 2;
+        }
+
         img {
           .cropped_image();
           width: 100vw!important;
@@ -738,6 +749,8 @@
     background-color: @color1;
 
     .sixth_section_content {
+      position: relative;
+      z-index: 3;
       .accordion_headline {
         box-sizing: border-box;
         text-align: right;
@@ -817,6 +830,17 @@
   .seventh_section {
     position: relative;
 
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
     img {
       .cropped_image();
       object-position: right;
@@ -837,7 +861,7 @@
 
     .seventh_section_content {
       position: relative;
-      z-index: 1;
+      z-index: 3;
       text-align: center;
       padding: 100px 0;
       box-sizing: border-box;
