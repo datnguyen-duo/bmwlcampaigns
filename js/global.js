@@ -17,6 +17,7 @@ var locoScroll;
       reversed: true,
       onComplete: function () {
         console.log("complete");
+        
       },
     });
 
