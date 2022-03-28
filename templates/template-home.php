@@ -27,6 +27,7 @@ $fourth_section_headline = get_field('fourth_section_headline');
 $fourth_section_services = get_field('fourth_section_services');
 
 $show_featured_project = get_field('show_featured_project');
+$fifth_section_featured_project = get_field('fifth_section_featured_project');
 
 $sixth_section_headline = get_field('sixth_section_headline');
 $sixth_section_testimonials = get_field('sixth_section_testimonials');
@@ -40,18 +41,21 @@ get_header(); ?>
 
 <div class="home_wrap">
     <div class="home_hero">
-        <?php if($home_hero_image): ?>
+        <?php if($home_hero_video): ?>
+            <video class="vid" muted autoplay loop playsinline>
+                <source src="<?php echo $home_hero_video; ?>" type="video/mp4">
+            </video>
+        <?php elseif($home_hero_image): ?>
             <img src="<?php echo $home_hero_image['url']; ?>" alt="<?php echo $home_hero_image['alt']; ?>">
         <?php endif; ?>
         <!-- <h1 class="letter_wrap_scroll">We Win For You</h1> -->
 
-        <div class="cta_button">
+        <!-- <div class="cta_button">
             <span>
                 Play Video
             </span>
             <img src="<?php echo get_template_directory_uri(); ?>/images/play_button.svg" alt="">
-        
-        </div>
+        </div> -->
     </div>
     <?php if($home_hero_banner_text): ?>
         <div class="banner home_first_banner">
@@ -202,50 +206,44 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <?php if($show_featured_project == 'yes'): ?>
-
-        <?php
-        $args = array(
-            'post_type'=>'work', 
-            'orderby'=>'rand', 
-            'posts_per_page'=>'1'
-        );
-
-        $testimonials=new WP_Query($args);
-
-        while ($testimonials->have_posts()) : $testimonials->the_post(); 
-        ?>
+    <?php if($show_featured_project == 'yes'): $fifth_section_featured_project = get_field('fifth_section_featured_project'); ?>
         
-            <div class="fifth_section">
-                <div class="fifth_section_content">
-                    <div class="image_holder">
-                        <?php the_post_thumbnail(); ?>
-                    </div>
+        <?php if( $fifth_section_featured_project ): ?>
+            <?php foreach( $fifth_section_featured_project as $post ): 
 
-                    <p class="left">
-                        Featured Project
-                    </p>
+                setup_postdata($post); ?>
+                <div class="fifth_section">
+                    <div class="fifth_section_content">
+                        <div class="image_holder">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
 
-                    <div class="content">
-                        <p>
-                            <h2 class="letter_wrap_scroll"><?php the_title(); ?></h2>
+                        <p class="left">
+                            Featured Project
                         </p>
-                        <a href="<?php the_permalink() ?>" class="btn">
-                            <span>
-                                View Project
-                            </span>
+
+                        <div class="content">
+                            <p>
+                                <h2 class="letter_wrap_scroll"><?php the_title(); ?></h2>
+                            </p>
+                            <a href="<?php the_permalink() ?>" class="btn">
+                                <span>
+                                    View Project
+                                </span>
+                            </a>
+                        </div>
+
+                        <a href="/portfolio" class="right">
+                            View all projects
                         </a>
                     </div>
-
-                    <a href="/portfolio" class="right">
-                        View all projects
-                    </a>
                 </div>
-            </div>
-        <?php 
-            endwhile;
-            wp_reset_postdata();
-        ?>
+            <?php endforeach; ?>
+            
+            <?php 
+            // Reset the global post object so that the rest of the page works correctly.
+            wp_reset_postdata(); ?>
+        <?php endif; ?>
     <?php endif; ?>
 
     <div class="sixth_section">

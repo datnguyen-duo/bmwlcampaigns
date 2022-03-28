@@ -171,20 +171,17 @@ var locoScroll;
     var rows = document.querySelectorAll(".fourth_section .single_item");
 
     rows.forEach((row) => {
-      row.addEventListener("mouseenter", function () {
-        if (
-          this.classList.contains("animate") &&
-          !this.classList.contains("init")
-        ) {
-          this.querySelector("video")
-            .play()
-            .bind("ended", function () {
-              this.currentTime = 0;
-            });
-          this.classList.add("init");
+      $(row).hover(
+        function() {
+          if (this.classList.contains("animate") && !this.classList.contains("init")){
+            $(this).find('video').get(0).play();
+          }
+        }, function() {
+          $(this).find('video').get(0).currentTime = 0;
         }
-      });
+      );
     });
+
 
     /*-----------------------------------------------------------------------------
         Parallax Animation
@@ -283,7 +280,7 @@ var locoScroll;
     });
 
     let heroHeadline = $(".home_hero h1 .char");
-    let heroImg = $(".home_hero img");
+    let heroImg = $(".home_hero img, .home_hero video");
     let heroCtaButton = $(".home_hero .cta_button");
     heroAnimation.to(heroImg, { opacity: 1, duration: 0.5 });
     heroAnimation.from(heroHeadline, {
