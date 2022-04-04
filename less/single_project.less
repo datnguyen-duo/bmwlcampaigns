@@ -645,10 +645,10 @@
             padding-top: 49%;
             width: 100vw;
             margin-right: 10px;
-            transform: skewX(-15deg);
+            // transform: skewX(-15deg);
 
             @media @tablet-s {
-              padding-top: 20%;
+              padding-top: 15%;
               margin-right: 20px;
             }
 
@@ -658,12 +658,15 @@
               max-width: 160%;
               margin-left: -20%;
               height: 120%;
-              transform: skewX(15deg);
-
+              // transform: skewX(15deg);
+              object-fit: contain;
               @media @tablet-s {
-                width: 120%;
-                max-width: 120%;
-                margin-left: -8%;
+                // width: 120%;
+                // max-width: 120%;
+                // margin-left: -8%;
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
               }
             }
           }
