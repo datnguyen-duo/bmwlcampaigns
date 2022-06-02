@@ -177,11 +177,15 @@ $more_work_call_to_action = get_field('more_work_call_to_action', 'option');
 					
 					<?php foreach ($project_gallery as $singleImage): ?>
 						<div class="image_holder">
-							<img src="<?php echo $singleImage['image']['url'] ?>" alt="">
+							<?php if ($singleImage['image']['type'] == "image"): ?>
+								<img src="<?php echo $singleImage['image']['url'] ?>" alt="<?php echo $singleImage['image']['alt'] ?>">
+							<?php endif; ?>
+							<?php if ($singleImage['image']['type'] == "video"): ?>
+								<video controls playsinline src="<?php echo $singleImage['image']['url'] ?>"></video>
+							<?php endif; ?>
 						</div>
 					<?php endforeach; ?>
 				</div>
-				<div class="proxy-slider"></div>
 			</div>
 
 			<div class="swiper_indicator">

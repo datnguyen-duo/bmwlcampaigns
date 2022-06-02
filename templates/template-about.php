@@ -25,13 +25,13 @@ get_header(); ?>
 
 <div class="about_wrap">
     <div class="first_section">
+        <?php if($first_section_headline): ?>
+            <h2 class="letter_wrap desktop">
+                <?php echo $first_section_headline; ?>
+            </h2>
+        <?php endif; ?>
         <div class="first_section_content">
             <div class="left">
-                <?php if($first_section_headline): ?>
-                    <h2 class="letter_wrap mobile">
-                        <?php echo $first_section_headline; ?>
-                    </h2>
-                <?php endif; ?>
                 <?php if($first_section_image): ?>
                     <div class="image_holder fadein_wrap fadeIn">
                         <img src="<?php echo $first_section_image['url'] ?>" alt="<?php echo $first_section_image['alt'] ?>">
@@ -39,11 +39,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
             <div class="right">
-                <?php if($first_section_headline): ?>
-                    <h2 class="letter_wrap desktop">
-                        <?php echo $first_section_headline; ?>
-                    </h2>
-                <?php endif; ?>
+
 
                 <div class="content">
                     <?php if($first_section_description): ?>
@@ -105,19 +101,12 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
 
-            <?php if($third_section_banner_text): ?>
-                <div class="banner about_first_banner">
-                    <div class="banner_section">
-                        <p><?php echo $third_section_banner_text; ?></p>                
-                    </div>
-                </div>
-            <?php endif; ?>
+
 
             <div class="accordions">
                 <?php $i=1; foreach ($third_section_core_values as $coreValue): ?>
                     <div class="single_accordion <?php if($i == 1): ?>active<?php endif; ?>">
                         <div class="accordion_header">
-                            <span>/0<?php echo $i; ?></span>
                             <p>
                                 <?php echo $coreValue['core_value_name'] ?>
                             </p>
@@ -134,8 +123,15 @@ get_header(); ?>
                                     Next
                                     <div class="arrow"></div>
                                 </div>
-                                
-                                <img src="<?php echo $coreValue['core_value_image']['url'] ?>" alt="<?php echo $coreValue['core_value_image']['alt'] ?>">
+                                <?php if ($coreValue['core_value_image']) : ?>
+                                    <img src="<?php echo $coreValue['core_value_image']['url'] ?>" alt="<?php echo $coreValue['core_value_image']['alt'] ?>">
+
+                                <?php endif; ?>
+
+                                <?php if ($coreValue['core_value_image']['caption']): ?>
+                                    <figcaption><?php echo $coreValue['core_value_image']['caption'] ?></figcaption>
+                                <?php endif; ?>
+
                                 <p>
                                     <?php echo $coreValue['core_value_description'] ?>
                                 </p>
@@ -145,6 +141,14 @@ get_header(); ?>
                     <?php $i++; ?>
                 <?php endforeach; ?>
             </div>    
+
+            <?php if($third_section_banner_text): ?>
+                <div class="banner about_first_banner">
+                    <div class="banner_section">
+                        <p><?php echo $third_section_banner_text; ?></p>                
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 

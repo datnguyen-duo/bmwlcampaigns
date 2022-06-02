@@ -2,9 +2,6 @@
   //document ready
 
   function loadAboutScripts() {
-    
-
-    console.log("load about");
     if (window.screen.width > 1024) {
       var scroller = "#viewport";
     } else {
@@ -17,9 +14,7 @@
     var teamOpener = gsap.timeline({
       paused: true,
       reversed: true,
-      onComplete: function () {
-        console.log("complete");
-      },
+      onComplete: function () {},
     });
 
     if (window.screen.width > 750) {

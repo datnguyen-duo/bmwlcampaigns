@@ -8,7 +8,7 @@ footer {
   }
 
   .footer_content {
-    background-color: @color4;
+    background: #fff;
     padding: 50px 30px;
     padding-bottom: 10px;
     box-sizing: border-box;
@@ -79,26 +79,26 @@ footer {
             input:-webkit-autofill:hover,
             input:-webkit-autofill:focus,
             input:-webkit-autofill:active {
-                transition: background-color 5000s ease-in-out 0s;
-                -webkit-text-fill-color: #fff !important;
+              transition: background-color 5000s ease-in-out 0s;
+              -webkit-text-fill-color: #fff !important;
             }
 
-            .wpcf7-form-control-wrap.your-email{
+            .wpcf7-form-control-wrap.your-email {
               margin: 0px;
               width: 100%;
             }
 
-            .wpcf7-not-valid-tip{
+            .wpcf7-not-valid-tip {
               margin: 0px;
               margin-top: 20px;
               font-size: 12px;
             }
 
-            .wpcf7-spinner{
+            .wpcf7-spinner {
               display: none;
             }
 
-            .wpcf7-response-output{
+            .wpcf7-response-output {
               // position: absolute;
               padding: 0;
               left: 0;
@@ -139,7 +139,7 @@ footer {
               }
             }
 
-            input[type="submit"]{
+            input[type="submit"] {
               opacity: 0;
               position: absolute;
               z-index: 100;
@@ -255,7 +255,7 @@ footer {
           display: flex;
           margin-top: 90px;
 
-          @media @tablet-l{
+          @media @tablet-l {
             margin-top: 0px;
           }
 
@@ -295,6 +295,7 @@ footer {
               position: relative;
               color: @color2;
               margin: 0px;
+              .transition();
             }
 
             &:after {
@@ -305,14 +306,14 @@ footer {
               top: 0;
               width: 0%;
               height: 100%;
-              background-color: @color2;
+              background-color: @color4;
               clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
               .transition(all, 600ms);
             }
 
             &:hover {
               span {
-                color: @color4;
+                color: #fff;
               }
               &:after {
                 width: 100%;

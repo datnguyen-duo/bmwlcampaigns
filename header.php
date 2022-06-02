@@ -181,8 +181,6 @@ $templates = wp_get_theme()->get_page_templates();
 	</div>
 </div>
 
-<div id="viewport" class="loading">
-
 <header>
 	<a href="/" class="logo_holder">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="logo" class="light">
@@ -242,6 +240,10 @@ $templates = wp_get_theme()->get_page_templates();
 		</div>
 	</div>
 </header>
+
+<div id="viewport" class="loading">
+
+
 <div id="page" class="site barba-container" data-barba="container" 
 data-barba-namespace="<?php if ($template_path) {echo $templates[$template_path];} else {echo get_post_type();}?>">
 

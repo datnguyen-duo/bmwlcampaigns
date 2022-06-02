@@ -1,198 +1,197 @@
-.single_team_popup{
-    position: fixed;
-    background-color: rgba(4, 145, 181, 0.9);
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 1000;
-    overflow: auto;
-    opacity: 0;
-    visibility: hidden;
+.single_team_popup {
+  position: fixed;
+  background-color: rgba(4, 145, 181, 0.9);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
 
-    .single_team_popup_content{
-        width: 0%;
-        margin-left: auto;
-        background-color: @color1;
-        position: relative;
-        
-        @media @tablet-s{
-            margin-top: 10%;
-        }
-        
-        .close_team_popup{
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            cursor: pointer;
-            .transition();
-            z-index: 6;
-            opacity: 0;
+  .single_team_popup_content {
+    width: 0%;
+    margin-left: auto;
+    background-color: @color1;
+    position: relative;
 
-            &:hover{
-                opacity: 0.6;
-            }
-
-            span{
-                .text();
-            }
-        }
-
-        .content{
-            padding: 80px 34px;
-            box-sizing: border-box;
-            opacity: 0;
-
-            @media @tablet-l{
-                padding: 80px;
-            }
-
-            @media @tablet-xl{
-                padding: 5vw 8vw;
-            }
-
-            .team_header{
-                margin-bottom: 6vw;
-                position: relative;
-                text-align: center;
-
-                .image_holder{
-                    position: relative;
-                    overflow: hidden;
-                    padding-top: 50%;
-                    max-width: 180px;
-                    margin: auto;
-                    margin-bottom: 15px;
-                    transform: skewX(-15deg);
-                    -webkit-mask-image: -webkit-radial-gradient(white, black);
-
-                    img{
-                        .cropped_image();
-                        width: 125%;
-                        max-width: 125%;
-                        height: 120%;
-                        transform: skewX(15deg);
-                        margin-left: -10%;
-                    }
-                }
-
-                @media @tablet-s{
-                    .image_holder{
-                        display: none;
-                    }
-
-                    text-align: left;
-                }
-
-                h2{
-                    .medium_headline();
-                    margin-bottom: 20px;
-                }
-
-                h3{
-                    .big_text();
-                }
-            }
-
-            .team_description{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-
-                .left{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    order: 2;
-
-                    @media @tablet-s{
-                        width: 26%;
-                        order: 1;
-                    }
-
-                    .image_holder{
-                        position: relative;
-                        overflow: hidden;
-                        padding-top: 84%;
-                        display: none;
-                        transform: skewX(-15deg);
-
-                        @media @tablet-s{
-                            display: block;
-                        }
-
-                        img{
-                            .cropped_image();
-                            width: 125%;
-                            height: 120%;
-                            transform: skewX(15deg);
-                            margin-left: -10%;
-                            max-width: 125%;
-                        }
-                    }
-
-                    .team_info{
-                        display: flex;
-                        justify-content: space-between;
-
-                        @media @tablet-s{
-                            display: block;
-                        }
-
-                        .single_info{
-                            margin-bottom: 20px;
-
-                            span{
-                                font-size: 12px;
-                                font-family: @font1;
-                                color: @color4;
-                                margin-bottom: 5px;
-                                display: block;
-                    
-                                @media @tablet-s{
-                                    font-size: 16px;
-                                }
-                            }
-
-                            a{
-                                .text();
-                                color: @color2;
-                                display: block;
-                            }
-                        }
-                    }
-                }
-
-                .right{
-                    width: 100%;
-                    box-sizing: border-box;
-                    order: 1;
-                    margin-bottom: 40px;
-
-                    @media @tablet-s{
-                        width: 74%;
-                        margin-bottom: 0px;
-                        padding-left: 5vw;
-                        order: 2;
-                    }
-
-                    @media @tablet-xl{
-                        padding-left: 10vw;
-                    }
-
-                    p{
-                        .text();
-                        line-height: 1.4em;
-                        margin-left: auto;
-
-
-                        @media @tablet-xl{
-                            max-width: 29vw;
-                        }
-                    }
-                }
-            }
-        }
+    @media @tablet-s {
+      // margin-top: 10%;
     }
+
+    .close_team_popup {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+      .transition();
+      z-index: 6;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      span {
+        .text();
+      }
+    }
+
+    .content {
+      padding: 80px 34px;
+      box-sizing: border-box;
+      opacity: 0;
+
+      @media @tablet-l {
+        padding: 80px;
+      }
+
+      @media @tablet-xl {
+        padding: 5vw 8vw;
+      }
+
+      .team_header {
+        margin-bottom: 6vw;
+        position: relative;
+        text-align: center;
+
+        .image_holder {
+          position: relative;
+          overflow: hidden;
+          padding-top: 50%;
+          max-width: 180px;
+          margin: auto;
+          margin-bottom: 15px;
+          transform: skewX(-15deg);
+          -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+          img {
+            .cropped_image();
+            width: 125%;
+            max-width: 125%;
+            height: 100%;
+            transform: skewX(15deg);
+            margin-left: -10%;
+          }
+        }
+
+        @media @tablet-s {
+          .image_holder {
+            display: none;
+          }
+
+          text-align: left;
+        }
+
+        h2 {
+          .medium_headline();
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          .big_text();
+        }
+      }
+
+      .team_description {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          order: 2;
+
+          @media @tablet-s {
+            width: 26%;
+            order: 1;
+          }
+
+          .image_holder {
+            position: relative;
+            overflow: hidden;
+            padding-top: 84%;
+            display: none;
+            transform: skewX(-15deg);
+
+            @media @tablet-s {
+              display: block;
+            }
+
+            img {
+              .cropped_image();
+              width: 125%;
+              height: 120%;
+              transform: skewX(15deg);
+              margin-left: -10%;
+              max-width: 125%;
+            }
+          }
+
+          .team_info {
+            display: flex;
+            justify-content: space-between;
+
+            @media @tablet-s {
+              display: block;
+            }
+
+            .single_info {
+              margin-bottom: 20px;
+
+              span {
+                font-size: 12px;
+                font-family: @font1;
+                color: @color4;
+                margin-bottom: 5px;
+                display: block;
+
+                @media @tablet-s {
+                  font-size: 16px;
+                }
+              }
+
+              a {
+                .text();
+                color: @color2;
+                display: block;
+              }
+            }
+          }
+        }
+
+        .right {
+          width: 100%;
+          box-sizing: border-box;
+          order: 1;
+          margin-bottom: 40px;
+
+          @media @tablet-s {
+            width: 74%;
+            margin-bottom: 0px;
+            padding-left: 5vw;
+            order: 2;
+          }
+
+          @media @tablet-xl {
+            padding-left: 10vw;
+          }
+
+          p {
+            .text();
+            line-height: 1.4em;
+            margin-left: auto;
+
+            @media @tablet-xl {
+              max-width: 29vw;
+            }
+          }
+        }
+      }
+    }
+  }
 }

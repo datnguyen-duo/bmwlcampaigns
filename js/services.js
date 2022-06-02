@@ -8,73 +8,81 @@
     }
 
     var winHeight = document.body.clientHeight;
-    var services = document.querySelectorAll(".services_wrap .single_accordion");
+    var services = document.querySelectorAll(
+      ".services_wrap .single_accordion"
+    );
     var h = 0;
-    var l = document.querySelectorAll(".services_wrap .single_accordion").length; // get number of services
-
+    var l = document.querySelectorAll(
+      ".services_wrap .single_accordion"
+    ).length; // get number of services
 
     if (window.screen.width > 768) {
       var serviceHeroScroll = 1.3;
     } else {
-      var serviceHeroScroll = 1.4; 
+      var serviceHeroScroll = 1.4;
     }
 
     for (var i = 0; i < l; i++) {
       h += services[i].scrollHeight; // get height of all services container
     }
 
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".services_wrap .service_hero",
-        invalidateOnRefresh: true,
-        pin: true,
-        pinSpacing: true,
-        scrub: true,
-        end: "+=250%",
-        scroller: scroller,
-        start: "top top",
-      },
-    }).to($('.services_wrap .image_slider'), { y: -$('.services_wrap .image_slider').height() / serviceHeroScroll + window.innerHeight });;
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".services_wrap .service_hero",
+          invalidateOnRefresh: true,
+          pin: true,
+          pinSpacing: true,
+          scrub: true,
+          end: "+=250%",
+          scroller: scroller,
+          start: "top top",
+        },
+      })
+      .to($(".services_wrap .image_slider"), {
+        y:
+          -$(".services_wrap .image_slider").height() / serviceHeroScroll +
+          window.innerHeight,
+      });
 
-    var servicesPinTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".services_wrap .third_section",
-        invalidateOnRefresh: true,
-        pin: true,
-        pinSpacing: true,
-        scrub: true,
-        end: () => "+=" + h * 1.5, // 1.5 to dampen the scroller
-        scroller: scroller,
-        start: "top top",
-      },
-    });
+    // var servicesPinTl = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: ".services_wrap .third_section",
+    //     invalidateOnRefresh: true,
+    //     pin: true,
+    //     pinSpacing: true,
+    //     scrub: true,
+    //     end: () => "+=" + h * 1.5, // 1.5 to dampen the scroller
+    //     scroller: scroller,
+    //     start: "top top",
+    //   },
+    // });
 
-    gsap.utils.toArray(services).forEach((service, index) => {
-      var y = 0;
-      var accordionContent = 0;
-      var serviceHeight;
-      serviceHeight = 28;
-      // if (window.screen.width > 768) {
-      //   serviceHeight = 45;
-      // } else {
-      //   serviceHeight = 28;
-      // }
-      
+    // gsap.utils.toArray(services).forEach((service, index) => {
+    //   var y = 0;
+    //   var accordionContent = 0;
+    //   var serviceHeight;
+    //   serviceHeight = 28;
+    //   // if (window.screen.width > 768) {
+    //   //   serviceHeight = 45;
+    //   // } else {
+    //   //   serviceHeight = 28;
+    //   // }
 
-      if (index == 0) {
-        y = 0; // since we start this at the top, offset with the window height
-        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * serviceHeight);
+    //   if (index == 0) {
+    //     y = 0; // since we start this at the top, offset with the window height
+    //     accordionContent = $(service).find('.accordion_content').height() - (window.innerHeight - 6 * serviceHeight);
 
-        servicesPinTl.to(service, { y: -y });
-        servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent }, '<');
-      } else {
-        y = window.innerHeight - index * serviceHeight;
-        accordionContent = $(service).find('.accordion_contenet').height() - (window.innerHeight - 6 * serviceHeight);
+    //     servicesPinTl.to(service, { y: -y });
+    //     servicesPinTl.to($(service).find('.accordion_content'), { y: -accordionContent }, '<');
+    //   } else {
+    //     y = window.innerHeight - index * serviceHeight;
+    //     accordionContent = $(service).find('.accordion_content').height() - (window.innerHeight - 6 * serviceHeight);
 
-        servicesPinTl.to(service, { y: -y });
-        servicesPinTl.to($(service).find('.accordion_contenet'), { y: -accordionContent });
-      }
-    });
+    //     servicesPinTl.to(service, { y: -y });
+    //     servicesPinTl.to($(service).find('.accordion_content'), { y: -accordionContent });
+    //   }
+    // });
 
     /*	-----------------------------------------------------------------------------
         Services First Banner

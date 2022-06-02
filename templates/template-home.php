@@ -46,7 +46,7 @@ get_header(); ?>
                 <source src="<?php echo $home_hero_video; ?>" type="video/mp4">
             </video>
         <?php elseif($home_hero_image): ?>
-            <img src="<?php echo $home_hero_image['url']; ?>" alt="<?php echo $home_hero_image['alt']; ?>">
+            <img class="vid-img" src="<?php echo $home_hero_image['url']; ?>" alt="<?php echo $home_hero_image['alt']; ?>">
         <?php endif; ?>
         <!-- <h1 class="letter_wrap_scroll">We Win For You</h1> -->
 
@@ -56,17 +56,10 @@ get_header(); ?>
             </span>
             <img src="<?php echo get_template_directory_uri(); ?>/images/play_button.svg" alt="">
         </div> -->
+        <a href="#intro" class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow"></a>
     </div>
-    <?php if($home_hero_banner_text): ?>
-        <div class="banner home_first_banner">
-            <div class="banner_section">
-                <p><?php echo $home_hero_banner_text; ?></p>
-                
-            </div>
-        </div>
-    <?php endif; ?>
 
-    <div class="first_section">
+    <div class="first_section" id="intro">
         <div class="first_section_content">
             <div class="left">
                 <?php if($first_section_small_headline): ?>
@@ -79,6 +72,9 @@ get_header(); ?>
                         <div class="image_holder">
                             
                             <img src="<?php echo $first_section_image['url']; ?>" alt="<?php echo $first_section_image['alt']; ?>">
+                            <?php if ($first_section_image["caption"]): ?>
+                                <figcaption><?php echo $first_section_image["caption"] ?></figcaption>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -91,6 +87,8 @@ get_header(); ?>
             <?php if($first_section_big_headline): ?>
                 <h2 class="letter_wrap"><?php echo $first_section_big_headline; ?></h2>
             <?php endif; ?>
+            
+            <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
 
             <div class="image_text_section">
                 <div class="left">
@@ -125,14 +123,14 @@ get_header(); ?>
 
     <div class="third_section color_change">
 
-        <div class="image_holder_top vscroll">
+        <!-- <div class="image_holder_top vscroll">
 
             <?php if($third_section_first_image): ?>
                 <div class="image_holder fadein_wrap fadeIn">
                     <img src="<?php echo $third_section_first_image['url'] ?>" alt="<?php echo $third_section_first_image['alt'] ?>">
                 </div>
             <?php endif; ?>
-        </div>
+        </div> -->
 
 
         <div class="third_section_content">
@@ -150,6 +148,7 @@ get_header(); ?>
 
             <div class="right">
                 <div class="right_content">
+                    <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="logo">
                     <h2 class="letter_wrap"><?php echo $third_section_headline; ?></h2>
                     <p>
                         <?php echo $third_section_description; ?>
@@ -167,6 +166,9 @@ get_header(); ?>
             <?php if($third_section_third_image): ?>
                 <div class="image_holder fadein_wrap fadeIn">
                     <img src="<?php echo $third_section_third_image['url'] ?>" alt="<?php echo $third_section_third_image['alt'] ?>">
+                    <?php if ($third_section_third_image["caption"]): ?>
+                        <figcaption><?php echo $third_section_third_image["caption"] ?></figcaption>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
         </div>
@@ -258,7 +260,6 @@ get_header(); ?>
                 <?php $i=1; foreach ($sixth_section_testimonials as $singleTestimonial): ?>
                     <div class="single_accordion <?php if($i == 1): ?>active<?php endif; ?>">
                         <div class="accordion_header">
-                            <span>/0<?php echo $i; ?></span>
                             <p>
                                 <?php echo $singleTestimonial['client_name'] ?>
                             </p>
@@ -276,9 +277,12 @@ get_header(); ?>
                                     <div class="arrow"></div>
                                 </div>
                                 <span><?php echo $singleTestimonial['year'] ?></span>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/quotes.svg" alt="">
+                                <img src="<?php echo $singleTestimonial['photo']['url']?>" alt="<?php echo $singleTestimonial['photo']['alt']?>">
                                 <p>
                                     <?php echo $singleTestimonial['description'] ?>
+                                </p>
+                                <p style="font-size: 16px" >
+                                    -<?php echo $singleTestimonial['client_name'] ?>
                                 </p>
                             </div>
                         </div>

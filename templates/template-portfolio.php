@@ -2,6 +2,7 @@
 /* Template Name: Portfolio */
 
 $main_headline = get_field('main_headline');
+$background_image = get_field('background_image');
 $banner_text = get_field('banner_text');
 $description_headline = get_field('description_headline');
 $description = get_field('description');
@@ -17,7 +18,8 @@ $work = new WP_Query( $args );
 get_header(); ?>
 
 <div class="portfolio_wrap">
-    <div class="portfolio_header">
+    <div class="portfolio_header" style="background: url('<?php echo $background_image["url"]; ?>') 50% 50% / cover;">
+
         <?php if($main_headline): ?>
             <h1 class="letter_wrap"><?php echo $main_headline; ?></h1>
         <?php endif; ?>
@@ -53,7 +55,15 @@ get_header(); ?>
                         <p class="category">
                             <?php echo $category_name; ?>
                         </p>
-                        <p class="project_name"><?php the_title(); ?></p>
+                        <div class="container">
+                            <p class="category_name">
+                                <?php echo $category_name; ?>
+                            </p>
+                            <p class="project_name">
+                                <?php the_title(); ?>
+                            </p>
+                        </div>
+        
                         <div class="counter">
                             <div class="curent">0 <?php echo $counter; ?> </div>
                             <span>/</span>

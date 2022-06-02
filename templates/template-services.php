@@ -4,13 +4,10 @@
 $hero_section_headline = get_field('hero_section_headline');
 $hero_section_images = get_field('hero_section_images');
 
+$first_section_image = get_field('first_section_bg-image');
 $first_section_headline = get_field('first_section_headline');
 $first_section_description = get_field('first_section_description');
 $first_section_button = get_field('first_section_button');
-$first_section_first_image = get_field('first_section_first_image');
-$first_section_first_text = get_field('first_section_first_text');
-$first_section_second_image = get_field('first_section_second_image');
-$first_section_second_text = get_field('first_section_second_text');
 
 $services_section_banner_text = get_field('services_section_banner_text');
 $services = get_field('services');
@@ -36,39 +33,8 @@ get_header(); ?>
 
     <div class="second_section">
         <div class="second_section_content">
-            
-            <h2 class="section_headline mobile"><?php echo $first_section_first_text; ?> <?php echo $first_section_second_text; ?></h2>
-            <div class="left">
-                <?php if($first_section_first_image): ?>
-                    <div class="image_holder">
-                        <img src="<?php echo $first_section_first_image['url'] ?>" alt="<?php echo $first_section_first_image['alt'] ?>">
-                    </div>
-                <?php endif; ?>
-
-                <?php if($first_section_first_text): ?>    
-                    <h2 class="letter_wrap"><?php echo $first_section_first_text; ?></h2>
-                <?php endif; ?>
-                
-            </div>
-
-            <div class="middle_info">
-                <?php if($first_section_headline): ?>
-                    <p>
-                        <?php echo $first_section_headline; ?>
-                    </p>
-                <?php endif; ?>
-            </div>
-
-            <div class="right">
-                <?php if($first_section_second_image): ?>
-                    <div class="image_holder">
-                        <img src="<?php echo $first_section_second_image['url'] ?>" alt="<?php echo $first_section_second_image['alt'] ?>">
-                    </div>
-                <?php endif; ?>
-                <?php if($first_section_second_text): ?>    
-                    <h2 class="letter_wrap"><?php echo $first_section_second_text; ?></h2>
-                <?php endif; ?>
-            </div>
+            <img src="<?php echo $first_section_image["url"]; ?>" alt="<?php echo $first_section_image["alt"]; ?>">
+            <h2 class="section_headline"><?php echo $first_section_headline; ?></h2>
         </div>
         <div class="description">
         
@@ -99,20 +65,11 @@ get_header(); ?>
     <?php endif; ?>
 
     <div class="third_section">
-        <div class="third_section_conetnt">
+        <div class="third_section_content">
             <div class="service_accordions">
                 <?php $servicesCounter = 1; foreach ($services as $singleService): ?>
                     <div class="single_accordion" role="region">
-                        <div class="accordion_headline">
-                            <div class="counter">0<?php echo $servicesCounter; ?></div>
-                            <?php if($servicesCounter == 1): ?>
-                                <a href="#top" class="back_to_top">Back to Top</a>
-                            <?php endif; ?>
-                            <p>
-                                <?php echo $singleService['service_main_headline'] ?>
-                            </p>
-                        </div>
-                        <div class="accordion_contenet">
+                        <div class="accordion_content">
                             <div class="content_header">
                                 <video class="thevideo" loop autoplay playsinline="true" muted="muted">
                                     
