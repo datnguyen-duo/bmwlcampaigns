@@ -34,6 +34,7 @@ get_header(); ?>
     <div class="second_section">
         <div class="second_section_content">
             <img src="<?php echo $first_section_image["url"]; ?>" alt="<?php echo $first_section_image["alt"]; ?>">
+            <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="logo">
             <h2 class="section_headline"><?php echo $first_section_headline; ?></h2>
         </div>
         <div class="description">
@@ -78,6 +79,7 @@ get_header(); ?>
         
                                 <h2><?php echo $singleService['service_main_headline'] ?></h2>
 
+                                <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
                                 <div class="big_description">
                                     <?php echo $singleService['service_main_description'] ?>
                                 </div>
@@ -134,7 +136,7 @@ get_header(); ?>
                                             <p>
                                                 <?php echo $singleService['featured_project_description'] ?>
                                             </p>
-                                            <a href="<?php echo $singleService['featured_project_link']['url']; ?>" target="<?php echo $singleService['featured_project_link']['url']; ?>" class="btn">
+                                            <a href="<?php echo $singleService['featured_project_link']['url']; ?>" class="btn">
                                                 <span>
                                                     <?php echo $singleService['featured_project_link']['title']; ?>
                                                 </span>

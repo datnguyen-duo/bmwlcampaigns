@@ -31,6 +31,7 @@ get_header(); ?>
             </div>
         <?php endif; ?>
         <div class="work_description">
+            <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
             <?php if($description_headline): ?>
                 <h2><?php echo $description_headline; ?></h2>
             <?php endif; ?>

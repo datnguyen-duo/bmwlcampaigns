@@ -146,6 +146,7 @@
     --------------------------------------------------------------------------------- */
     setTimeout(() => {
       ScrollTrigger.refresh();
+      window.scrollTo(0, 0);
     }, 500);
   }
 
@@ -320,6 +321,14 @@
     jsVideo.onclick = function () {
       this.paused ? this.play() : this.pause();
     };
+
+    ScrollTrigger.create({
+      trigger: ".home_hero",
+      start: "center top",
+      end: "top center",
+      onEnter: () => jsVideo.pause(),
+      onEnterBack: () => jsVideo.play(),
+    });
 
     /*-----------------------------------------------------------------------------
         End of Home Hero Animation
@@ -562,6 +571,7 @@
 
     setTimeout(() => {
       ScrollTrigger.refresh();
+      window.scrollTo(0, 0);
     }, 500);
   }
   function loadAboutScripts() {
@@ -689,22 +699,22 @@
     /*	-----------------------------------------------------------------------------
         End of About First Banner
         --------------------------------------------------------------------------------- */
-    let imageSlider = $(".about_wrap .image_slider");
-    gsap.to(imageSlider, {
-      xPercent: -75,
-      x: () => innerWidth,
-      ease: "none",
-      scrollTrigger: {
-        scroller: scroller,
-        trigger: ".massiveImage",
-        start: "top top",
-        end: () => innerWidth * 3,
-        scrub: true,
-        pin: true,
-        invalidateOnRefresh: true,
-        anticipatePin: 1,
-      },
-    });
+    // let imageSlider = $(".about_wrap .image_slider");
+    // gsap.to(imageSlider, {
+    //   xPercent: -25,
+    //   x: () => innerWidth,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     scroller: scroller,
+    //     trigger: ".massiveImage",
+    //     start: "top top",
+    //     end: () => innerWidth * 3,
+    //     scrub: true,
+    //     pin: true,
+    //     invalidateOnRefresh: true,
+    //     anticipatePin: 1,
+    //   },
+    // });
 
     $(".single_accordion").on("click", function () {
       $(".single_accordion").removeClass("active");
@@ -790,6 +800,7 @@
     });
     setTimeout(() => {
       ScrollTrigger.refresh();
+      window.scrollTo(0, 0);
     }, 500);
   }
   function loadPortfolioScripts() {
@@ -966,6 +977,7 @@
 
     setTimeout(() => {
       ScrollTrigger.refresh();
+      window.scrollTo(0, 0);
     }, 500);
   }
   function loadServicesScripts() {
@@ -1069,24 +1081,24 @@
           End Of Fade Image/Text Animation
           --------------------------------------------------------------------------------- */
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".services_wrap .service_hero",
-          invalidateOnRefresh: true,
-          pin: true,
-          pinSpacing: true,
-          scrub: true,
-          end: "+=250%",
-          scroller: scroller,
-          start: "top top",
-        },
-      })
-      .to($(".services_wrap .image_slider"), {
-        y:
-          -$(".services_wrap .image_slider").height() / serviceHeroScroll +
-          window.innerHeight,
-      });
+    // gsap
+    //   .timeline({
+    //     scrollTrigger: {
+    //       trigger: ".services_wrap .service_hero",
+    //       invalidateOnRefresh: true,
+    //       pin: true,
+    //       pinSpacing: true,
+    //       scrub: true,
+    //       end: "+=250%",
+    //       scroller: scroller,
+    //       start: "top top",
+    //     },
+    //   })
+    //   .to($(".services_wrap .image_slider"), {
+    //     y:
+    //       -$(".services_wrap .image_slider").height() / serviceHeroScroll +
+    //       window.innerHeight,
+    //   });
 
     // var servicesPinTl = gsap.timeline({
     //   scrollTrigger: {
@@ -1182,6 +1194,7 @@
     });
     setTimeout(() => {
       ScrollTrigger.refresh();
+      window.scrollTo(0, 0);
     }, 500);
   }
   function loadSingleProjectScripts() {
@@ -1476,6 +1489,7 @@
     });
     setTimeout(() => {
       ScrollTrigger.refresh();
+      window.scrollTo(0, 0);
     }, 500);
   }
 

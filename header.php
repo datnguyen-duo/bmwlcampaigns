@@ -77,6 +77,7 @@ $templates = wp_get_theme()->get_page_templates();
 				</div>
 			</div>
 			<h2 class="form_headline"><?php echo $contact_headline; ?></h2>
+			<img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
 			<p>
 				<?php echo $contact_description; ?>
 			</p>

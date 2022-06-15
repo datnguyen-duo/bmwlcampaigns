@@ -131,6 +131,7 @@ html {
   //   background-color: @color1;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  // overflow: hidden !important;
   @media @tablet-xl {
     // overflow: hidden !important;
   }
@@ -157,10 +158,10 @@ body {
 }
 
 .main_headline {
-  font-size: 22vw;
+  font-size: 16vw;
   color: @color1;
   .font2R();
-  // line-height: 0.68em;
+  line-height: 0.8;
 }
 
 .big_headline {
@@ -170,7 +171,7 @@ body {
   // line-height: 0.75em;
 
   @media @tablet-s {
-    font-size: 14vw;
+    font-size: 10vw;
   }
 }
 
@@ -179,7 +180,7 @@ body {
   .font2R();
 
   @media @tablet-s {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 }
 
@@ -188,7 +189,7 @@ body {
   .font2R();
 
   @media @tablet-s {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 }
 
@@ -241,7 +242,7 @@ body {
   flex-direction: column;
 
   @media @tablet-xl {
-    height: 100vh;
+    height: 80vh;
     flex-direction: row;
   }
 
@@ -418,6 +419,17 @@ body {
           margin: 0;
           margin-bottom: 0px;
         }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          opacity: 0.5;
+          z-index: 1;
+        }
       }
 
       span {
@@ -441,7 +453,7 @@ body {
         cursor: pointer;
         right: 45px;
         bottom: 15px;
-
+        z-index: 1;
         @media @tablet-xl {
           right: 4vw;
           bottom: 3vw;
@@ -593,15 +605,14 @@ body {
 
       img {
         // margin-bottom: 15px;
-        width: 250px;
-        height: 250px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
         object-fit: cover;
         object-position: 50%;
-
-        @media @tablet-xl {
-          width: 18vw;
-          height: auto;
-        }
       }
 
       p {
@@ -609,6 +620,8 @@ body {
         max-width: 270px;
         text-align: center;
         margin-top: 30px;
+        position: relative;
+        z-index: 1;
         @media @tablet-s {
           max-width: 40vw;
         }
@@ -814,6 +827,12 @@ body {
 
 #page {
   padding-top: 80px;
+}
+
+.logo__section {
+  display: block;
+  margin: 1em 0;
+  width: 200px;
 }
 
 @import "header";

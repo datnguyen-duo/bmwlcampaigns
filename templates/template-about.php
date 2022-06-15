@@ -42,6 +42,8 @@ get_header(); ?>
 
 
                 <div class="content">
+                <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
+
                     <?php if($first_section_description): ?>
                         <p>
                             <?php echo $first_section_description; ?>
@@ -64,12 +66,14 @@ get_header(); ?>
     <div class="second_section">
         <div class="second_section_content">
             <div class="headline_holder">
+                <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
                 <?php if($second_section_headline): ?>
                     <h2 class="letter_wrap">
                         <?php echo $second_section_headline; ?>
                     </h2>
                 <?php endif; ?>
             </div>
+
             <div class="description">
                 <?php if($second_section_description): ?>
                     <p>
@@ -77,9 +81,9 @@ get_header(); ?>
                     </p>
                 <?php endif; ?>
             </div>
-            
+
             <div class="image_slider">
-                
+
                 <?php foreach ($second_section_gallery as $singleImage): ?>
                     <div class="image_holder">
                         <img src="<?php echo $singleImage['image']['url']; ?>" alt="<?php echo $singleImage['image']['alt']; ?>">
@@ -92,12 +96,11 @@ get_header(); ?>
 
     <div class="third_section">
         <div class="third_section_content">
+            
             <div class="headline_holder">
+                <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
                 <?php if($third_section_first_headline): ?>
-                    <h2 class="letter_wrap"><?php echo $third_section_first_headline; ?></h2>
-                <?php endif; ?>
-                <?php if($third_section_second_headline): ?>
-                    <h2 class="letter_wrap"><?php echo $third_section_second_headline; ?></h2>
+                    <h2 class="letter_wrap"><?php echo $third_section_first_headline; ?> <?php echo $third_section_second_headline; ?></h2>
                 <?php endif; ?>
             </div>
 
@@ -157,7 +160,7 @@ get_header(); ?>
             <h2 class="letter_wrap">
                 <?php echo $fourth_section_headline; ?>
             </h2>
-
+            <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="logo">
             <div class="team_holder">
                 <?php 
                     $counter = 1;

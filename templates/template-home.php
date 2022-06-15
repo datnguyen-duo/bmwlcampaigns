@@ -56,7 +56,7 @@ get_header(); ?>
             </span>
             <img src="<?php echo get_template_directory_uri(); ?>/images/play_button.svg" alt="">
         </div> -->
-        <a href="#intro" class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/white_arrow.svg" alt="arrow"></a>
+        <a href="#intro" id="anchor"></a>
     </div>
 
     <div class="first_section" id="intro">
@@ -88,8 +88,6 @@ get_header(); ?>
                 <h2 class="letter_wrap"><?php echo $first_section_big_headline; ?></h2>
             <?php endif; ?>
             
-            <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
-
             <div class="image_text_section">
                 <div class="left">
                     <?php if($second_section_image): ?>
@@ -101,6 +99,8 @@ get_header(); ?>
 
                 <div class="right">
                     <div class="right_content">
+                        <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
+
                         <?php if($second_section_description): ?>
                             <p>
                                 <?php echo $second_section_description; ?>

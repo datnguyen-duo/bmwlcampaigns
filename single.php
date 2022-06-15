@@ -147,7 +147,7 @@ $more_work_call_to_action = get_field('more_work_call_to_action', 'option');
 					<?php if($about_project_second_headline): ?>
 						<h2 class="letter_wrap"><?php echo $about_project_second_headline; ?></h2>
 					<?php endif; ?>
-
+					<img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="logo">
 					<?php if($about_project_second_description): ?>
 						<p>
 							<?php echo $about_project_second_description; ?>
