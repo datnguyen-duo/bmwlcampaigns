@@ -62,6 +62,7 @@ get_header(); ?>
     <div class="first_section" id="intro">
         <div class="first_section_content">
             <div class="left">
+                <img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
                 <?php if($first_section_small_headline): ?>
                     <h2 class="letter_wrap"><?php echo $first_section_small_headline; ?></h2>
                 <?php endif; ?>
