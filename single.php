@@ -42,6 +42,14 @@ $more_work_call_to_action = get_field('more_work_call_to_action', 'option');
 			<div class="left_content">
 				<div class="headline_wrap">
 					<h1 class="letter_wrap"><?php the_title(); ?></h1>
+
+					<div class="first_section">
+						<div class="first_section_content">
+							<?php if($about_project_description): ?>
+								<h2><?php echo $about_project_description; ?></h2>
+							<?php endif; ?>
+						</div>
+					</div>
 				</div>
 
 				<div class="project_info">
@@ -82,64 +90,6 @@ $more_work_call_to_action = get_field('more_work_call_to_action', 'option');
 		</div>
 	</div>
 
-	<div class="first_section">
-		<div class="first_section_content">
-			<?php if($about_project_headline): ?>
-				<p><?php echo $about_project_headline; ?></p>
-			<?php endif; ?>
-			<?php if($about_project_description): ?>
-				<h2><?php echo $about_project_description; ?></h2>
-			<?php endif; ?>
-		</div>
-	</div>
-
-	<?php if($about_project_image_1): ?>
-		<div class="second_section">
-			<div class="second_section_content">
-				<div class="image_holder">
-					<img src="<?php echo $about_project_image_1['url'] ?>" alt="<?php echo $about_project_image_1['alt'] ?>">
-				</div>
-			</div>
-		</div>
-	<?php endif; ?>
-
-	<div class="third_section">
-		<div class="third_section_content">
-			<div class="left">
-				<div class="image_holder_strap">
-					<?php if($about_project_image_2): ?>
-						<div class="image_holder">
-							<img src="<?php echo $about_project_image_2['url'] ?>" alt="<?php echo $about_project_image_2['alt'] ?>">
-						</div>
-					<?php endif; ?>
-				</div>
-
-				<div class="image_holder_second">
-					<?php if($about_project_image_3): ?>
-						<div class="image_holder">
-							<img src="<?php echo $about_project_image_3['url'] ?>" alt="<?php echo $about_project_image_3['alt'] ?>">
-						</div>
-					<?php endif; ?>
-				</div>
-			</div>
-			<div class="right">
-				<?php if($about_project_image_4): ?>
-					<div class="image_holder">
-						<img src="<?php echo $about_project_image_4['url'] ?>" alt="<?php echo $about_project_image_4['alt'] ?>">
-					</div>
-				<?php endif; ?>
-
-				<div class="image_holder_second">
-					<?php if($about_project_image_3): ?>
-						<div class="image_holder">
-							<img src="<?php echo $about_project_image_3['url'] ?>" alt="<?php echo $about_project_image_3['alt'] ?>">
-						</div>
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="fourth_section">
 		<div class="fourth_section_inner">
 			<div class="fourth_section_content">
@@ -147,7 +97,7 @@ $more_work_call_to_action = get_field('more_work_call_to_action', 'option');
 					<?php if($about_project_second_headline): ?>
 						<h2 class="letter_wrap"><?php echo $about_project_second_headline; ?></h2>
 					<?php endif; ?>
-					<img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/home/logo.svg" alt="logo">
+					<img class="logo__section" src="<?php echo get_template_directory_uri(); ?>/images/logo_dark.svg" alt="logo">
 					<?php if($about_project_second_description): ?>
 						<p>
 							<?php echo $about_project_second_description; ?>

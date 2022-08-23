@@ -84,39 +84,20 @@ get_header(); ?>
                                     <?php echo $singleService['service_main_description'] ?>
                                 </div>
                                 <div class="blurb_content">
-                                    <div class="blurb_section">
-                                        <div class="single_blurb">
-                                            <h3><?php echo $singleService['service_blurb_headline_1'] ?></h3>
-                                            <p>
-                                                <?php echo $singleService['service_blurb_1'] ?>
-                                            </p>
-                                        </div>
-                                        <div class="single_blurb">
-                                            <h3><?php echo $singleService['service_blurb_headline_2'] ?></h3>
-                                            <p>
-                                            <?php echo $singleService['service_blurb_2'] ?>
-                                            </p>
-                                        </div>
-                                    </div>
                                     <div class="blurb_description">
                                         <h3>
                                             <?php echo $singleService['service_blubs_headline'] ?>
                                         </h3>
                                     </div>
                                     <div class="blurb_section">
-                                        <div class="single_blurb">
-                                            <h3><?php echo $singleService['service_blurb_headline_3'] ?></h3>
-                                            <p>
-                                                <?php echo $singleService['service_blurb_3'] ?>
-                                            </p>
-                                        </div>
-                                        <div class="single_blurb">
-                                            <h3><?php echo $singleService['service_blurb_headline_4'] ?></h3>
-                                            <p>
-                                                <?php echo $singleService['service_blurb_4'] ?>
-                                            </p>
-                                        </div>
+                                        <ul>
+                                            <li><?php echo $singleService['service_blurb_1'] ?></li>
+                                            <li><?php echo $singleService['service_blurb_2'] ?></li>
+                                            <li><?php echo $singleService['service_blurb_3'] ?></li>
+                                            <li><?php echo $singleService['service_blurb_4'] ?></li>
+                                        </ul>
                                     </div>
+                              
                                 </div>
 
                                 <div class="image_text_section">

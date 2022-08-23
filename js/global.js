@@ -283,9 +283,7 @@
         Home Hero Animation
         --------------------------------------------------------------------------------- */
     var heroAnimation = gsap.timeline({
-      onComplete: function () {
-        // console.log("complete");
-      },
+      onComplete: function () {},
     });
 
     let heroHeadline = $(".home_hero h1 .char");
@@ -879,7 +877,6 @@
   --------------------------------------------------------------------------------- */
     var positionTop = 50;
     $(".section_parallax .project_info").each(function (index) {
-      // console.log(index);
       $(this).css({ top: positionTop + "%" });
 
       positionTop -= 100;
@@ -1478,6 +1475,17 @@
       },
     });
 
+    $(".image_slider .image_holder").on("click", function () {
+      var img = $(this).children().attr("src");
+
+      $("#modal img").attr("src", img);
+      $("body").addClass("init_modal");
+    });
+
+    $("#modal .close").on("click", function () {
+      $("body").removeClass("init_modal");
+    });
+
     gsap.from(".footer_content", {
       opacity: 0,
       top: "200px",
@@ -1557,7 +1565,6 @@
   }
 
   barba.hooks.afterLeave((data) => {
-    console.log("Ran after leave");
     var nextHtml = data.next.html;
     var response = nextHtml.replace(
       /(<\/?)body( .+?)?>/gi,
@@ -1588,8 +1595,6 @@
         async leave(data) {
           // locoScroll.destroy();
           const done = this.async();
-
-          console.log(data.current.container);
 
           gsap.to(data.current.container, {
             opacity: 0,

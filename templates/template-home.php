@@ -282,7 +282,7 @@ get_header(); ?>
                                 <p>
                                     <?php echo $singleTestimonial['description'] ?>
                                 </p>
-                                <p style="font-size: 16px" >
+                                <p>
                                     -<?php echo $singleTestimonial['client_name'] ?>
                                 </p>
                             </div>

@@ -13,6 +13,11 @@
 </div><!-- #page -->
 </div><!-- #viewport -->
 <?php wp_footer(); ?>
-
+<div id="modal">
+    <div class="close"></div>
+    <div class="container">
+        <img src="" alt="">
+    </div>
+</div>
 </body>
 </html>
