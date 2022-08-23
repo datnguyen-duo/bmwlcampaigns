@@ -1557,6 +1557,7 @@
   }
 
   barba.hooks.afterLeave((data) => {
+    console.log("Ran after leave");
     var nextHtml = data.next.html;
     var response = nextHtml.replace(
       /(<\/?)body( .+?)?>/gi,
@@ -1594,7 +1595,7 @@
             opacity: 0,
           });
 
-          await delay(650);
+          await delay(1000);
 
           done();
         },
@@ -1658,6 +1659,16 @@
           imagesLoaded(document.getElementById("viewport"), function () {
             globalScripts();
             loadServicesScripts();
+            document.getElementById("viewport").classList.remove("loading");
+          });
+        },
+      },
+
+      {
+        namespace: "Landing Page",
+        afterEnter({ next }) {
+          imagesLoaded(document.getElementById("viewport"), function () {
+            globalScripts();
             document.getElementById("viewport").classList.remove("loading");
           });
         },

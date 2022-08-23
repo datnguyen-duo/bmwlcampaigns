@@ -16,17 +16,13 @@
     position: relative;
     // height: calc(var(--vh, 1vh) * 100);
     // height: auto;
-    @media @mobile-xl {
-      height: 100vh;
-    }
+
     .vid-image,
     .vid {
       .cropped_image();
       opacity: 0;
       position: relative;
-      @media @mobile-xl {
-        position: absolute;
-      }
+      object-fit: contain;
     }
 
     h1 {
@@ -163,7 +159,7 @@
           .image_holder {
             position: relative;
             // overflow: hidden;
-            padding-top: 65%;
+            padding-top: 63%;
 
             img {
               .cropped_image();
@@ -270,7 +266,7 @@
 
           .image_holder {
             position: relative;
-            padding-top: 79%;
+            padding-top: 92%;
 
             // &:after {
             //   content: "";

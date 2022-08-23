@@ -395,6 +395,8 @@ body {
 
     .accordion_content {
       display: none;
+      overflow: hidden;
+
       @media @tablet-xl {
         display: flex;
       }
@@ -413,7 +415,7 @@ body {
       .content {
         margin: 40px 0;
         margin-bottom: 60px;
-        opacity: 0;
+        // opacity: 0;
         transition: all 0s 0s;
         @media @tablet-xl {
           margin: 0;
@@ -427,9 +429,14 @@ body {
           width: 100%;
           height: 100%;
           background: #fff;
-          opacity: 0.5;
+          opacity: 0.7;
           z-index: 1;
         }
+
+        // p {
+        //   transition: all 0.05s 0s;
+        //   opacity: 0;
+        // }
       }
 
       span {
@@ -622,10 +629,11 @@ body {
         margin-top: 30px;
         position: relative;
         z-index: 1;
-        max-width: 100%;
-
+        max-width: 100vw;
+        min-width: 100vw;
         @media @tablet-s {
-          max-width: 65%;
+          max-width: 35vw;
+          min-width: 35vw;
           margin: 0 auto;
         }
       }
@@ -661,8 +669,11 @@ body {
       .accordion_content {
         display: flex;
         .content {
-          transition: all 0.3s 0.5s;
-          opacity: 1;
+          // // opacity: 1;
+          // p {
+          //   transition: all 0.05s 0.5s;
+          //   opacity: 1;
+          // }
         }
       }
     }
@@ -730,7 +741,7 @@ body {
 
 .btn {
   background-color: @color3;
-  color: @color2;
+  color: @color1;
   padding: 10px 60px;
   box-sizing: border-box;
   font-family: @font1;
@@ -836,6 +847,114 @@ body {
   display: block;
   margin: 1em 0;
   width: 200px;
+}
+
+body.page-template-template-landing {
+  #viewport {
+    z-index: 9999;
+    position: relative;
+    #landing-page {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: @color1;
+      .row {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+        .col {
+          width: 50%;
+          height: 100%;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          padding: 2em 0;
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            &:before {
+              content: "";
+              height: 100%;
+              width: 2px;
+              background: @color2;
+              position: absolute;
+              left: 0;
+              top: 0;
+
+              @media screen and (max-width: 768px) {
+                height: 2px;
+                width: 100%;
+              }
+            }
+          }
+          .content {
+            text-align: center;
+            width: 100%;
+            img {
+              width: 75%;
+              position: relative;
+              &.bg-image {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                .transition();
+              }
+            }
+
+            .inner {
+              position: relative;
+              opacity: 0;
+              .transition();
+              margin-top: 2em;
+
+              @media screen and (max-width: 768px) {
+                opacity: 1;
+              }
+              p {
+                .text();
+                color: @color2;
+                max-width: 600px;
+                margin: 0 auto;
+                @media screen and (max-width: 768px) {
+                  max-width: 300px;
+                }
+              }
+              .btn {
+                margin-top: 1em;
+              }
+            }
+          }
+
+          &:hover {
+            .content {
+              img {
+                &.bg-image {
+                  opacity: 0.2;
+                }
+              }
+
+              .inner {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @import "header";
