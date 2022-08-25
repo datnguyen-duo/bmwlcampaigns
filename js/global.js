@@ -1608,6 +1608,7 @@
         async enter(data) {
           gsap.from(data.next.container, {
             opacity: 0,
+            delay: 0.7,
           });
         },
 
