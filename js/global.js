@@ -1475,11 +1475,14 @@
       },
     });
 
-    $(".image_slider .image_holder").on("click", function () {
+    $(".image_slider .image_holder").on("click", function (e) {
       var img = $(this).children().attr("src");
 
       $("#modal img").attr("src", img);
-      $("body").addClass("init_modal");
+
+      if ($(e.target).is("img")) {
+        $("body").addClass("init_modal");
+      }
     });
 
     $("#modal .close").on("click", function () {

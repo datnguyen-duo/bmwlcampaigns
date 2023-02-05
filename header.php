@@ -59,7 +59,7 @@ $templates = wp_get_theme()->get_page_templates();
 						<source src="<?php echo get_template_directory_uri(); ?>/videos/contact_grey.mp4#t=0.1" type="video/mp4">
 					</video>
 					<h2>
-						Thank you, <span>Name</span>!
+						Thank you!
 					</h2>
 
 					<h3>
@@ -84,7 +84,7 @@ $templates = wp_get_theme()->get_page_templates();
 			<div class="form_holder">
 				<div class="form_header">
 					<div class="single_form active" data-formid="work">
-						<span>Work Inquries</span>
+						<span>Work Inquiries</span>
 					</div>
 					<div class="single_form" data-formid="meeting">
 						<span>Request a Meeting</span>
