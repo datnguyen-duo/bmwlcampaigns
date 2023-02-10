@@ -1626,8 +1626,9 @@
         namespace: "Home",
         afterEnter({ next }) {
           imagesLoaded(document.getElementById("viewport"), function () {
-            globalScripts();
             loadIndexScripts();
+            globalScripts();
+
             document.getElementById("viewport").classList.remove("loading");
           });
         },
@@ -1636,8 +1637,9 @@
         namespace: "work",
         afterEnter({ next }) {
           imagesLoaded(document.getElementById("viewport"), function () {
-            globalScripts();
             loadSingleProjectScripts();
+            globalScripts();
+
             document.getElementById("viewport").classList.remove("loading");
           });
         },
@@ -1646,8 +1648,9 @@
         namespace: "About",
         afterEnter({ next }) {
           imagesLoaded(document.getElementById("viewport"), function () {
-            globalScripts();
             loadAboutScripts();
+            globalScripts();
+
             document.getElementById("viewport").classList.remove("loading");
           });
         },
@@ -1656,8 +1659,9 @@
         namespace: "Portfolio",
         afterEnter({ next }) {
           imagesLoaded(document.getElementById("viewport"), function () {
-            globalScripts();
             loadPortfolioScripts();
+            globalScripts();
+
             document.getElementById("viewport").classList.remove("loading");
           });
         },
@@ -1666,8 +1670,9 @@
         namespace: "Services",
         afterEnter({ next }) {
           imagesLoaded(document.getElementById("viewport"), function () {
-            globalScripts();
             loadServicesScripts();
+            globalScripts();
+
             document.getElementById("viewport").classList.remove("loading");
           });
         },

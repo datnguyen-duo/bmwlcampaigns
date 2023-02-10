@@ -84,6 +84,7 @@ header {
     height: 0vh;
     background-color: #0491b5;
     z-index: 100;
+    -webkit-transform: translate3d(0, 0, 0);
 
     @media @tablet-s {
       display: none;
@@ -292,7 +293,8 @@ header {
             font-size: 80px;
             color: @color1;
             .font2R();
-            line-height: 0.75em;
+            line-height: 1;
+            display: block;
           }
         }
       }
